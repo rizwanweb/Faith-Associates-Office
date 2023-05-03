@@ -1,0 +1,61 @@
+﻿CREATE PROCEDURE [dbo].[usp_JobsGetJobByID]
+(
+	@JobID INT
+)
+AS
+	BEGIN
+		SELECT [JobID]
+			  ,[JobNo]
+			  ,[JobDate]
+			  ,[Client]
+			  ,[LC]
+			  ,[LCDate]
+			  ,[Item]
+			  ,[ItemDetail]
+			  ,[Containers]
+			  ,[Size]
+			  ,[Packages]
+			  ,[Vessel]
+			  ,[BL]
+			  ,[BLDate]
+			  ,[IGM]
+			  ,[IGMDate]
+			  ,[IndexNo]
+			  ,[Quantity]
+			  ,[InvoiceValueUSD]
+			  ,[ExchangeRate]
+			  ,[ValueInPKR]
+			  ,[Insurance]
+			  ,[LandingCharges]
+			  ,[ImportValuePKR]
+			  ,[CustomDuty]
+			  ,[CustomDutyType]
+			  ,[CustomDutyRate]
+			  ,[AddCustomDuty]
+			  ,[AddCustomDutyType]
+			  ,[AddCustomDutyRate]
+			  ,[SalesTax]
+			  ,[SalesTaxType]
+			  ,[SalesTaxRate]
+			  ,[IncomeTax]
+			  ,[IncomeTaxType]
+			  ,[IncomeTaxRate]
+			  ,[Cess]
+			  ,[CessType]
+			  ,[CessRate]
+			  ,[RD]
+			  ,[RDType]
+			  ,[RDRate]
+			  ,[TotalDuty]
+
+			  ,[Terminal]
+			  ,[ShippingLine]
+			  ,[Lolo]
+			  ,[Clients].[ContactPerson]
+			  ,[Clients].[Address]
+		  FROM [dbo].[Jobs]
+		  INNER JOIN Clients ON Clients.ClientID = Jobs.Client
+		  WHERE JobID = @JobID
+	END
+
+

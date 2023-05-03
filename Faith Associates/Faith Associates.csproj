@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B463F4F7-9F36-41A9-B16B-06D1736F0353}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Faith_Associates</RootNamespace>
+    <AssemblyName>Faith Associates</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Ff-Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>CAF %28General%29</ProductName>
+    <PublisherName>Rizwan</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.1.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Faith_Associates.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>FaithIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>92A57EF7E6B762F352E3F2331F74BA88D199A87E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Faith Associates_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Accounts\AccountLedger.cs" />
+    <Compile Include="Models\Clients\BalanceSheet.cs" />
+    <Compile Include="Models\Bills\Bill.cs" />
+    <Compile Include="Models\Bills\BillDetail.cs" />
+    <Compile Include="Models\Bills\BillHeader.cs" />
+    <Compile Include="Models\Bills\PidBilll.cs" />
+    <Compile Include="Models\Bills\SalesTaxInvoice.cs" />
+    <Compile Include="Models\Clients\Client.cs" />
+    <Compile Include="Models\Items\Item.cs" />
+    <Compile Include="Models\Jobs\JobPayorder.cs" />
+    <Compile Include="Models\Jobs\Pid.cs" />
+    <Compile Include="Models\Jobs\Job.cs" />
+    <Compile Include="Models\LOLOs\Lolo.cs" />
+    <Compile Include="Models\PSQC\Certificate.cs" />
+    <Compile Include="Models\ShippingLines\ShippingLine.cs" />
+    <Compile Include="Models\Terminals\Terminal.cs" />
+    <Compile Include="Models\Users\LoggedInUser.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Bills\STReport.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Bills\STReport.Designer.cs">
+      <DependentUpon>STReport.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Bills\BillReport.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Bills\BillReport.Designer.cs">
+      <DependentUpon>BillReport.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Bills\SalesTaxReport.cs">
+      <DependentUpon>SalesTaxReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Bills\JobBillReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JobBillReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Jobs\CalculationSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Jobs\CalculationSheet.Designer.cs">
+      <DependentUpon>CalculationSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Jobs\PIDCalculationSheetReport.cs">
+      <DependentUpon>PIDCalculationSheetReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Jobs\CalculationSheetReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalculationSheetReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Clients\BalanceSheet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BalanceSheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Clients\MReport.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Clients\MReport.Designer.cs">
+      <DependentUpon>MReport.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Lists\JobRegister.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JobRegister.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Lists\ReportDateSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Lists\ReportDateSelectForm.Designer.cs">
+      <DependentUpon>ReportDateSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Lists\ListReportForm.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Lists\ListReportForm.Designer.cs">
+      <DependentUpon>ListReportForm.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Lists\SalesTaxRegister.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesTaxRegister.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\PidBills\PidBillReport.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\PidBills\PidBillReport.Designer.cs">
+      <DependentUpon>PidBillReport.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\PidBills\PidBillReport1.cs">
+      <DependentUpon>PidBillReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PSQCA\AuthorityLetter.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuthorityLetter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PSQCA\Certificate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Certificate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PSQCA\ConsigneeInformation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsigneeInformation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PSQCA\Undertaking.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Undertaking.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\BillHeadersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\BillHeadersForm.Designer.cs">
+      <DependentUpon>BillHeadersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Bill\PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Bill\PaymentForm.Designer.cs">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Bill\PidBillScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Bill\PidBillScreen.Designer.cs">
+      <DependentUpon>PidBillScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Bill\BillScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Bill\BillScreen.Designer.cs">
+      <DependentUpon>BillScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Bill\ReportSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Bill\ReportSelectForm.Designer.cs">
+      <DependentUpon>ReportSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Bill\SearchPidBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Bill\SearchPidBillForm.Designer.cs">
+      <DependentUpon>SearchPidBillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Bill\SearchBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Bill\SearchBillForm.Designer.cs">
+      <DependentUpon>SearchBillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Bill\SearchBillPidForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Bill\SearchBillPidForm.Designer.cs">
+      <DependentUpon>SearchBillPidForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Bill\SearchBillJobsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Bill\SearchBillJobsForm.Designer.cs">
+      <DependentUpon>SearchBillJobsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Clients\ClientBalanceSheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Clients\ClientBalanceSheetForm.Designer.cs">
+      <DependentUpon>ClientBalanceSheetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Clients\ClientDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Clients\ClientDetailsForm.Designer.cs">
+      <DependentUpon>ClientDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Clients\ClientList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Clients\ClientList.Designer.cs">
+      <DependentUpon>ClientList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Clients\ClientPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Clients\ClientPortal.Designer.cs">
+      <DependentUpon>ClientPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Items\ItemDetailsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Items\ItemDetailsScreen.Designer.cs">
+      <DependentUpon>ItemDetailsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Items\ItemListScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Items\ItemListScreen.Designer.cs">
+      <DependentUpon>ItemListScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Jobs\PidEntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Jobs\PidEntryForm.Designer.cs">
+      <DependentUpon>PidEntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Jobs\JobEntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Jobs\JobEntryForm.Designer.cs">
+      <DependentUpon>JobEntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Jobs\SearchPidsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Jobs\SearchPidsForm.Designer.cs">
+      <DependentUpon>SearchPidsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Jobs\SearchJobsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Jobs\SearchJobsForm.Designer.cs">
+      <DependentUpon>SearchJobsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Lolos\LoloDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Lolos\LoloDetailsForm.Designer.cs">
+      <DependentUpon>LoloDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Lolos\LoloList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Lolos\LoloList.Designer.cs">
+      <DependentUpon>LoloList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\PSQC\PSQCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\PSQC\PSQCForm.Designer.cs">
+      <DependentUpon>PSQCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ShippingLines\ShippingLineList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\ShippingLines\ShippingLineList.Designer.cs">
+      <DependentUpon>ShippingLineList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ShippingLines\ShippingLineDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\ShippingLines\ShippingLineDetailsForm.Designer.cs">
+      <DependentUpon>ShippingLineDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\TemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\TemplateForm.Designer.cs">
+      <DependentUpon>TemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Terminals\TerminalDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Terminals\TerminalDetailsForm.Designer.cs">
+      <DependentUpon>TerminalDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Terminals\TerminalList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Terminals\TerminalList.Designer.cs">
+      <DependentUpon>TerminalList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\AppSetting.cs" />
+    <Compile Include="Utilities\Lists\ListData.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reports\Bills\STReport.resx">
+      <DependentUpon>STReport.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Bills\BillReport.resx">
+      <DependentUpon>BillReport.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Bills\SalesTaxReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesTaxReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Bills\JobBillReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>JobBillReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Jobs\CalculationSheet.resx">
+      <DependentUpon>CalculationSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Jobs\PIDCalculationSheetReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PIDCalculationSheetReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Jobs\CalculationSheetReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CalculationSheetReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Clients\BalanceSheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BalanceSheet.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Clients\MReport.resx">
+      <DependentUpon>MReport.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Lists\JobRegister.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>JobRegister.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Lists\ReportDateSelectForm.resx">
+      <DependentUpon>ReportDateSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Lists\ListReportForm.resx">
+      <DependentUpon>ListReportForm.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Lists\SalesTaxRegister.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesTaxRegister.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PidBills\PidBillReport.resx">
+      <DependentUpon>PidBillReport.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PidBills\PidBillReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LastGenOutput>PidBillReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PSQCA\AuthorityLetter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AuthorityLetter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PSQCA\Certificate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Certificate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PSQCA\ConsigneeInformation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsigneeInformation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PSQCA\Undertaking.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Undertaking.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\BillHeadersForm.resx">
+      <DependentUpon>BillHeadersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Bill\PaymentForm.resx">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Bill\PidBillScreen.resx">
+      <DependentUpon>PidBillScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Bill\BillScreen.resx">
+      <DependentUpon>BillScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Bill\ReportSelectForm.resx">
+      <DependentUpon>ReportSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Bill\SearchPidBillForm.resx">
+      <DependentUpon>SearchPidBillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Bill\SearchBillForm.resx">
+      <DependentUpon>SearchBillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Bill\SearchBillPidForm.resx">
+      <DependentUpon>SearchBillPidForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Bill\SearchBillJobsForm.resx">
+      <DependentUpon>SearchBillJobsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Clients\ClientBalanceSheetForm.resx">
+      <DependentUpon>ClientBalanceSheetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Clients\ClientDetailsForm.resx">
+      <DependentUpon>ClientDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Clients\ClientList.resx">
+      <DependentUpon>ClientList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Clients\ClientPortal.resx">
+      <DependentUpon>ClientPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Items\ItemDetailsScreen.resx">
+      <DependentUpon>ItemDetailsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Items\ItemListScreen.resx">
+      <DependentUpon>ItemListScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Jobs\PidEntryForm.resx">
+      <DependentUpon>PidEntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Jobs\JobEntryForm.resx">
+      <DependentUpon>JobEntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Jobs\SearchPidsForm.resx">
+      <DependentUpon>SearchPidsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Jobs\SearchJobsForm.resx">
+      <DependentUpon>SearchJobsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Lolos\LoloDetailsForm.resx">
+      <DependentUpon>LoloDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Lolos\LoloList.resx">
+      <DependentUpon>LoloList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\PSQC\PSQCForm.resx">
+      <DependentUpon>PSQCForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ShippingLines\ShippingLineList.resx">
+      <DependentUpon>ShippingLineList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ShippingLines\ShippingLineDetailsForm.resx">
+      <DependentUpon>ShippingLineDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\TemplateForm.resx">
+      <DependentUpon>TemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Terminals\TerminalDetailsForm.resx">
+      <DependentUpon>TerminalDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Terminals\TerminalList.resx">
+      <DependentUpon>TerminalList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RSDBFramework\RSDBFramework.csproj">
+      <Project>{793949F6-CCB7-4A51-87E1-6B00FF6DFA2A}</Project>
+      <Name>RSDBFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FaithIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

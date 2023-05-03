@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>CaFDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{15de7873-db0c-458b-97c3-8da53fc5e153}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>CaFDB</RootNamespace>
+    <AssemblyName>CaFDB</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\BillDetails.sql" />
+    <Build Include="dbo\Tables\Items.sql" />
+    <Build Include="dbo\Tables\SalesTaxInvoice.sql" />
+    <Build Include="dbo\Tables\Users.sql" />
+    <Build Include="dbo\Tables\Roles.sql" />
+    <Build Include="dbo\Tables\Cities.sql" />
+    <Build Include="dbo\Tables\ClientTypes.sql" />
+    <Build Include="dbo\Tables\Clients.sql" />
+    <Build Include="dbo\Tables\Jobs.sql" />
+    <Build Include="dbo\Tables\ShippingLines.sql" />
+    <Build Include="dbo\Tables\Terminals.sql" />
+    <Build Include="dbo\Tables\LOLOs.sql" />
+    <Build Include="dbo\Tables\Pids.sql" />
+    <Build Include="dbo\Tables\PidBills.sql" />
+    <Build Include="dbo\Tables\BillHeaders.sql" />
+    <Build Include="dbo\Tables\Bills.sql" />
+    <Build Include="dbo\Tables\PidBillDetails.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ItemsGetItemByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ItemsAddNewItem.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ItemsUpdateItem.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ItemsDeleteItem.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ClientsGetClientsForComboBox.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillsGetLastBillID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillDetailsInsertNewBillDetail.sql" />
+    <Build Include="dbo\Stored Procedures\usp_SalesTaxInvoiceInsertNewSalesTaxInvoice.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillsGetBillData.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillsGetBillByBillNo.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillDetailsGetBillDetailsByBillID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillsGetBillDataByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_SalesTaxInvoiceGetMaxNumber.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillsUpdateBill.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillDetailsUpdateBillDetail.sql" />
+    <Build Include="dbo\Stored Procedures\usp_SalesTaxInvoiceUpdateSTInvoice.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobsDeleteJob.sql" />
+    <Build Include="dbo\Stored Procedures\usp_UsersCheckLoginDetails.sql" />
+    <Build Include="dbo\Stored Procedures\usp_STInvoiceGetSTInvoiceByBillID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReportsGetJobDataByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobsInsertNewJob.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobsUpdateJob.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobsCheckJobDetails.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobsGetJobsByJobNo.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobsGetJobsByLC.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ClientGetAllClients.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobsGetJobByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CitiesGetCities.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ClientTypeGetClientType.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ClientGetClientDetailByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ClientsAddNewClient.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ClientsUpdateClient.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReportsGetBillDataByBillID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ClientsDeleteClient.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobsUpdateGDAndCash.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobsGetLastJobID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LOLODeletelolo.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ShippingLinesDeleteShippingLine.sql" />
+    <Build Include="dbo\Stored Procedures\usp_TerminalsDeleteTerminal.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillsCheckBillExist.sql" />
+    <Build Include="dbo\Stored Procedures\usp_SalesTaxInvoiceDeleteByBillID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillDetailsDeleteByBillID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidsCheckPidDetails.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillsDeleteByBillID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidsDeletePid.sql" />
+    <Build Include="dbo\Stored Procedures\usp_HeadersUpdateByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidsGetPidByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_HeadersInsertNewHeader.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidsGetPidsByPidNo.sql" />
+    <Build Include="dbo\Stored Procedures\usp_HeadersDeleteByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidsGetPidsByLC.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReportsGetPIDDataByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidsInsertNewPid.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidsUpdatePid.sql" />
+    <Build Include="dbo\Stored Procedures\usp_TerminalsGetAllTerminals.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ShippingLinesGetAllShippingLines.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillsGetJobDataByJobNo.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LOLOsGetAllLolos.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidBillsGetPidDataByPidNo.sql" />
+    <Build Include="dbo\Stored Procedures\usp_HeadsGetAllHeads.sql" />
+    <Build Include="dbo\Stored Procedures\usp_TerminalsAddNewTerminal.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidsGetPidByPidNo.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ShippingLinesAddNewShippingLine.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillsCheckPidBillExist.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LOLOsAddNewLolo.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidBillsInsertNewPidBill.sql" />
+    <Build Include="dbo\Stored Procedures\usp_TerminalsUpdateTerminal.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidBillsGetLastPidBillID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LOLOsUpdateLolo.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidBillsUpdatePidBill.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ShippingLinesUpdateShippingLine.sql" />
+    <Build Include="dbo\Stored Procedures\usp_TerminalsGetTerminalDetailByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillsInsertNewBill.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LOLOsGetLoloDetailByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ShippingLinesGetShippingLineDetailByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidBillDetailsDeleteByBillID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidBillDetailsUpdatePidBillDetail.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidBillDetailsInsertNewPidBillDetail.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidsUpdateGDAndCash.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidBillsGetPidBillByBillNo.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidBillDetailsGetPidBillDetailsByBillID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidBillsGetPidBillDataByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidBillsDeleteByBillID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ItemsGetAllItems.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ItemsGetItemByName.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReportsGePidtBillDataByBillID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ItemsGetItemByHSCode.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ItemsGetItemsForComboBox.sql" />
+    <Build Include="dbo\Tables\AccountLedger.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LedgerInsertNewEntry.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReportsSalesTaxRegister.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReportJobRegister.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReportBalanceSheet.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidsGetClientID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LedgerUpdateLedgerEntryTotal.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LedgerInsertOpeningBalance.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LedgerInsertBillNewEntry.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LedgerGetTransactionID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobsGetClientID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ClientGetLastClientID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillDetailsTestUpdateBillDetail.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LedgerDeleteEntry.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobsGetClientsJob.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BillDetailsDeleteItemByID.sql" />
+    <Build Include="dbo\Tables\PayorderHeaders.sql" />
+    <Build Include="dbo\Tables\JobPayorders.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PayorderHeadersGetAllHeaders.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PayorderHeaderGetHeaderByJobID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobPayorderUpdatePayorder.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobPayordersDeleteByJobID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_JobPayorderInsertNewPayorder.sql" />
+    <Build Include="dbo\Tables\PSQCAuthPerson.sql" />
+    <Build Include="dbo\Tables\PSQCACertificate.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PSQCAuthPersonGetAllAuthPersons.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StaticCodeAnalysis.SuppressMessages.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="CaFDB.refactorlog" />
+  </ItemGroup>
+</Project>
