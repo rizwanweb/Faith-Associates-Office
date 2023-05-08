@@ -195,6 +195,15 @@
     <Build Include="dbo\Tables\PSQCAuthPerson.sql" />
     <Build Include="dbo\Tables\PSQCACertificate.sql" />
     <Build Include="dbo\Stored Procedures\usp_PSQCAuthPersonGetAllAuthPersons.sql" />
+    <Build Include="dbo\Tables\PidPayorders.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReportsGetNewPidDataByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PSQCInsertNewCertificate.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PSQCGetJoDatabByID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidsGetLastPidID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidPayorderUpdatePayorder.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidPayordersDeleteByPidID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidPayorderInsertNewPayorder.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PayorderHeaderGetHeaderByPidID.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="StaticCodeAnalysis.SuppressMessages.xml" />

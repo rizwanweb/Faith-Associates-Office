@@ -1,0 +1,6 @@
+﻿CREATE PROCEDURE [dbo].[usp_PidsGetLastPidID]
+
+AS
+BEGIN
+	SELECT TOP 1 PidID from Pids ORDER BY PidID DESC
+END

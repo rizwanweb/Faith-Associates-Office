@@ -47,16 +47,11 @@ AS
 			  ,[RDType]
 			  ,[RDRate]
 			  ,[TotalDuty]
-			  ,[DeliveryCharges]
-			  ,[Wharfage]
-			  ,[ContainerDeposit]
-			  ,[LoloCharges]
-			  ,[PSQCA1]
-			  ,[PSQCA2]
+
 			  ,[Terminal]
 			  ,[ShippingLine]
 			  ,[Lolo]
-			  ,[Rent]
+
 			  ,[Clients].[ContactPerson]
 			  ,[Clients].[Address]
 		  FROM [dbo].[Pids]

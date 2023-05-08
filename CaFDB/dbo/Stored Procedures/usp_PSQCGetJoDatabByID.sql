@@ -1,17 +1,13 @@
-﻿CREATE PROCEDURE [dbo].[usp_JobsGetJobByID]
+﻿CREATE PROCEDURE [dbo].[usp_PSQCGetJoDatabByID]
 (
 	@JobID INT
 )
 AS
 	BEGIN
 		SELECT [JobID]
-			  ,[JobNo]
-			  ,[JobDate]
+			  ,[JobNo]			  
 			  ,[Client]
-			  ,[LC]
-			  ,[LCDate]
 			  ,[Item]
-			  ,[ItemDetail]
 			  ,[Containers]
 			  ,[Size]
 			  ,[Packages]
@@ -25,28 +21,7 @@ AS
 			  ,[InvoiceValueUSD]
 			  ,[ExchangeRate]
 			  ,[ValueInPKR]
-			  ,[Insurance]
-			  ,[LandingCharges]
 			  ,[ImportValuePKR]
-			  ,Jobs.[CustomDuty]
-			  ,Jobs.[CustomDutyType]
-			  ,Jobs.[CustomDutyRate]
-			  ,Jobs.[AddCustomDuty]
-			  ,Jobs.[AddCustomDutyType]
-			  ,[AddCustomDutyRate]
-			  ,Jobs.[SalesTax]
-			  ,[SalesTaxType]
-			  ,[SalesTaxRate]
-			  ,Jobs.[IncomeTax]
-			  ,[IncomeTaxType]
-			  ,[IncomeTaxRate]
-			  ,Jobs.[Cess]
-			  ,Jobs.[CessType]
-			  ,[CessRate]
-			  ,Jobs.[RD]
-			  ,Jobs.[RDType]
-			  ,[RDRate]
-			  ,[TotalDuty]
 
 			  ,[Terminal]
 			  ,[ShippingLine]
@@ -55,12 +30,16 @@ AS
 			  ,[Clients].[ClientName]
 			  ,[Clients].[ContactPerson]
 			  ,[Clients].[Address]
+			  ,[Clients].Phone
+			  ,Clients.Fax
+			  ,Clients.StandAddress
 
 			  ,[Items].[ItemName]
+			  ,[Items].[HSCode]
+			  ,[Terminals].TerminalName
 		  FROM [dbo].[Jobs]
 		  INNER JOIN Clients ON Clients.ClientID = Jobs.Client
 		  INNER JOIN Items ON Items.ItemID = Jobs.Item
+		  INNER JOIN Terminals ON Terminals.TerminalID = Jobs.Terminal
 		  WHERE JobID = @JobID
 	END
-
-

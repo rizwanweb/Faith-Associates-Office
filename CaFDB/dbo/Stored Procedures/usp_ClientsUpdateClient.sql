@@ -11,6 +11,11 @@
       ,@Address text
       ,@City int
       ,@ClientType nvarchar(50)
+	  ,@StandAddress nvarchar(500)
+	  ,@Fax	nvarchar(50)
+	  ,@CNIC nvarchar(50)
+	  ,@Designation	nvarchar(50)
+	  ,@AuthorizedPerson	nvarchar(150)
 
 )
 
@@ -28,6 +33,11 @@ AS
 			  ,[Address] = @Address
 			  ,[City] = @City
 			  ,[ClientType] = @ClientType
+			  ,[StandAddress] = @StandAddress
+			  ,[Fax] = @Fax
+			  ,[CNIC] = @CNIC
+			  ,[Designation] = @Designation
+			  ,[AuthorizedPerson] = @AuthorizedPerson
 		 WHERE [ClientID] = @ClientID
 	END
 
