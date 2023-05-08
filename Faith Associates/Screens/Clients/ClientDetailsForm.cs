@@ -171,6 +171,11 @@ namespace Faith_Associates.Screens.Clients
             c.GST = txtGST.Text;
             c.City = Convert.ToInt32(cmbCity.SelectedValue);
             c.ClientType = Convert.ToInt32(cmbClientType.SelectedValue);
+            c.Fax = txtFax.Text;
+            c.StandAddress = txtStandAddress.Text.ToUpper();
+            c.AuthorizedPerson = txtAuthorizedPerson.Text.ToUpper();
+            c.CNIC = txtCNIC.Text;
+            c.Designation = txtDesignation.Text.ToUpper();
 
             return c;
         }

@@ -96,7 +96,7 @@ namespace Faith_Associates.Screens
 
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
-            PidEntryForm pid = new PidEntryForm();
+            NewPidEntryForm pid = new NewPidEntryForm();
             pid.ShowDialog();
         }
 

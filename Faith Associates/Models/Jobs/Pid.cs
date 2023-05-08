@@ -51,12 +51,6 @@ namespace Faith_Associates.Models.Jobs
         public string RDType { get; set; }
         public double RDRate { get; set; }
         public int TotalDuty { get; set; }
-        public int DeliveryCharges { get; set; }
-        public int Wharfage { get; set; }
-        public int ContainerDeposit { get; set; }
-        public int LoloCharges { get; set; }
-        public int PSQCA1 { get; set; }
-        public int PSQCA2 { get; set; }
         public int Terminal { get; set; }
         public int ShippingLine { get; set; }
         public int Lolo { get; set; }
@@ -64,6 +58,5 @@ namespace Faith_Associates.Models.Jobs
         public DateTime GDDate { get; set; }
         public string Cash { get; set; }
         public DateTime CashDate { get; set; }
-        public int Rent { get; set; }
     }
 }

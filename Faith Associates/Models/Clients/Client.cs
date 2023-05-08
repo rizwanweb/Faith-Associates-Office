@@ -21,5 +21,8 @@ namespace Faith_Associates.Models.Clients
         public int ClientType { get; set; }
         public string StandAddress { get; set; }
         public string Fax { get; set; }
+        public string CNIC { get; set; }
+        public string Designation { get; set; }
+        public string AuthorizedPerson { get; set; }
     }
 }

@@ -31,7 +31,7 @@ namespace Faith_Associates.Reports.Jobs
             {
                 ReportDocument report = new ReportDocument();
                 string appPath = Application.StartupPath;
-                string reportPath = @"Reports\Jobs\PIDCalculationSheetReport.rpt";
+                string reportPath = @"Reports\Jobs\NewPIDCalculationSheetReport.rpt";
                 string reportFullPath = Path.Combine(appPath, reportPath);
 
                 report.Load(reportFullPath);
@@ -58,7 +58,7 @@ namespace Faith_Associates.Reports.Jobs
             para.Parameter = "@PidID";
             para.Value = this.JobID;
 
-            DataTable dt = db.GetDataList("usp_ReportsGetPIDDataByID", para);
+            DataTable dt = db.GetDataList("usp_ReportsGetNewPidDataByID", para);
             return dt;
         }
 

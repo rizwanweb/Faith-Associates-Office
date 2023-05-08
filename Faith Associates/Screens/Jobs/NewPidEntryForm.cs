@@ -12,14 +12,16 @@ using RSDBFramework.Windows;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace Faith_Associates.Screens.Jobs
 {
-    public partial class PidEntryForm : TemplateForm
+    public partial class NewPidEntryForm : TemplateForm
     {
         public int PidID { get; set; }
-        public PidEntryForm()
+        public int PayorderID { get; set; }
+        public NewPidEntryForm()
         {
             InitializeComponent();
         }
@@ -29,16 +31,30 @@ namespace Faith_Associates.Screens.Jobs
             this.Close();
         }
 
-        private void PidEntryForm_Load(object sender, EventArgs e)
+        private void NewPidEntryForm_Load(object sender, EventArgs e)
         {
             LoadClientIntoComboBox();
             LoadItemsIntoComboBox();
             LoadLolosIntoComboBox();
             LoadTerminalsIntoComboBox();
             LoadShippingLinesIntoComboBox();
-
             enableDeleteBtn();
+            if (!isUpdate)
+            {
+                LoadPayorderListtoDataGrid();
+            }
+        }
 
+        private void LoadPayorderListtoDataGrid()
+        {
+            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+            DataTable dt = db.GetDataList("usp_PayorderHeadersGetAllHeaders");
+            foreach (DataRow row in dt.Rows)
+            {
+                string particular = row[1].ToString();
+                string details = row[2].ToString();
+                dgvPayorders.Rows.Add("",particular,"",details);
+            }
         }
 
         private void enableDeleteBtn()
@@ -201,7 +217,7 @@ namespace Faith_Associates.Screens.Jobs
         {
             double valueInPKR = CalculateValueInPKR();
             double insurance = Convert.ToDouble(txtInsurance.Text);
-            double landingCharges = (valueInPKR + insurance)* 0.01;
+            double landingCharges = (valueInPKR +insurance) * 0.01;
             return Convert.ToInt32(Math.Round(landingCharges, MidpointRounding.AwayFromZero));
         }
 
@@ -290,9 +306,9 @@ namespace Faith_Associates.Screens.Jobs
                     }
 
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    RSMessageBox.ShowErrorMessage("There is Error. Check Fields");
+                    RSMessageBox.ShowErrorMessage("There is Error. Check Fields" + ex.Message);
                     txtLandingCharges.Clear();
                     txtValuePKR.Clear();
                     txtImportPKR.Clear();
@@ -357,7 +373,8 @@ namespace Faith_Associates.Screens.Jobs
                 double importValuePKR = CalculateImportValuePKR();
                 double cd = Convert.ToDouble(CalculateCustomDuty());
                 double acd = Convert.ToDouble(CalculateAddCD());
-                double amount = importValuePKR + cd + acd;
+                double cess = Convert.ToDouble(CalculateCess());
+                double amount = importValuePKR + cd + acd + cess;
                 double stRate = Convert.ToDouble(txtSTRate.Text);
                 int st = Convert.ToInt32(amount * (stRate / 100));
                 return st.ToString();
@@ -418,28 +435,131 @@ namespace Faith_Associates.Screens.Jobs
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (isValidated())
-            {
+            {                    
                 if (isUpdate)
                 {
-                    DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
-                    db.InsertOrUpdateRecord("usp_PidsUpdatePid", GetObjects());
-                    RSMessageBox.ShowSuccessMessage("Pid Updated...");
-                    ListData.ClearFormControls(this);
-                    btnPrint.Focus();
+                    try
+                    {
+                        using (TransactionScope ts = new TransactionScope())
+                        {
+                            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+                            db.InsertOrUpdateRecord("usp_PidsUpdatePid", GetObjects());
+
+                            // update job payorders
+                            UpdateJobPayorders();
+                            RSMessageBox.ShowSuccessMessage("Pid Updated...");
+                            ListData.ClearFormControls(this);
+                            dgvPayorders.Rows.Clear();
+                            LoadPayorderListtoDataGrid();
+                            btnPrint.Focus();
+                            isUpdate = false;
+                            ts.Complete();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        RSMessageBox.ShowErrorMessage("There is problem " + ex.Message.ToString());
+                    }
                 }
                 else
                 {
-                    if (!CheckIfJobExist())
+                    try
                     {
-                        DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
-                        db.InsertOrUpdateRecord("usp_PidsInsertNewPid", GetObjects());
-                        RSMessageBox.ShowSuccessMessage("Pid Added Successfully...");
-                        ListData.ClearFormControls(this);
-                        btnPrint.Focus();
-                    }
+                        //Check if job exist already or not
+                        if (!CheckIfJobExist())
+                        {
+                            using (TransactionScope ts = new TransactionScope())
+                            {
+                                this.isUpdate = false;
+                                this.PidID = 0;
+                                DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+                                db.InsertOrUpdateRecord("usp_PidsInsertNewPid", GetObjects());
 
+                                this.PidID = Convert.ToInt32(db.GetScalarValue("usp_PidsGetLastPidID"));
+
+                                // Insert Payorder List to Database
+                                SaveJobPayorders();
+                                RSMessageBox.ShowSuccessMessage("Pid Added Successfully...");
+                                ListData.ClearFormControls(this);
+                                dgvPayorders.Rows.Clear();
+                                LoadPayorderListtoDataGrid();
+                                ts.Complete();
+                            }
+
+                            btnPrint.Focus();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        RSMessageBox.ShowErrorMessage("There is problem " + ex.Message.ToString());
+                    }
+                }
+            }            
+        }
+
+        private void UpdateJobPayorders()
+        {
+            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+            try
+            {
+                int pid;
+                string particulars;
+                int amount;
+                string detail;
+
+                foreach (DataGridViewRow row in dgvPayorders.Rows)
+                {
+                    pid = Convert.ToInt32(row.Cells[0].Value);
+                    particulars = row.Cells[1].Value.ToString();
+                    if (row.Cells[2].Value.ToString() == String.Empty) amount = 0; else amount = Convert.ToInt32(row.Cells[2].Value.ToString());
+                    if (row.Cells[3].Value.ToString() == String.Empty) detail = String.Empty; else detail = row.Cells[3].Value.ToString();
+
+                    db.InsertOrUpdateRecord("usp_PidPayorderUpdatePayorder", GetPayorderObjects(pid, particulars, amount, detail));
                 }
             }
+            catch (Exception ex)
+            {
+                RSMessageBox.ShowErrorMessage(ex.Message);
+                throw;
+            }
+        }
+
+        private void SaveJobPayorders()
+        {
+            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+            try
+            {
+                int pid = 0;
+                string particulars;
+                int amount;
+                string detail;
+
+                foreach (DataGridViewRow row in dgvPayorders.Rows)
+                {
+                    particulars = row.Cells[1].Value.ToString();
+                    if (row.Cells[2].Value.ToString() == String.Empty) amount = 0; else amount = Convert.ToInt32(row.Cells[2].Value.ToString());
+                    if (row.Cells[3].Value.ToString() == String.Empty) detail = String.Empty; else detail = row.Cells[3].Value.ToString();
+
+                    db.InsertOrUpdateRecord("usp_PidPayorderInsertNewPayorder", GetPayorderObjects(pid, particulars, amount, detail));
+                }
+            }
+            catch (Exception ex)
+            {
+                RSMessageBox.ShowErrorMessage(ex.Message);
+                throw;
+            }
+        }
+
+        private object GetPayorderObjects(int pid, string particulars, int amount, string detail)
+        {
+            PidPayorder p = new PidPayorder();
+            
+            p.PayorderID = this.isUpdate ? pid : 0;
+            p.PidID = this.PidID;
+            p.Particular = particulars;
+            p.Amount = amount;
+            p.Detail = detail;
+            return p;
         }
 
         private object GetObjects()
@@ -454,8 +574,8 @@ namespace Faith_Associates.Screens.Jobs
             j.LCDate = dtLC.Value;
             j.Item = Convert.ToInt32(cmbItem.SelectedValue);
             j.ItemDetail = txtItemDetail.Text.Trim().ToUpper();
-            j.Containers = Convert.ToInt32(txtContainer.Text);
-            j.Size = Convert.ToInt32(txtSize.Text);
+            if (txtContainer.Text == String.Empty) j.Containers = 0; else j.Containers = Convert.ToInt32(txtContainer.Text);
+            if (txtSize.Text == String.Empty) j.Size = 0; else j.Size = Convert.ToInt32(txtSize.Text);
             j.Packages = txtPackages.Text.Trim().ToUpper();
             j.Vessel = txtVessel.Text.Trim().ToUpper();
             j.BL = txtBL.Text.Trim().ToUpper();
@@ -505,6 +625,7 @@ namespace Faith_Associates.Screens.Jobs
 
         private bool isValidated()
         {
+
             if (txtJobNo.Text == String.Empty)
             {
                 RSMessageBox.ShowErrorMessage("Enter Job No.");
@@ -537,31 +658,32 @@ namespace Faith_Associates.Screens.Jobs
                 return false;
             }
 
-            if (txtPSQCA1.Text == String.Empty) txtPSQCA1.Text = "0";
-            if (txtPSQCA2.Text == String.Empty) txtPSQCA2.Text = "0";
-            if (txtDO.Text == String.Empty) txtDO.Text = "0";
-            if (txtWhrfage.Text == String.Empty) txtWhrfage.Text = "0";
-            if (txtContainetDeposit.Text == String.Empty) txtContainetDeposit.Text = "0";
-            if (txtLoloCharges.Text == String.Empty) txtLoloCharges.Text = "0";
-
             return true;
         }
 
 
         private bool CheckIfJobExist()
         {
-            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
-            bool ifJobExist = Convert.ToBoolean(db.GetScalarValue("usp_PidsCheckPidDetails", GetParameters()));
+            try
+            {
+                DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+                bool ifJobExist = Convert.ToBoolean(db.GetScalarValue("usp_PidsCheckPidDetails", GetParameters()));
 
-            if (ifJobExist)
-            {
-                RSMessageBox.ShowErrorMessage("Pid Already Exist");
-                return true;
+                if (ifJobExist)
+                {
+                    RSMessageBox.ShowErrorMessage("Pid Already Exist");
+                    return true;
+                }
+                else
+                {                    
+                    return false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return false;
+                RSMessageBox.ShowErrorMessage(ex.Message);
             }
+            return false;
         }
 
         private DBParameter[] GetParameters()
@@ -586,25 +708,49 @@ namespace Faith_Associates.Screens.Jobs
             isUpdate = false;
             SearchPidsForm search = new SearchPidsForm();
             search.ShowDialog();
-            if (search.PidID > 0)
-            {
-                isUpdate = search.isUpdate;
-                PidID = search.PidID;
-            }
+            isUpdate = search.isUpdate;
+            PidID = search.PidID;
 
             if (isUpdate)
             {
                 LoadDataIntoJobEntryFormIfUpdate();
+                dgvPayorders.Rows.Clear();
+                //TODO :  Load Payorder to Data grid view
+                LoadPayorderToDGV();
                 enableDeleteBtn();
             }
+        }
+
+        private void LoadPayorderToDGV()
+        {
+            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+            DBParameter para = new DBParameter();
+            para.Parameter = "@PidID";
+            para.Value = this.PidID;
+            DataTable dt = db.GetDataList("usp_PayorderHeaderGetHeaderByPidID", para);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                int id = Convert.ToInt32(dr[0]);
+                string p = dr["Particular"].ToString();
+                string a = dr["Amount"].ToString();
+                string d = dr["Detail"].ToString();
+
+                if (a == "0") a = string.Empty;               
+
+                dgvPayorders.Rows.Add(id, p, a, d);
+            }
+
         }
 
         private void LoadDataIntoJobEntryFormIfUpdate()
         {
             DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
-            DBParameter para = new DBParameter();
-            para.Parameter = "@PidID";
-            para.Value = PidID;
+            DBParameter para = new DBParameter
+            {
+                Parameter = "@PidID",
+                Value = this.PidID
+            };
             DataTable dt = db.GetDataList("usp_PidsGetPidByID", para);
             DataRow row = dt.Rows[0];
 
@@ -615,8 +761,8 @@ namespace Faith_Associates.Screens.Jobs
             txtAddress.Text = row["Address"].ToString();
             cmbItem.SelectedValue = row["Item"];
             txtItemDetail.Text = row["ItemDetail"].ToString();
-            txtContainer.Text = row["Containers"].ToString();
-            txtSize.Text = row["Size"].ToString();
+            if (row["Containers"].ToString() == "0") txtContainer.Text = String.Empty; else txtContainer.Text = row["Containers"].ToString();
+            if (row["Size"].ToString() == "0") txtSize.Text = String.Empty; else txtSize.Text = row["Size"].ToString();
             txtPackages.Text = row["Packages"].ToString();
             txtLC.Text = row["LC"].ToString();
             dtLC.Value = Convert.ToDateTime(row["LCDate"]);
@@ -630,12 +776,6 @@ namespace Faith_Associates.Screens.Jobs
             cmbTerminal.SelectedValue = row["Terminal"];
             cmbShippingLine.SelectedValue = row["ShippingLine"];
             cmbLolo.SelectedValue = row["Lolo"];
-            txtDO.Text = row["DeliveryCharges"].ToString();
-            txtWhrfage.Text = row["Wharfage"].ToString();
-            txtContainetDeposit.Text = row["ContainerDeposit"].ToString();
-            txtLoloCharges.Text = row["LoloCharges"].ToString();
-            txtPSQCA1.Text = row["PSQCA1"].ToString();
-            txtPSQCA2.Text = row["PSQCA2"].ToString();
 
             txtQuantity.Text = row["Quantity"].ToString();
             txtEXRate.Text = row["ExchangeRate"].ToString();
@@ -663,7 +803,6 @@ namespace Faith_Associates.Screens.Jobs
             txtRDRate.Text = row["RDRate"].ToString();
             txtRD.Text = row["RD"].ToString();
             txtTotal.Text = row["TotalDuty"].ToString();
-
         }
 
 
@@ -706,7 +845,7 @@ namespace Faith_Associates.Screens.Jobs
         }
         private void txtQuantity_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -819,10 +958,26 @@ namespace Faith_Associates.Screens.Jobs
             
         }
 
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (this.PidID <= 0)
+            {
+                RSMessageBox.ShowErrorMessage("No Pid Selected");
+            }
+            else
+            {
+                CalculationSheet cs = new CalculationSheet();
+                cs.isPID = true;
+                cs.JobID = this.PidID;
+                cs.ShowDialog();
+            }
+
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Are you sure you want to delete this PID ?",
-                                                "Warning", MessageBoxButtons.OKCancel);
+            DialogResult dr = MessageBox.Show("Are you sure you want to delete this job ?",
+                "Warning", MessageBoxButtons.OKCancel);
             if (dr == DialogResult.OK)
             {
                 try
@@ -831,61 +986,116 @@ namespace Faith_Associates.Screens.Jobs
                     DBParameter para = new DBParameter();
                     para.Parameter = "@PidID";
                     para.Value = this.PidID;
+                    db.DeleteRecord("usp_PidPayordersDeleteByPidID", para);
                     db.DeleteRecord("usp_PidsDeletePid", para);
-                    RSMessageBox.ShowSuccessMessage("PID Deleted Successfully..");
+
+                    //Delete from Job Payorders
+
+                    RSMessageBox.ShowSuccessMessage("Pid Deleted Successfully..");
                     ListData.ClearFormControls(this);
+                    LoadPayorderListtoDataGrid();
                     this.PidID = 0;
                     txtJobNo.Focus();
                 }
                 catch (Exception ex)
                 {
-                    RSMessageBox.ShowErrorMessage("Problem Deleting Pid.. " + ex.Message.ToString());
-                }
+                    RSMessageBox.ShowErrorMessage("Problem Deleting Pid.. " + ex.Message.ToString());                    
+                }               
             }
         }
 
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            CalculationSheet cs = new CalculationSheet();
-            cs.isPID = true;
-            cs.JobID = this.PidID;
-            cs.Show();
-        }
-
         // Duty Customize functions
-        private void txtCDRate_Leave_1(object sender, EventArgs e)
+        private void txtCDRate_Leave(object sender, EventArgs e)
         {
             txtCD.Clear();
             txtCD.Text = CalculateCustomDuty();
         }
 
-        private void txtACDRate_Leave_1(object sender, EventArgs e)
+        private void txtACDRate_Leave(object sender, EventArgs e)
         {
             txtACD.Clear();
             txtACD.Text = CalculateAddCD();
         }
 
-        private void txtSTRate_Leave_1(object sender, EventArgs e)
+        private void txtSTRate_Leave(object sender, EventArgs e)
         {
             txtST.Clear();
             txtST.Text = CalculateSalesTax();
         }
 
-        private void txtITRate_Leave_1(object sender, EventArgs e)
+        private void txtITRate_Leave(object sender, EventArgs e)
         {
             txtIT.Clear();
             txtIT.Text = CalculateIncomeTax();
         }
 
-        private void txtCessRate_Leave_1(object sender, EventArgs e)
+        private void txtCessRate_Leave(object sender, EventArgs e)
         {
             txtCess.Clear();
             txtCess.Text = CalculateCess();
         }
 
-        private void txtRDRate_Leave_1(object sender, EventArgs e)
-        {
 
+        private void cmbTerminal_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+            DBParameter para = new DBParameter();
+            para.Parameter = "@TerminalID";
+            para.Value = Convert.ToInt32(cmbTerminal.SelectedValue);
+            DataTable dt = db.GetDataList("usp_TerminalsGetTerminalDetailByID", para);
+
+            string searchValue = "WHARFAGE";
+            foreach (DataGridViewRow row in dgvPayorders.Rows)
+            {
+                if (row.Cells[1].Value.ToString().Contains(searchValue))
+                {
+                    DataRow r = dt.Rows[0];
+                    row.Cells[1].Value = r["ShortName"] + " WHARFAGE";
+                    row.Cells[3].Value = r["TerminalName"];
+                }
+            }
         }
+
+        private void cmbShippingLine_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+            DBParameter para = new DBParameter();
+            para.Parameter = "@ShippingLineID";
+            para.Value = Convert.ToInt32(cmbShippingLine.SelectedValue);
+            DataTable dt = db.GetDataList("usp_ShippingLinesGetShippingLineDetailByID", para);
+
+            
+            foreach (DataGridViewRow row in dgvPayorders.Rows)
+            {
+                if (row.Cells[1].Value.ToString().Equals("DELIVERY ORDER".Trim()) || 
+                    row.Cells[1].Value.ToString().Equals("CONTAINER DEPOSIT".Trim()) || 
+                    row.Cells[1].Value.ToString().Equals("CONTAINER RENT".Trim()))
+                {
+                    DataRow r = dt.Rows[0];
+                    row.Cells[3].Value = r["ShippingLineName"];
+                }
+            }
+        }
+
+        private void cmbLolo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+            DBParameter para = new DBParameter();
+            para.Parameter = "@LoloID";
+            para.Value = Convert.ToInt32(cmbLolo.SelectedValue);
+            DataTable dt = db.GetDataList("usp_LOLOsGetLoloDetailByID", para);
+
+
+            foreach (DataGridViewRow row in dgvPayorders.Rows)
+            {
+                if (row.Cells[1].Value.ToString().Equals("LIFT ON LIFT OFF".Trim()))
+                {
+                    DataRow r = dt.Rows[0];
+                    row.Cells[3].Value = r["LoloName"];
+                }
+            }
+        }
+
+
     }
 }

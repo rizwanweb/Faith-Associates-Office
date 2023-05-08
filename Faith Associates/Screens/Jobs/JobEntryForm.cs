@@ -12,6 +12,7 @@ using RSDBFramework.Windows;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace Faith_Associates.Screens.Jobs
@@ -439,17 +440,21 @@ namespace Faith_Associates.Screens.Jobs
                 {
                     try
                     {
-                        DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
-                        db.InsertOrUpdateRecord("usp_JobsUpdateJob", GetObjects());
+                        using (TransactionScope ts = new TransactionScope())
+                        {
+                            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+                            db.InsertOrUpdateRecord("usp_JobsUpdateJob", GetObjects());
 
-                        // TODO : need to update job payorders
-                        UpdateJobPayorders();
-                        RSMessageBox.ShowSuccessMessage("Job Updated...");
-                        ListData.ClearFormControls(this);
-                        dgvPayorders.Rows.Clear();
-                        LoadPayorderListtoDataGrid();
-                        btnPrint.Focus();
-                        isUpdate = false;
+                            // update job payorders
+                            UpdateJobPayorders();
+                            RSMessageBox.ShowSuccessMessage("Job Updated...");
+                            ListData.ClearFormControls(this);
+                            dgvPayorders.Rows.Clear();
+                            LoadPayorderListtoDataGrid();
+                            btnPrint.Focus();
+                            isUpdate = false;
+                            ts.Complete();
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -463,19 +468,24 @@ namespace Faith_Associates.Screens.Jobs
                         //Check if job exist already or not
                         if (!CheckIfJobExist())
                         {
-                            this.isUpdate = false;
-                            this.JobID = 0;
-                            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
-                            db.InsertOrUpdateRecord("usp_JobsInsertNewJob", GetObjects());
-                            
-                            this.JobID = Convert.ToInt32(db.GetScalarValue("usp_JobsGetLastJobID"));
+                            using (TransactionScope ts = new TransactionScope())
+                            {
+                                this.isUpdate = false;
+                                this.JobID = 0;
+                                DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+                                db.InsertOrUpdateRecord("usp_JobsInsertNewJob", GetObjects());
 
-                            // Insert Payorder List to Database
-                            SaveJobPayorders();
-                            RSMessageBox.ShowSuccessMessage("Job Added Successfully...");
-                            ListData.ClearFormControls(this);
-                            dgvPayorders.Rows.Clear();
-                            LoadPayorderListtoDataGrid();
+                                this.JobID = Convert.ToInt32(db.GetScalarValue("usp_JobsGetLastJobID"));
+
+                                // Insert Payorder List to Database
+                                SaveJobPayorders();
+                                RSMessageBox.ShowSuccessMessage("Job Added Successfully...");
+                                ListData.ClearFormControls(this);
+                                dgvPayorders.Rows.Clear();
+                                LoadPayorderListtoDataGrid();
+                                ts.Complete();
+                            }
+
                             btnPrint.Focus();
                         }
                     }
