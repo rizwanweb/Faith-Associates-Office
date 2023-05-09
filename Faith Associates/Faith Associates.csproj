@@ -450,6 +450,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reports\Bills\STReport.resx">
       <DependentUpon>STReport.cs</DependentUpon>
@@ -650,6 +651,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FaithIcon.ico" />
+    <None Include="Resources\Login-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
