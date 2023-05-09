@@ -511,7 +511,7 @@ namespace Faith_Associates.Screens.Jobs
                 {
                     pid = Convert.ToInt32(row.Cells[0].Value);
                     particulars = row.Cells[1].Value.ToString();
-                    if (row.Cells[2].Value.ToString() == String.Empty) amount = 0; else amount = Convert.ToInt32(row.Cells[2].Value.ToString());
+                    if (row.Cells[2].Value.ToString() == String.Empty || row.Cells[2].Value == DBNull.Value) amount = 0; else amount = Convert.ToInt32(row.Cells[2].Value.ToString());
                     if (row.Cells[3].Value.ToString() == String.Empty) detail = String.Empty; else detail = row.Cells[3].Value.ToString();
 
                     db.InsertOrUpdateRecord("usp_JobPayorderUpdatePayorder", GetPayorderObjects(pid, particulars, amount, detail));
@@ -519,8 +519,7 @@ namespace Faith_Associates.Screens.Jobs
             }
             catch (Exception ex)
             {
-                RSMessageBox.ShowErrorMessage(ex.Message);
-                throw;
+                RSMessageBox.ShowErrorMessage(ex.Message);                
             }
         }
 

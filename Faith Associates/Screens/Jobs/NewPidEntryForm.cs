@@ -53,7 +53,7 @@ namespace Faith_Associates.Screens.Jobs
             {
                 string particular = row[1].ToString();
                 string details = row[2].ToString();
-                dgvPayorders.Rows.Add("",particular,"",details);
+                dgvPayorders.Rows.Add("",particular, string.Empty, details);
             }
         }
 
@@ -459,6 +459,7 @@ namespace Faith_Associates.Screens.Jobs
                     catch (Exception ex)
                     {
                         RSMessageBox.ShowErrorMessage("There is problem " + ex.Message.ToString());
+                        throw;
                     }
                 }
                 else
@@ -492,6 +493,7 @@ namespace Faith_Associates.Screens.Jobs
                     catch (Exception ex)
                     {
                         RSMessageBox.ShowErrorMessage("There is problem " + ex.Message.ToString());
+                        throw;
                     }
                 }
             }            
@@ -511,10 +513,24 @@ namespace Faith_Associates.Screens.Jobs
                 {
                     pid = Convert.ToInt32(row.Cells[0].Value);
                     particulars = row.Cells[1].Value.ToString();
-                    if (row.Cells[2].Value.ToString() == String.Empty) amount = 0; else amount = Convert.ToInt32(row.Cells[2].Value.ToString());
-                    if (row.Cells[3].Value.ToString() == String.Empty) detail = String.Empty; else detail = row.Cells[3].Value.ToString();
+                    //amount = Convert.ToInt32(row.Cells[2].Value.ToString()); //row.Cells[2].Value.ToString() == null ? 0 : Convert.ToInt32(row.Cells[2].Value.ToString());
+                    //detail = row.Cells[3].Value.ToString();
+
+                        
+                    if (row.Cells[2].Value.ToString() == string.Empty || row.Cells[2].Value.ToString() == null) amount = 0;
+                    else amount = Convert.ToInt32(row.Cells[2].Value.ToString());
+
+                    if (row.Cells[3].Value.ToString() == String.Empty)
+                        detail = String.Empty; 
+                    else 
+                        detail = row.Cells[3].Value.ToString();
 
                     db.InsertOrUpdateRecord("usp_PidPayorderUpdatePayorder", GetPayorderObjects(pid, particulars, amount, detail));
+
+
+
+
+
                 }
             }
             catch (Exception ex)

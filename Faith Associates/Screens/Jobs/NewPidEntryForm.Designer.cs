@@ -124,16 +124,16 @@
             this.cmbTerminal = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.dgvPayorders = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Particulars = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Payorder = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Particulars = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Payorder = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1087,33 +1087,6 @@
             this.dgvPayorders.Size = new System.Drawing.Size(728, 242);
             this.dgvPayorders.TabIndex = 56;
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // Particulars
-            // 
-            this.Particulars.HeaderText = "Particulars";
-            this.Particulars.Name = "Particulars";
-            this.Particulars.Width = 200;
-            // 
-            // Amount
-            // 
-            this.Amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Amount.HeaderText = "Amount";
-            this.Amount.Name = "Amount";
-            this.Amount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Payorder
-            // 
-            this.Payorder.HeaderText = "Payorder Detail";
-            this.Payorder.Name = "Payorder";
-            this.Payorder.Width = 400;
-            // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1188,6 +1161,33 @@
             this.groupBox5.Size = new System.Drawing.Size(125, 267);
             this.groupBox5.TabIndex = 58;
             this.groupBox5.TabStop = false;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // Particulars
+            // 
+            this.Particulars.HeaderText = "Particulars";
+            this.Particulars.Name = "Particulars";
+            this.Particulars.Width = 200;
+            // 
+            // Amount
+            // 
+            this.Amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
+            this.Amount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Payorder
+            // 
+            this.Payorder.HeaderText = "Payorder Detail";
+            this.Payorder.Name = "Payorder";
+            this.Payorder.Width = 400;
             // 
             // NewPidEntryForm
             // 

@@ -44,6 +44,8 @@
             this.jOBENTRYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jobEntryToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.searchJobToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.pSQCAJobToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bILLINGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createJobBillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createJobSuppplementryBillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,8 +92,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.pSQCAJobToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.jobSuppliementryBillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pidSupplimentryBillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -216,14 +219,26 @@
             // jobEntryToolStripMenuItem1
             // 
             this.jobEntryToolStripMenuItem1.Name = "jobEntryToolStripMenuItem1";
-            this.jobEntryToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.jobEntryToolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
             this.jobEntryToolStripMenuItem1.Text = "Job Entry";
             // 
             // searchJobToolStripMenuItem
             // 
             this.searchJobToolStripMenuItem.Name = "searchJobToolStripMenuItem";
-            this.searchJobToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchJobToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.searchJobToolStripMenuItem.Text = "Search Job";
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(131, 6);
+            // 
+            // pSQCAJobToolStripMenuItem
+            // 
+            this.pSQCAJobToolStripMenuItem.Name = "pSQCAJobToolStripMenuItem";
+            this.pSQCAJobToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.pSQCAJobToolStripMenuItem.Text = "PSQCA Job";
+            this.pSQCAJobToolStripMenuItem.Click += new System.EventHandler(this.pSQCAJobToolStripMenuItem_Click);
             // 
             // bILLINGToolStripMenuItem
             // 
@@ -234,6 +249,9 @@
             this.createPIDBillToolStripMenuItem,
             this.createPIDSuppBillToolStripMenuItem,
             this.toolStripSeparator8,
+            this.jobSuppliementryBillToolStripMenuItem,
+            this.pidSupplimentryBillToolStripMenuItem,
+            this.toolStripSeparator11,
             this.receivePaymentToolStripMenuItem});
             this.bILLINGToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.bILLINGToolStripMenuItem.Name = "bILLINGToolStripMenuItem";
@@ -243,41 +261,41 @@
             // createJobBillToolStripMenuItem
             // 
             this.createJobBillToolStripMenuItem.Name = "createJobBillToolStripMenuItem";
-            this.createJobBillToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.createJobBillToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.createJobBillToolStripMenuItem.Text = "Create Job Bill";
             // 
             // createJobSuppplementryBillToolStripMenuItem
             // 
             this.createJobSuppplementryBillToolStripMenuItem.Name = "createJobSuppplementryBillToolStripMenuItem";
-            this.createJobSuppplementryBillToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.createJobSuppplementryBillToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.createJobSuppplementryBillToolStripMenuItem.Text = "Create Job Supp Bill";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(182, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(188, 6);
             // 
             // createPIDBillToolStripMenuItem
             // 
             this.createPIDBillToolStripMenuItem.Name = "createPIDBillToolStripMenuItem";
-            this.createPIDBillToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.createPIDBillToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.createPIDBillToolStripMenuItem.Text = "Create PID Bill";
             // 
             // createPIDSuppBillToolStripMenuItem
             // 
             this.createPIDSuppBillToolStripMenuItem.Name = "createPIDSuppBillToolStripMenuItem";
-            this.createPIDSuppBillToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.createPIDSuppBillToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.createPIDSuppBillToolStripMenuItem.Text = "Create PID Supp Bill";
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(182, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(188, 6);
             // 
             // receivePaymentToolStripMenuItem
             // 
             this.receivePaymentToolStripMenuItem.Name = "receivePaymentToolStripMenuItem";
-            this.receivePaymentToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.receivePaymentToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.receivePaymentToolStripMenuItem.Text = "Receive Payment";
             // 
             // rEPORTSToolStripMenuItem
@@ -674,17 +692,22 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // toolStripSeparator10
+            // toolStripSeparator11
             // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(188, 6);
             // 
-            // pSQCAJobToolStripMenuItem
+            // jobSuppliementryBillToolStripMenuItem
             // 
-            this.pSQCAJobToolStripMenuItem.Name = "pSQCAJobToolStripMenuItem";
-            this.pSQCAJobToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pSQCAJobToolStripMenuItem.Text = "PSQCA Job";
-            this.pSQCAJobToolStripMenuItem.Click += new System.EventHandler(this.pSQCAJobToolStripMenuItem_Click);
+            this.jobSuppliementryBillToolStripMenuItem.Name = "jobSuppliementryBillToolStripMenuItem";
+            this.jobSuppliementryBillToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.jobSuppliementryBillToolStripMenuItem.Text = "Job Supplimentry Bill";
+            // 
+            // pidSupplimentryBillToolStripMenuItem
+            // 
+            this.pidSupplimentryBillToolStripMenuItem.Name = "pidSupplimentryBillToolStripMenuItem";
+            this.pidSupplimentryBillToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.pidSupplimentryBillToolStripMenuItem.Text = "Pid Supplimentry Bill";
             // 
             // DashboardForm
             // 
@@ -787,5 +810,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton10;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
         private System.Windows.Forms.ToolStripMenuItem pSQCAJobToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jobSuppliementryBillToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pidSupplimentryBillToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
     }
 }
