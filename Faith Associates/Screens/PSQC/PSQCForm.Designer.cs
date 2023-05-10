@@ -482,7 +482,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(672, 22);
+            this.label22.Location = new System.Drawing.Point(655, 22);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(46, 21);
             this.label22.TabIndex = 41;
@@ -492,14 +492,14 @@
             // 
             this.dtInvoice.CustomFormat = "dd-MMM-yyyy";
             this.dtInvoice.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtInvoice.Location = new System.Drawing.Point(674, 47);
+            this.dtInvoice.Location = new System.Drawing.Point(657, 47);
             this.dtInvoice.Name = "dtInvoice";
-            this.dtInvoice.Size = new System.Drawing.Size(129, 26);
+            this.dtInvoice.Size = new System.Drawing.Size(146, 26);
             this.dtInvoice.TabIndex = 40;
             // 
             // txtInvoice
             // 
-            this.txtInvoice.Location = new System.Drawing.Point(514, 47);
+            this.txtInvoice.Location = new System.Drawing.Point(497, 47);
             this.txtInvoice.Name = "txtInvoice";
             this.txtInvoice.Size = new System.Drawing.Size(154, 26);
             this.txtInvoice.TabIndex = 39;
@@ -507,7 +507,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(514, 24);
+            this.label21.Location = new System.Drawing.Point(497, 24);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(91, 21);
             this.label21.TabIndex = 38;
@@ -517,7 +517,7 @@
             // 
             this.txtBrand.Location = new System.Drawing.Point(347, 47);
             this.txtBrand.Name = "txtBrand";
-            this.txtBrand.Size = new System.Drawing.Size(161, 26);
+            this.txtBrand.Size = new System.Drawing.Size(143, 26);
             this.txtBrand.TabIndex = 37;
             // 
             // label20

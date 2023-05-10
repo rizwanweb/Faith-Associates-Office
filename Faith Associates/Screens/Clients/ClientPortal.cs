@@ -1,4 +1,5 @@
 ﻿using Faith_Associates.Models.Clients;
+using Faith_Associates.Screens.Jobs;
 using Faith_Associates.Utilities;
 using Faith_Associates.Utilities.Lists;
 using RSDBFramework;
@@ -18,6 +19,8 @@ namespace Faith_Associates.Screens.Clients
     public partial class ClientPortal : TemplateForm
     {
         int ClientID { get; set; }
+        public int JobID { get; set; }
+        public int PidID { get; set; }
 
         public ClientPortal()
         {
@@ -56,8 +59,7 @@ namespace Faith_Associates.Screens.Clients
                 this.ClientID = id;
                 LoadClientDatatoLabels(id);
                 LoadClientJobstoDGV(id);
-
-
+                LoadClientPidstoDGV(id);
             }
             catch (Exception)
             {
@@ -73,6 +75,20 @@ namespace Faith_Associates.Screens.Clients
             ClientID.Parameter = "@ClientID";
             ClientID.Value = id;
             ListData.LoadDataIntoDataGridView(dgvJobs, "usp_JobsGetClientsJob", ClientID);
+            dgvJobs.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvJobs.Columns[1].Width = 90;
+            dgvJobs.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgvJobs.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvJobs.Columns[2].Width = 120;
+        }
+        private void LoadClientPidstoDGV(int id)
+        {
+            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+            DBParameter ClientID = new DBParameter();
+            ClientID.Parameter = "@ClientID";
+            ClientID.Value = id;
+            ListData.LoadDataIntoDataGridView(dgvPid, "usp_PidsGetClientsPids", ClientID);
             dgvJobs.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvJobs.Columns[1].Width = 90;
             dgvJobs.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -132,10 +148,52 @@ namespace Faith_Associates.Screens.Clients
             client.ClientID = this.ClientID;
             client.isUpdate = true;
             client.ShowDialog();
+            treeView1.Nodes.Clear();
             LoadTreeView();
         }
 
-        //TODO : Get total Consignments
-        //TODO : Get Total Containers
+        private void dgvJobs_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ShowJobDetails(int jobID)
+        {
+            JobEntryForm job = new JobEntryForm();
+            job.JobID = jobID;
+            job.isUpdate = true;
+            job.ShowDialog();
+        }
+
+        private void dgvPid_DoubleClick(object sender, EventArgs e)
+        {
+            int rowIndex = dgvPid.Rows.GetFirstRow(DataGridViewElementStates.Selected);
+            this.PidID = Convert.ToInt32(dgvPid.Rows[rowIndex].Cells["PidID"].Value);
+            ShowPidDetails(this.PidID);
+        }
+
+        private void ShowPidDetails(int pidID)
+        {
+            NewPidEntryForm pid = new NewPidEntryForm();
+            pid.PidID = pidID;
+            pid.isUpdate = true;
+            pid.ShowDialog();
+        }
+
+        private void dgvJobs_DoubleClick(object sender, EventArgs e)
+        {
+            int rowIndex = dgvJobs.Rows.GetFirstRow(DataGridViewElementStates.Selected);
+            this.JobID = Convert.ToInt32(dgvJobs.Rows[rowIndex].Cells["JobID"].Value);
+
+            ShowJobDetails(this.JobID);
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            ClientDetailsForm client = new ClientDetailsForm();
+            client.ShowDialog();
+            treeView1.Nodes.Clear();
+            LoadTreeView();
+        }
     }
 }

@@ -43,6 +43,12 @@ namespace Faith_Associates.Screens.Jobs
             {
                 LoadPayorderListtoDataGrid();
             }
+            else
+            {
+                LoadDataIntoJobEntryFormIfUpdate();
+                dgvPayorders.Rows.Clear();
+                LoadPayorderToDGV();
+            }
         }
 
         private void LoadPayorderListtoDataGrid()

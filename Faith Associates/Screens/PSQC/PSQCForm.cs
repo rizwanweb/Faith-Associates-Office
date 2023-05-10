@@ -95,6 +95,7 @@ namespace Faith_Associates.Screens.PSQC
             client.isUpdate = true;
             client.ClientID = this.ClientID;
             client.ShowDialog();
+            LoadJobDataIntoForm();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
