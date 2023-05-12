@@ -12,8 +12,6 @@ namespace Faith_Associates.Models.Bills
         public int BillNo { get; set; }
         public DateTime BillDate { get; set; }
         public int PidID { get; set; }
-        public int SubTotal { get; set; }
-        public int ServiceCharges { get; set; }
         public int Total { get; set; }
     }
 }

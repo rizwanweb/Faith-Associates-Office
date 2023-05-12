@@ -230,10 +230,16 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Reports\PidBills\PidBillReport1.cs">
-      <DependentUpon>PidBillReport.rpt</DependentUpon>
+      <DependentUpon>PidBillReport1.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PidBills\PidBillReport11.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PidBillReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\PSQCA\AuthorityLetter.cs">
@@ -265,6 +271,12 @@
     </Compile>
     <Compile Include="Screens\BillHeadersForm.Designer.cs">
       <DependentUpon>BillHeadersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Bill\NewPidBillScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Bill\NewPidBillScreen.Designer.cs">
+      <DependentUpon>NewPidBillScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Bill\PaymentForm.cs">
       <SubType>Form</SubType>
@@ -518,10 +530,10 @@
       <DependentUpon>PidBillReport.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\PidBills\PidBillReport.rpt">
+    <EmbeddedResource Include="Reports\PidBills\PidBillReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LastGenOutput>PidBillReport2.cs</LastGenOutput>
+      <LastGenOutput>PidBillReport11.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PSQCA\AuthorityLetter.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -541,6 +553,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\BillHeadersForm.resx">
       <DependentUpon>BillHeadersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Bill\NewPidBillScreen.resx">
+      <DependentUpon>NewPidBillScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Bill\PaymentForm.resx">
       <DependentUpon>PaymentForm.cs</DependentUpon>

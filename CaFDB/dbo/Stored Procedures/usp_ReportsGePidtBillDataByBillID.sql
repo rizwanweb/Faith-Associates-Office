@@ -32,10 +32,7 @@ BEGIN
 
 		   ,b.BillNo
 		   ,CONVERT(varchar, b.BillDate, 103) AS 'BillDate'
-		   ,b.SubTotal
-		   ,b.ServiceCharges
-		   ,b.Total
-		   ,(b.ServiceCharges + b.SubTotal) AS 'Total' 
+		   ,b.Total 
 		   		   
 		   ,c.ClientName
 		   ,Concat(c.Address, ',',  Cities.CityName) AS 'Address'

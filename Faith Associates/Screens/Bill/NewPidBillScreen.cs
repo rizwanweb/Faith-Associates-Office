@@ -10,12 +10,12 @@ using RSDBFramework.Windows;
 using System;
 using System.Collections.Generic;
 using System.Data;
-
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace Faith_Associates.Screens.Bill
 {
-    public partial class PidBillScreen : TemplateForm
+    public partial class NewPidBillScreen : TemplateForm
     {
         int BillID { get; set; }
         int PidID { get; set; }
@@ -25,14 +25,17 @@ namespace Faith_Associates.Screens.Bill
         public int SalesTaxInvoiceID { get; set; }
         public int TransactionID { get; set; }
 
-        public PidBillScreen()
+        // Form objects
+        public int RowIndex { get; set; }
+
+        public NewPidBillScreen()
         {
             InitializeComponent();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SearchBillPidForm search = new SearchBillPidForm();
+            SearchPidBillForm search = new SearchPidBillForm();
             search.ShowDialog();
             PidID = search.PidID;
             this.isUpdate = search.isUpdate;
@@ -41,19 +44,19 @@ namespace Faith_Associates.Screens.Bill
             {
                 EnableButtons();
                 btnAdd.Enabled = false;
-                LoadJobDataToPidBillScreen(this.PidID);             
+                LoadJobDataToBillScreen(this.PidID);             
 
             }
         }
 
-        private void LoadJobDataToPidBillScreen(int PidID)
+        private void LoadJobDataToBillScreen(int pidID)
         {
             try
             {
                 DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
                 DBParameter para = new DBParameter();
                 para.Parameter = "@PidID";
-                para.Value = PidID;
+                para.Value = pidID;
                 DataTable dt = db.GetDataList("usp_PidBillsGetPidDataByPidNo", para);
                 if (dt != null)
                 {
@@ -87,10 +90,12 @@ namespace Faith_Associates.Screens.Bill
                     RSMessageBox.ShowErrorMessage("No Data");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                RSMessageBox.ShowErrorMessage(ex.Message);
+                
             }
+
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -98,7 +103,7 @@ namespace Faith_Associates.Screens.Bill
             this.Close();
         }
 
-        private void PidBillScreen_Load(object sender, EventArgs e)
+        private void BillScreen_Load(object sender, EventArgs e)
         {
             if (!isUpdate)
             {
@@ -143,34 +148,44 @@ namespace Faith_Associates.Screens.Bill
                     UpdateGDAndCash();
                     UpdateBill();
                     UpdateBillDetails();
+
+
                     // Get Transaction ID from ledger
                     this.TransactionID = GetTransactionID();
 
                     // Update Ledger Enter
                     UpdateLedgerEntry();
+
                     isUpdate = false;
                     RSMessageBox.ShowSuccessMessage("Bill Updated");
                     ListData.ClearFormControls(this);
+                    dgvBill.Rows.Clear();
                     dgvBill.Refresh();
                     LoadBillingHeadsToDataGrid();
                     btnPrint.Focus();
                 }
                 else
-                {
-                    // UPdate GD and Cash Number in Job Table
-                    UpdateGDAndCash();
-                    // Save Bill
-                    SaveBill();
-                    // Get Last Bill ID FROM DATABASE
-                    this.BillID = GetLatestBillID();
-                    // Save Bill Particulars to Database
-                    SaveBillDetails();
+                {                    
+                    using (TransactionScope ts = new TransactionScope())
+                    {
+                        // UPdate GD and Cash Number in Job Table
+                        UpdateGDAndCash();
+                        // Save Bill
+                        SaveBill();
+                        // Get Last Bill ID FROM DATABASE
+                        this.BillID = GetLatestBillID();
+                        // Save Bill Particulars to Database
+                        SaveBillDetails();
+                        // Save SalesTax Invoice to Database
 
-                    // Enter Transaction into Ledger Table
-                    SaveLedgerEntry();
+                        // Enter Transaction into Ledger Table
+                        SaveLedgerEntry();
 
-                    isUpdate = false;                 
+                        ts.Complete();
+                    }
+                    isUpdate = false;
                     ListData.ClearFormControls(this);
+                    dgvBill.Rows.Clear();
                     dgvBill.Refresh();
                     LoadBillingHeadsToDataGrid();
                     RSMessageBox.ShowSuccessMessage("Bill Added Successfully");
@@ -178,31 +193,6 @@ namespace Faith_Associates.Screens.Bill
                 }
             }
         }
-
-        private void SaveLedgerEntry()
-        {
-            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
-            DBParameter paraPIDID = new DBParameter();
-            paraPIDID.Parameter = "@PIDID";
-            paraPIDID.Value = this.PidID;
-            int cid = Convert.ToInt32(db.GetScalarValue("usp_PidsGetClientID", paraPIDID));
-            db.InsertOrUpdateRecord("usp_LedgerInsertBillNewEntry", GetLedgerObjects(cid));
-        }
-
-        private object GetLedgerObjects(int cid)
-        {
-            AccountLedger al = new AccountLedger();
-            al.TransactionID = this.isUpdate ? this.TransactionID : 0;
-            al.TransactionDate = dtBill.Value;
-            al.ClientID = cid;
-            al.Particular = $"Bill# : {txtBill.Text}, B/L# : {txtBL.Text}, IGM# : {txtIGM.Text}/{dtIGM.Value.Year.ToString()}";
-            al.Debit = 0;
-            al.Credit = Convert.ToInt32(txtTotal.Text);
-            al.Reff = this.BillID;
-            al.drcr = "Dr";
-            return al;
-        }
-
 
         private void UpdateLedgerEntry()
         {
@@ -229,6 +219,30 @@ namespace Faith_Associates.Screens.Bill
             para.Value = this.BillID;
             int tid = Convert.ToInt32(db.GetScalarValue("usp_LedgerGetTransactionID", para));
             return tid;
+        }
+
+        private void SaveLedgerEntry()
+        {
+            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+            DBParameter paraJobID = new DBParameter();
+            paraJobID.Parameter = "@PidID";
+            paraJobID.Value = this.PidID;
+            int cid = Convert.ToInt32(db.GetScalarValue("usp_PidsGetClientID", paraJobID));
+            db.InsertOrUpdateRecord("usp_LedgerInsertNewEntry", GetLedgerObjects(cid));
+        }
+
+        private object GetLedgerObjects(int cid)
+        {
+            AccountLedger al = new AccountLedger();
+            al.TransactionID = this.isUpdate ? this.TransactionID : 0;
+            al.TransactionDate = dtBill.Value;
+            al.ClientID = cid;
+            al.Particular = $"Pid # : {txtBill.Text}/{dtBill.Value.Year}, L/C# : {txtLC.Text}";
+            al.Debit = Convert.ToInt32(txtTotal.Text);
+            al.Credit = 0;
+            al.Reff = this.BillID;
+            al.drcr = "Dr";
+            return al;
         }
 
         private void UpdateGDAndCash()
@@ -278,12 +292,15 @@ namespace Faith_Associates.Screens.Bill
             int us;
             foreach (DataGridViewRow row in dgvBill.Rows)
             {
+                if (row.Cells[1].Value != DBNull.Value)
+                {
                 bid = Convert.ToInt32(row.Cells[0].Value);
                 particulars = row.Cells[1].Value.ToString();
                 if (row.Cells[2].Value == null) receiptNo = ""; else receiptNo = row.Cells[2].Value.ToString();
                 if (row.Cells[3].Value == null) you = 0; else you = Convert.ToInt32(row.Cells[3].Value);
                 if (row.Cells[4].Value == null) us = 0; else us = Convert.ToInt32(row.Cells[4].Value);
                 db.InsertOrUpdateRecord("usp_PidBillDetailsUpdatePidBillDetail", GetBillDetailsObject(bid, particulars, receiptNo, you, us));
+                }
             }
         }
 
@@ -305,11 +322,14 @@ namespace Faith_Associates.Screens.Bill
                 int us;
                 foreach (DataGridViewRow row in dgvBill.Rows)
                 {
-                    particulars = row.Cells[1].Value.ToString();
-                    if (row.Cells[2].Value == null) receiptNo = ""; else receiptNo = row.Cells[2].Value.ToString();
-                    if (row.Cells[3].Value == null) you = 0; else you = Convert.ToInt32(row.Cells[3].Value);
-                    if (row.Cells[4].Value == null) us = 0; else us = Convert.ToInt32(row.Cells[4].Value);
-                    db.InsertOrUpdateRecord("usp_PidBillDetailsInsertNewPidBillDetail", GetBillDetailsObject(bid, particulars, receiptNo, you, us));
+                    if (row.Cells[1].Value.ToString() != string.Empty)
+                    {
+                        particulars = row.Cells[1].Value.ToString();
+                        if (row.Cells[2].Value == null) receiptNo = ""; else receiptNo = row.Cells[2].Value.ToString();
+                        if (row.Cells[3].Value == null) you = 0; else you = Convert.ToInt32(row.Cells[3].Value);
+                        if (row.Cells[4].Value == null) us = 0; else us = Convert.ToInt32(row.Cells[4].Value);
+                        db.InsertOrUpdateRecord("usp_PidBillDetailsInsertNewPidBillDetail", GetBillDetailsObject(bid, particulars, receiptNo, you, us));
+                    }                    
                 }
             }
             catch (Exception ex)
@@ -344,9 +364,9 @@ namespace Faith_Associates.Screens.Bill
             {
                 db.InsertOrUpdateRecord("usp_PidBillsInsertNewPidBill", GetBillObjects());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                RSMessageBox.ShowErrorMessage(ex.Message);
+                throw;
             }
         }
 
@@ -370,20 +390,6 @@ namespace Faith_Associates.Screens.Bill
                 txtBill.Focus();
                 return false;
             }
-            if (txtSubTotal.Text == String.Empty)
-            {
-                RSMessageBox.ShowErrorMessage("Sub Total Required");
-                txtSubTotal.Clear();
-                txtSubTotal.Focus();
-                return false;
-            }
-            if (txtServiceCharges.Text == String.Empty)
-            {
-                RSMessageBox.ShowErrorMessage("Enter Service Charges");
-                txtServiceCharges.Clear();
-                txtServiceCharges.Focus();
-                return false;
-            }
 
             if (txtTotal.Text == String.Empty)
             {
@@ -398,6 +404,7 @@ namespace Faith_Associates.Screens.Bill
         private void dgvBill_RowValidated(object sender, DataGridViewCellEventArgs e)
         {
             txtSubTotal.Text =  SumTotalByUs().ToString();
+            txtTotal.Text = txtSubTotal.Text;
         }
 
         private int SumTotalByUs()
@@ -418,26 +425,12 @@ namespace Faith_Associates.Screens.Bill
             return sum;
         }
 
-        private void txtServiceCharges_TextChanged(object sender, EventArgs e)
-        {
-            if(txtSubTotal.Text == String.Empty)
-            {
-                txtSubTotal.Text = "0";
-            }
-            if (txtServiceCharges.Text == String.Empty)
-            {
-                txtServiceCharges.Text = "0";
-            }
-            CalculateBillAmount();
-        }
-
         private void CalculateBillAmount()
         {
             try
             {
                 int subTotal = Convert.ToInt32(txtSubTotal.Text);
-                double serviceCharges = Convert.ToDouble(txtServiceCharges.Text);             
-                txtTotal.Text = Convert.ToString(subTotal + serviceCharges);
+                txtTotal.Text = subTotal.ToString();
             }
             catch (Exception)
             {                
@@ -449,7 +442,7 @@ namespace Faith_Associates.Screens.Bill
         {
             isUpdate = false;
 
-            SearchBillPidForm search = new SearchBillPidForm();
+            SearchPidsForm search = new SearchPidsForm();
             search.ShowDialog();
             this.PidID = search.PidID;
 
@@ -461,9 +454,9 @@ namespace Faith_Associates.Screens.Bill
                 ListData.ClearFormControls(this);
                 dgvBill.Rows.Clear();
                 LoadBillingHeadsToDataGrid();
-                LoadJobDataToPidBillScreen(this.PidID);
+                LoadJobDataToBillScreen(this.PidID);
                 dtBill.Focus();
-
+                // Add Sales Tax Invoice Number to Control
             }
             else
             {
@@ -482,7 +475,6 @@ namespace Faith_Associates.Screens.Bill
             return b;
         }
 
-
         private void btnSearchBill_Click(object sender, EventArgs e)
         {
             SearchPidBillForm b = new SearchPidBillForm();
@@ -494,14 +486,15 @@ namespace Faith_Associates.Screens.Bill
             BillID = b.BillID;
             this.isUpdate = true;
             // Load Bill Data to Form
-            LoadJobDataToPidBillScreen(this.PidID);
+            LoadJobDataToBillScreen(this.PidID);
             LoadBIllDetailstoDataGrid(this.BillID);
+
             LoadBillDataToControls(this.BillID);
+            
             EnableButtons();
-            dtBill.Focus();         
+            dtBill.Focus();
+
         }
-
-
 
         private void LoadBillDataToControls(int billID)
         {
@@ -516,10 +509,10 @@ namespace Faith_Associates.Screens.Bill
                 {
                     DataRow row = dt.Rows[0];
                     dtBill.Value = Convert.ToDateTime(row["BillDate"]);
-                    txtSubTotal.Text = row["SubTotal"].ToString();
-                    txtServiceCharges.Text = row["ServiceCharges"].ToString();
+                    txtSubTotal.Text = row["Total"].ToString();
                     txtTotal.Text = row["Total"].ToString();
                 }
+
             }
             catch (Exception ex)
             {
@@ -560,7 +553,8 @@ namespace Faith_Associates.Screens.Bill
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
-        {            
+        {
+            //RSMessageBox.ShowSuccessMessage(this.BillID.ToString());
             if (this.BillID <= 0)
             {
                 RSMessageBox.ShowErrorMessage("No Bill Selected");
@@ -571,17 +565,20 @@ namespace Faith_Associates.Screens.Bill
                 bp.BID = this.BillID;
                 bp.Show();
             }
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
-        {            
+        {
+            
             try
             {
                 DialogResult dr = MessageBox.Show("You Sure you want to delete this bill ?", "Delete Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (dr == DialogResult.Yes)
                 {
-                    DeleteBill();
+                    DeleteLedgerEntry();
+                    DeleteBillAndSTInvoice();
                     RSMessageBox.ShowSuccessMessage("Bill Deleted Successfully");
                     ListData.ClearFormControls(this);
                     dgvBill.Rows.Clear();
@@ -594,12 +591,20 @@ namespace Faith_Associates.Screens.Bill
             }
         }
 
-        private void DeleteBill()
+        private void DeleteLedgerEntry()
+        {
+            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+            DBParameter paraReff = new DBParameter();
+            paraReff.Parameter = "@REFF";
+            paraReff.Value = this.BillID;
+            db.DeleteRecord("usp_LedgerDeleteEntry", paraReff);
+        }
+
+        private void DeleteBillAndSTInvoice()
         {
             DBParameter para = new DBParameter();
             para.Parameter = "@BillID";
             para.Value = this.BillID;
-
             DeleteBillDetails(para);
             DeleteBill(para);
         }
@@ -607,13 +612,93 @@ namespace Faith_Associates.Screens.Bill
         private void DeleteBill(DBParameter para)
         {
             DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
-            db.DeleteRecord("usp_PidBillsDeleteByBillID", para);
+            db.DeleteRecord("usp_BillsDeleteByBillID", para);
         }
 
         private void DeleteBillDetails(DBParameter para)
         {
             DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
-            db.DeleteRecord("usp_PidBillDetailsDeleteByBillID", para);
+            db.DeleteRecord("usp_BillDetailsDeleteByBillID", para);
+        }
+
+        private void txtSubTotal_TextChanged(object sender, EventArgs e)
+        {
+            if (isUpdate)
+            {
+                try
+                {
+                    CalculateBillAmount();
+                }
+                catch (Exception)
+                {
+                                        
+                }
+            }
+        }
+
+        private void btnAddRow_Click(object sender, EventArgs e)
+        {
+            dgvBill.Rows.Add();
+        }
+
+        private void btnDeleteRow_Click(object sender, EventArgs e)
+        {
+            int ri = dgvBill.CurrentCell.RowIndex;
+            
+
+            int BillDetailsID = Convert.ToInt32(dgvBill.Rows[this.RowIndex].Cells["bdi"].Value);
+            
+            DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
+            DBParameter bdi = new DBParameter();
+            bdi.Parameter = "@BillDetailsID";
+            bdi.Value = BillDetailsID;
+            db.DeleteRecord("usp_PidBillDetailsDeleteByBillID", bdi);
+            dgvBill.Rows.RemoveAt(ri);
+            txtSubTotal.Text = SumTotalByUs().ToString();
+            CalculateBillAmount();
+        }
+
+        private void dgvBill_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.RowIndex = dgvBill.CurrentCell.RowIndex;         
+        }
+
+        private void btnGoUp_Click(object sender, EventArgs e)
+        {
+            int RowIndex = dgvBill.CurrentCell.RowIndex;
+            if (RowIndex > 0)
+            {
+                DataGridViewRow clonedRow = (DataGridViewRow)dgvBill.Rows[RowIndex].Clone();
+                DataGridViewRow oldRow = dgvBill.Rows[RowIndex];
+                clonedRow.Cells[0].Value = oldRow.Cells[0].Value;
+                clonedRow.Cells[1].Value = oldRow.Cells[1].Value;
+                clonedRow.Cells[2].Value = oldRow.Cells[2].Value;
+                clonedRow.Cells[3].Value = oldRow.Cells[3].Value;
+                clonedRow.Cells[4].Value = oldRow.Cells[4].Value;
+                dgvBill.Rows.RemoveAt(RowIndex);
+                dgvBill.Rows.Insert(RowIndex - 1, clonedRow);
+                txtSubTotal.Text = SumTotalByUs().ToString();
+                CalculateBillAmount();                
+            }
+        }
+
+        private void btnGoDown_Click(object sender, EventArgs e)
+        {
+            RowIndex = dgvBill.CurrentCell.RowIndex;
+            if (RowIndex < dgvBill.Rows.Count)
+            {
+                DataGridViewRow clonedRow = (DataGridViewRow)dgvBill.Rows[RowIndex].Clone();
+                DataGridViewRow oldRow = dgvBill.Rows[RowIndex];
+                clonedRow.Cells[0].Value = oldRow.Cells[0].Value;
+                clonedRow.Cells[1].Value = oldRow.Cells[1].Value;
+                clonedRow.Cells[2].Value = oldRow.Cells[2].Value;
+                clonedRow.Cells[3].Value = oldRow.Cells[3].Value;
+                clonedRow.Cells[4].Value = oldRow.Cells[4].Value;
+                dgvBill.Rows.RemoveAt(RowIndex);
+                dgvBill.Rows.Insert(RowIndex + 1, clonedRow);
+                txtSubTotal.Text = SumTotalByUs().ToString();
+                CalculateBillAmount();
+            }
         }
 
     }

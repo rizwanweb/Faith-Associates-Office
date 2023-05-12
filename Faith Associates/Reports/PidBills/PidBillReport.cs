@@ -29,7 +29,7 @@ namespace Faith_Associates.Reports.Bills
         {
             ReportDocument report = new ReportDocument();
             string appPath = Application.StartupPath;
-            string reportPath = @"Reports\PidBills\PidBillReport.rpt";
+            string reportPath = @"Reports\PidBills\PidBillReport1.rpt";
             string reportFullPath = Path.Combine(appPath, reportPath);
 
             report.Load(reportFullPath);

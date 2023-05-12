@@ -5,8 +5,6 @@
 AS
 SELECT
        [BillDate]
-      ,[SubTotal]
-      ,[ServiceCharges]
       ,[Total]
   FROM [dbo].[PidBills]
   WHERE BillID = @BillID

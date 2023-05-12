@@ -5,8 +5,6 @@
 	,@BillNo int
 	,@BillDate date
 	,@PidID int
-	,@SubTotal int
-	,@ServiceCharges int
 	,@Total int
 )
 AS
@@ -15,17 +13,13 @@ AS
 				   ([BillNo]
 				   ,[BillDate]
 				   ,[PidID]
-				   ,[SubTotal]
-				   ,[ServiceCharges]
+
 				   ,[Total])
 			 VALUES
 				   (
 				   @BillNo
 				   ,@BillDate
 				   ,@PidID
-				   ,@SubTotal
-				   ,@ServiceCharges
-
 				   ,@Total
 				   )
 	END

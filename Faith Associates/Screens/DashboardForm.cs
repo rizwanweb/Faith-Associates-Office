@@ -108,7 +108,7 @@ namespace Faith_Associates.Screens
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
-            PidBillScreen pidBill = new PidBillScreen();
+            NewPidBillScreen pidBill = new NewPidBillScreen();
             pidBill.ShowDialog();
         }
 

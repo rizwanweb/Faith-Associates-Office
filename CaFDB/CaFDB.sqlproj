@@ -204,6 +204,7 @@
     <Build Include="dbo\Stored Procedures\usp_PidPayordersDeleteByPidID.sql" />
     <Build Include="dbo\Stored Procedures\usp_PidPayorderInsertNewPayorder.sql" />
     <Build Include="dbo\Stored Procedures\usp_PayorderHeaderGetHeaderByPidID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PidsGetClientsPids.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="StaticCodeAnalysis.SuppressMessages.xml" />
