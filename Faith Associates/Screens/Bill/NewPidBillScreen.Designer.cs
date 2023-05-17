@@ -93,12 +93,16 @@
             this.label22 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.billGroupBox = new System.Windows.Forms.GroupBox();
+            this.txtRefund = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtBalance = new System.Windows.Forms.TextBox();
             this.btnGoDown = new System.Windows.Forms.Button();
             this.btnGoUp = new System.Windows.Forms.Button();
             this.btnDeleteRow = new System.Windows.Forms.Button();
             this.btnAddRow = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNote = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.detailGroupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -694,7 +698,7 @@
             // txtSubTotal
             // 
             this.txtSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubTotal.Location = new System.Drawing.Point(823, 285);
+            this.txtSubTotal.Location = new System.Drawing.Point(823, 262);
             this.txtSubTotal.Name = "txtSubTotal";
             this.txtSubTotal.Size = new System.Drawing.Size(175, 26);
             this.txtSubTotal.TabIndex = 0;
@@ -705,7 +709,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(731, 285);
+            this.label19.Location = new System.Drawing.Point(731, 262);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(86, 20);
             this.label19.TabIndex = 5;
@@ -715,7 +719,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(768, 358);
+            this.label22.Location = new System.Drawing.Point(768, 297);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 20);
             this.label22.TabIndex = 12;
@@ -724,20 +728,25 @@
             // txtTotal
             // 
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(823, 355);
+            this.txtTotal.Location = new System.Drawing.Point(823, 294);
             this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(175, 26);
             this.txtTotal.TabIndex = 4;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // billGroupBox
             // 
+            this.billGroupBox.Controls.Add(this.txtRefund);
+            this.billGroupBox.Controls.Add(this.label20);
+            this.billGroupBox.Controls.Add(this.label21);
+            this.billGroupBox.Controls.Add(this.txtBalance);
             this.billGroupBox.Controls.Add(this.btnGoDown);
             this.billGroupBox.Controls.Add(this.btnGoUp);
             this.billGroupBox.Controls.Add(this.btnDeleteRow);
             this.billGroupBox.Controls.Add(this.btnAddRow);
             this.billGroupBox.Controls.Add(this.label24);
-            this.billGroupBox.Controls.Add(this.textBox2);
+            this.billGroupBox.Controls.Add(this.txtNote);
             this.billGroupBox.Controls.Add(this.dgvBill);
             this.billGroupBox.Controls.Add(this.txtSubTotal);
             this.billGroupBox.Controls.Add(this.label22);
@@ -748,6 +757,47 @@
             this.billGroupBox.Size = new System.Drawing.Size(1004, 395);
             this.billGroupBox.TabIndex = 2;
             this.billGroupBox.TabStop = false;
+            // 
+            // txtRefund
+            // 
+            this.txtRefund.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRefund.Location = new System.Drawing.Point(823, 326);
+            this.txtRefund.Name = "txtRefund";
+            this.txtRefund.Size = new System.Drawing.Size(175, 26);
+            this.txtRefund.TabIndex = 19;
+            this.txtRefund.Text = "0";
+            this.txtRefund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRefund.Validated += new System.EventHandler(this.txtRefund_Validated);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(753, 361);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(64, 20);
+            this.label20.TabIndex = 22;
+            this.label20.Text = "Balace";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(749, 329);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(68, 20);
+            this.label21.TabIndex = 21;
+            this.label21.Text = "Refund";
+            // 
+            // txtBalance
+            // 
+            this.txtBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBalance.Location = new System.Drawing.Point(823, 358);
+            this.txtBalance.Name = "txtBalance";
+            this.txtBalance.Size = new System.Drawing.Size(175, 26);
+            this.txtBalance.TabIndex = 20;
+            this.txtBalance.Text = "0";
+            this.txtBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnGoDown
             // 
@@ -799,13 +849,13 @@
             this.label24.TabIndex = 13;
             this.label24.Text = "Note:";
             // 
-            // textBox2
+            // txtNote
             // 
-            this.textBox2.Location = new System.Drawing.Point(10, 285);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(661, 96);
-            this.textBox2.TabIndex = 14;
+            this.txtNote.Location = new System.Drawing.Point(61, 262);
+            this.txtNote.Multiline = true;
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(661, 119);
+            this.txtNote.TabIndex = 14;
             // 
             // NewPidBillScreen
             // 
@@ -889,7 +939,7 @@
         private System.Windows.Forms.Button btnSearchBill;
         private System.Windows.Forms.GroupBox billGroupBox;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Button btnGoDown;
         private System.Windows.Forms.Button btnGoUp;
@@ -900,5 +950,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Receipt;
         private System.Windows.Forms.DataGridViewTextBoxColumn ByYou;
         private System.Windows.Forms.DataGridViewTextBoxColumn ByUs;
+        private System.Windows.Forms.TextBox txtRefund;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtBalance;
     }
 }

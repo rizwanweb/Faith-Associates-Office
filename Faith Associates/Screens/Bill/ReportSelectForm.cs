@@ -15,6 +15,7 @@ namespace Faith_Associates.Screens.Bill
     public partial class ReportSelectForm : TemplateForm
     {
         public int BillID { get; set; }
+        public string note { get; set; }
         public ReportSelectForm()
         {
             InitializeComponent();
@@ -35,9 +36,19 @@ namespace Faith_Associates.Screens.Bill
             if (rbBill.Checked)
             {
                 BillReport bp = new BillReport();
-                bp.BID = this.BillID;
-                
-                bp.Show();
+                if (note == string.Empty) 
+                {
+                    bp.BID = this.BillID;
+                    bp.note = string.Empty;
+                    bp.Show();
+                }
+                else
+                {
+                    bp.BID = this.BillID;
+                    bp.note = note;
+                    bp.Show();
+                }
+
             }
             else if (rbST.Checked)
             {

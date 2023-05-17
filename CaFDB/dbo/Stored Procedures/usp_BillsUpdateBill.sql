@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_BillsUpdateBill
+﻿CREATE PROCEDURE [dbo].[usp_BillsUpdateBill]
 (
 	 @BillID	int
 	,@BillNo int
@@ -9,6 +9,7 @@
 	,@SalesTaxRate decimal(18,2)
 	,@SalesTax int
 	,@Total int
+	,@Note nvarchar(MAX)
 )
 AS
 UPDATE [dbo].[Bills]
@@ -20,6 +21,7 @@ UPDATE [dbo].[Bills]
       ,[SalesTaxRate] = @SalesTaxRate
       ,[SalesTax] = @SalesTax
       ,[Total] = @Total
+	  ,[Note] = @Note
  WHERE BillID = @BillID
 
 

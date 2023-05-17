@@ -284,12 +284,6 @@
     <Compile Include="Screens\Bill\PaymentForm.Designer.cs">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Bill\PidBillScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Bill\PidBillScreen.Designer.cs">
-      <DependentUpon>PidBillScreen.cs</DependentUpon>
-    </Compile>
     <Compile Include="Screens\Bill\BillScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -421,6 +415,12 @@
     </Compile>
     <Compile Include="Screens\PSQC\PSQCForm.Designer.cs">
       <DependentUpon>PSQCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\PSQC\SelectType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\PSQC\SelectType.Designer.cs">
+      <DependentUpon>SelectType.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\ShippingLines\ShippingLineList.cs">
       <SubType>Form</SubType>
@@ -560,9 +560,6 @@
     <EmbeddedResource Include="Screens\Bill\PaymentForm.resx">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Bill\PidBillScreen.resx">
-      <DependentUpon>PidBillScreen.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Bill\BillScreen.resx">
       <DependentUpon>BillScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -628,6 +625,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\PSQC\PSQCForm.resx">
       <DependentUpon>PSQCForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\PSQC\SelectType.resx">
+      <DependentUpon>SelectType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\ShippingLines\ShippingLineList.resx">
       <DependentUpon>ShippingLineList.cs</DependentUpon>

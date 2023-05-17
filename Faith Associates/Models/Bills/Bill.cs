@@ -17,5 +17,6 @@ namespace Faith_Associates.Models.Bills
         public double SalesTaxRate { get; set; }
         public int SalesTax { get; set; }
         public int Total { get; set; }
+        public string Note { get; set; }
     }
 }

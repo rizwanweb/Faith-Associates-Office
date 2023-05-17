@@ -63,7 +63,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtClientName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblType = new System.Windows.Forms.Label();
             this.btnSearchJob = new System.Windows.Forms.Button();
             this.txtJob = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -80,7 +80,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -113,7 +113,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(832, 59);
             this.label1.TabIndex = 0;
-            this.label1.Text = "PSQCA Information (JOB)";
+            this.label1.Text = "PSQCA Information";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox1
@@ -150,7 +150,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtClientName);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lblType);
             this.groupBox1.Controls.Add(this.btnSearchJob);
             this.groupBox1.Controls.Add(this.txtJob);
             this.groupBox1.Location = new System.Drawing.Point(12, 65);
@@ -435,14 +435,14 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Client Name";
             // 
-            // label2
+            // lblType
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Job #";
+            this.lblType.AutoSize = true;
+            this.lblType.Location = new System.Drawing.Point(7, 43);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(55, 21);
+            this.lblType.TabIndex = 2;
+            this.lblType.Text = "Job #";
             // 
             // btnSearchJob
             // 
@@ -567,7 +567,7 @@
             // 
             this.groupBox3.Controls.Add(this.btnExit);
             this.groupBox3.Controls.Add(this.btnDelete);
-            this.groupBox3.Controls.Add(this.btnEdit);
+            this.groupBox3.Controls.Add(this.btnAdd);
             this.groupBox3.Controls.Add(this.btnSave);
             this.groupBox3.Location = new System.Drawing.Point(610, 484);
             this.groupBox3.Name = "groupBox3";
@@ -594,18 +594,19 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // btnEdit
+            // btnAdd
             // 
-            this.btnEdit.Location = new System.Drawing.Point(108, 16);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(97, 30);
-            this.btnEdit.TabIndex = 35;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(6, 17);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(97, 30);
+            this.btnAdd.TabIndex = 35;
+            this.btnAdd.Text = "Add New";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(6, 16);
+            this.btnSave.Location = new System.Drawing.Point(108, 15);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(97, 30);
             this.btnSave.TabIndex = 34;
@@ -689,7 +690,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Button btnSearchJob;
         private System.Windows.Forms.TextBox txtJob;
         private System.Windows.Forms.Button btnEditJob;
@@ -737,7 +738,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnEditClient;
         private System.Windows.Forms.GroupBox groupBox4;

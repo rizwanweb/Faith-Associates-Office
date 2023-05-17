@@ -413,6 +413,7 @@ namespace Faith_Associates.Screens.Bill
             b.SalesTaxRate = Convert.ToDouble(txtSalesTaxRate.Text);
             b.SalesTax = Convert.ToInt32(txtSalesTax.Text);
             b.Total = Convert.ToInt32(txtTotal.Text);
+            b.Note = txtNote.Text.ToUpper();
             return b;
         }
 
@@ -619,6 +620,7 @@ namespace Faith_Associates.Screens.Bill
                     txtSalesTaxRate.Text = row["SalesTaxRate"].ToString();
                     txtSalesTax.Text = row["SalesTax"].ToString();
                     txtTotal.Text = row["Total"].ToString();
+                    txtNote.Text = row["Note"].ToString();
                 }
 
             }
@@ -671,9 +673,17 @@ namespace Faith_Associates.Screens.Bill
             {
                 ReportSelectForm rs = new ReportSelectForm();
                 rs.BillID = this.BillID;
-                rs.ShowDialog();
+                if (txtNote.Text != string.Empty)
+                {
+                    rs.note = txtNote.Text;
+                    rs.ShowDialog();
+                }
+                else
+                {
+                    rs.note = string.Empty;
+                    rs.ShowDialog();
+                }
             }
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

@@ -83,6 +83,11 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvBill = new System.Windows.Forms.DataGridView();
+            this.bdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Particulars = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Receipt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ByYou = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ByUs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSubTotal = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -99,12 +104,7 @@
             this.btnDeleteRow = new System.Windows.Forms.Button();
             this.btnAddRow = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.bdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Particulars = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Receipt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ByYou = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ByUs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNote = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.detailGroupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -662,6 +662,41 @@
             this.dgvBill.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBill_CellClick);
             this.dgvBill.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBill_RowValidated);
             // 
+            // bdi
+            // 
+            this.bdi.HeaderText = "ID Column";
+            this.bdi.Name = "bdi";
+            this.bdi.Visible = false;
+            // 
+            // Particulars
+            // 
+            this.Particulars.HeaderText = "Particulars";
+            this.Particulars.Name = "Particulars";
+            this.Particulars.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Particulars.Width = 375;
+            // 
+            // Receipt
+            // 
+            this.Receipt.HeaderText = "Receipt No";
+            this.Receipt.Name = "Receipt";
+            this.Receipt.Width = 250;
+            // 
+            // ByYou
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ByYou.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ByYou.HeaderText = "Amount Paid By You";
+            this.ByYou.Name = "ByYou";
+            this.ByYou.Width = 150;
+            // 
+            // ByUs
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ByUs.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ByUs.HeaderText = "Amount Paid By Us";
+            this.ByUs.Name = "ByUs";
+            this.ByUs.Width = 150;
+            // 
             // txtSubTotal
             // 
             this.txtSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -767,7 +802,7 @@
             this.billGroupBox.Controls.Add(this.btnDeleteRow);
             this.billGroupBox.Controls.Add(this.btnAddRow);
             this.billGroupBox.Controls.Add(this.label24);
-            this.billGroupBox.Controls.Add(this.textBox2);
+            this.billGroupBox.Controls.Add(this.txtNote);
             this.billGroupBox.Controls.Add(this.dgvBill);
             this.billGroupBox.Controls.Add(this.label23);
             this.billGroupBox.Controls.Add(this.txtSubTotal);
@@ -835,48 +870,13 @@
             this.label24.TabIndex = 13;
             this.label24.Text = "Note:";
             // 
-            // textBox2
+            // txtNote
             // 
-            this.textBox2.Location = new System.Drawing.Point(10, 285);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(661, 96);
-            this.textBox2.TabIndex = 14;
-            // 
-            // bdi
-            // 
-            this.bdi.HeaderText = "ID Column";
-            this.bdi.Name = "bdi";
-            this.bdi.Visible = false;
-            // 
-            // Particulars
-            // 
-            this.Particulars.HeaderText = "Particulars";
-            this.Particulars.Name = "Particulars";
-            this.Particulars.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Particulars.Width = 375;
-            // 
-            // Receipt
-            // 
-            this.Receipt.HeaderText = "Receipt No";
-            this.Receipt.Name = "Receipt";
-            this.Receipt.Width = 250;
-            // 
-            // ByYou
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ByYou.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ByYou.HeaderText = "Amount Paid By You";
-            this.ByYou.Name = "ByYou";
-            this.ByYou.Width = 150;
-            // 
-            // ByUs
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ByUs.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ByUs.HeaderText = "Amount Paid By Us";
-            this.ByUs.Name = "ByUs";
-            this.ByUs.Width = 150;
+            this.txtNote.Location = new System.Drawing.Point(10, 285);
+            this.txtNote.Multiline = true;
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(661, 96);
+            this.txtNote.TabIndex = 14;
             // 
             // BillScreen
             // 
@@ -966,7 +966,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.GroupBox billGroupBox;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Button btnGoDown;
         private System.Windows.Forms.Button btnGoUp;

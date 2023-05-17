@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_BillsGetBillDataByID
+﻿CREATE PROCEDURE [dbo].[usp_BillsGetBillDataByID]
 (
 	@BillID	int
 )
@@ -10,6 +10,7 @@ SELECT
       ,[SalesTaxRate]
       ,Bills.[SalesTax]
       ,[Total]
+	  ,[Note]
 	  ,SalesTaxInvoice.SalesTaxNo
   FROM [dbo].[Bills]
   INNER JOIN SalesTaxInvoice ON bills.BillID = SalesTaxInvoice.BillID

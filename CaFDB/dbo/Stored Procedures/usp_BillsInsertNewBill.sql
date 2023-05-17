@@ -10,6 +10,7 @@
 	,@SalesTaxRate decimal(18,2)
 	,@SalesTax int
 	,@Total int
+	,@Note nvarchar(MAX)
 )
 AS
 	BEGIN
@@ -21,7 +22,8 @@ AS
 				   ,[ServiceCharges]
 				   ,[SalesTaxRate]
 				   ,[SalesTax]
-				   ,[Total])
+				   ,[Total]
+				   ,[Note])
 			 VALUES
 				   (
 				   @BillNo
@@ -32,6 +34,7 @@ AS
 				   ,@SalesTaxRate
 				   ,@SalesTax
 				   ,@Total
+				   ,@Note
 				   )
 	END
 

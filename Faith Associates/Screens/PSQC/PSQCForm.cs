@@ -20,6 +20,8 @@ namespace Faith_Associates.Screens.PSQC
     {
         public int JobID;
         public int ClientID;
+        public bool isPID { get; set; }
+        public bool isJob { get; set; }
 
         public PSQCForm()
         {
@@ -101,6 +103,16 @@ namespace Faith_Associates.Screens.PSQC
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            SelectType t = new SelectType();
+            t.ShowDialog();
+            _ = t.isJob == true ? this.isJob = true : this.isPID = true;
+            this.Close();
+            RSMessageBox.ShowSuccessMessage(this.isJob.ToString());
+            RSMessageBox.ShowSuccessMessage(this.isPID.ToString());
         }
     }
 }

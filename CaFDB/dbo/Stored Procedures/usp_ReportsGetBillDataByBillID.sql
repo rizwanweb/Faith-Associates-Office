@@ -37,6 +37,7 @@ BEGIN
 		   ,b.SubTotal
 		   ,b.ServiceCharges
 		   ,b.Total
+		   ,b.Note
 		   ,(b.ServiceCharges + b.SalesTax) AS 'ST Total' 
 		   		   
 		   ,c.ClientName

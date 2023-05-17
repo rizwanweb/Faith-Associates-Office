@@ -19,6 +19,7 @@ namespace Faith_Associates.Reports.Bills
     public partial class BillReport : TemplateForm
     {
         public int BID { get; set; }
+        public string note { get; set; }
         public BillReport()
         {
             InitializeComponent();     
@@ -27,6 +28,7 @@ namespace Faith_Associates.Reports.Bills
 
         private void BillReport_Load(object sender, EventArgs e)
         {
+
             ReportDocument report = new ReportDocument();
             string appPath = Application.StartupPath;
             string reportPath = @"Reports\Bills\JobBillReport.rpt";
@@ -36,6 +38,7 @@ namespace Faith_Associates.Reports.Bills
             crystalReportViewer1.ReportSource = report;
 
             report.SetDataSource(GetBillReportData());
+            
         }
         private DataTable GetBillReportData()
         {

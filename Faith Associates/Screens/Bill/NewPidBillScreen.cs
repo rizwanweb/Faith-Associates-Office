@@ -378,6 +378,9 @@ namespace Faith_Associates.Screens.Bill
             b.BillDate = Convert.ToDateTime(dtBill.Value);
             b.PidID = this.PidID;
             b.Total = Convert.ToInt32(txtTotal.Text);
+            b.Refund = txtRefund.Text == string.Empty ? 0 : Convert.ToInt32(txtRefund.Text);
+            b.Balance = txtBalance.Text == string.Empty ? 0 : Convert.ToInt32(txtBalance.Text);
+            b.Note = txtNote.Text.ToUpper();
             return b;
         }
 
@@ -511,6 +514,9 @@ namespace Faith_Associates.Screens.Bill
                     dtBill.Value = Convert.ToDateTime(row["BillDate"]);
                     txtSubTotal.Text = row["Total"].ToString();
                     txtTotal.Text = row["Total"].ToString();
+                    txtRefund.Text = row["Refund"].ToString();
+                    txtBalance.Text = row["Balance"].ToString();
+                    txtNote.Text = row["Note"].ToString();
                 }
 
             }
@@ -612,13 +618,13 @@ namespace Faith_Associates.Screens.Bill
         private void DeleteBill(DBParameter para)
         {
             DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
-            db.DeleteRecord("usp_BillsDeleteByBillID", para);
+            db.DeleteRecord("usp_PidBillsDeleteByBillID", para);
         }
 
         private void DeleteBillDetails(DBParameter para)
         {
             DBSQLServer db = new DBSQLServer(AppSetting.ConnectionString());
-            db.DeleteRecord("usp_BillDetailsDeleteByBillID", para);
+            db.DeleteRecord("usp_PidBillDetailsDeleteByBillID", para);
         }
 
         private void txtSubTotal_TextChanged(object sender, EventArgs e)
@@ -701,5 +707,19 @@ namespace Faith_Associates.Screens.Bill
             }
         }
 
+        private void txtRefund_Validated(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(txtRefund.Text) == 0)
+            {
+                txtBalance.Text = "0";
+            }
+            else
+            {
+                int total = Convert.ToInt32(txtTotal.Text);
+                int balance = total - Convert.ToInt32(txtRefund.Text);
+                txtBalance.Text = balance.ToString();
+            }
+
+        }
     }
 }
