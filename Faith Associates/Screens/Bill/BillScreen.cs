@@ -846,5 +846,6 @@ namespace Faith_Associates.Screens.Bill
 				txtBalance.Text = balance.ToString();
 			}
 		}
+
 	}
 }

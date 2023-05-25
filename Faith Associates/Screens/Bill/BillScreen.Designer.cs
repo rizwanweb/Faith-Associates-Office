@@ -558,9 +558,9 @@
 			this.groupBox2.Controls.Add(this.btnPrint);
 			this.groupBox2.Controls.Add(this.btnSave);
 			this.groupBox2.Controls.Add(this.btnAdd);
-			this.groupBox2.Location = new System.Drawing.Point(12, 836);
+			this.groupBox2.Location = new System.Drawing.Point(10, 379);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(1004, 84);
+			this.groupBox2.Size = new System.Drawing.Size(661, 85);
 			this.groupBox2.TabIndex = 2;
 			this.groupBox2.TabStop = false;
 			// 
@@ -568,9 +568,9 @@
 			// 
 			this.btnExit.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-			this.btnExit.Location = new System.Drawing.Point(680, 21);
+			this.btnExit.Location = new System.Drawing.Point(505, 18);
 			this.btnExit.Name = "btnExit";
-			this.btnExit.Size = new System.Drawing.Size(111, 57);
+			this.btnExit.Size = new System.Drawing.Size(111, 61);
 			this.btnExit.TabIndex = 3;
 			this.btnExit.Text = "Exit";
 			this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -583,9 +583,9 @@
 			this.btnDelete.Enabled = false;
 			this.btnDelete.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-			this.btnDelete.Location = new System.Drawing.Point(559, 21);
+			this.btnDelete.Location = new System.Drawing.Point(388, 18);
 			this.btnDelete.Name = "btnDelete";
-			this.btnDelete.Size = new System.Drawing.Size(111, 57);
+			this.btnDelete.Size = new System.Drawing.Size(111, 61);
 			this.btnDelete.TabIndex = 3;
 			this.btnDelete.Text = "Delete";
 			this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -598,9 +598,9 @@
 			this.btnPrint.Enabled = false;
 			this.btnPrint.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-			this.btnPrint.Location = new System.Drawing.Point(434, 21);
+			this.btnPrint.Location = new System.Drawing.Point(271, 18);
 			this.btnPrint.Name = "btnPrint";
-			this.btnPrint.Size = new System.Drawing.Size(111, 57);
+			this.btnPrint.Size = new System.Drawing.Size(111, 61);
 			this.btnPrint.TabIndex = 1;
 			this.btnPrint.Text = "Print";
 			this.btnPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -613,9 +613,9 @@
 			this.btnSave.Enabled = false;
 			this.btnSave.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-			this.btnSave.Location = new System.Drawing.Point(309, 21);
+			this.btnSave.Location = new System.Drawing.Point(154, 18);
 			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(111, 57);
+			this.btnSave.Size = new System.Drawing.Size(111, 61);
 			this.btnSave.TabIndex = 0;
 			this.btnSave.Text = "Save";
 			this.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -627,9 +627,9 @@
 			// 
 			this.btnAdd.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-			this.btnAdd.Location = new System.Drawing.Point(184, 21);
+			this.btnAdd.Location = new System.Drawing.Point(37, 18);
 			this.btnAdd.Name = "btnAdd";
-			this.btnAdd.Size = new System.Drawing.Size(111, 57);
+			this.btnAdd.Size = new System.Drawing.Size(111, 61);
 			this.btnAdd.TabIndex = 2;
 			this.btnAdd.Text = "Add New";
 			this.btnAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -704,7 +704,7 @@
 			// txtSubTotal
 			// 
 			this.txtSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtSubTotal.Location = new System.Drawing.Point(823, 259);
+			this.txtSubTotal.Location = new System.Drawing.Point(823, 277);
 			this.txtSubTotal.Name = "txtSubTotal";
 			this.txtSubTotal.Size = new System.Drawing.Size(175, 26);
 			this.txtSubTotal.TabIndex = 0;
@@ -715,7 +715,7 @@
 			// 
 			this.label19.AutoSize = true;
 			this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label19.Location = new System.Drawing.Point(731, 262);
+			this.label19.Location = new System.Drawing.Point(731, 280);
 			this.label19.Name = "label19";
 			this.label19.Size = new System.Drawing.Size(86, 20);
 			this.label19.TabIndex = 5;
@@ -725,7 +725,7 @@
 			// 
 			this.label20.AutoSize = true;
 			this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label20.Location = new System.Drawing.Point(677, 294);
+			this.label20.Location = new System.Drawing.Point(677, 312);
 			this.label20.Name = "label20";
 			this.label20.Size = new System.Drawing.Size(140, 20);
 			this.label20.TabIndex = 7;
@@ -734,7 +734,7 @@
 			// txtServiceCharges
 			// 
 			this.txtServiceCharges.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtServiceCharges.Location = new System.Drawing.Point(823, 291);
+			this.txtServiceCharges.Location = new System.Drawing.Point(823, 309);
 			this.txtServiceCharges.Name = "txtServiceCharges";
 			this.txtServiceCharges.Size = new System.Drawing.Size(175, 26);
 			this.txtServiceCharges.TabIndex = 1;
@@ -745,7 +745,7 @@
 			// 
 			this.label21.AutoSize = true;
 			this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label21.Location = new System.Drawing.Point(730, 326);
+			this.label21.Location = new System.Drawing.Point(730, 344);
 			this.label21.Name = "label21";
 			this.label21.Size = new System.Drawing.Size(87, 20);
 			this.label21.TabIndex = 9;
@@ -754,7 +754,7 @@
 			// txtSalesTax
 			// 
 			this.txtSalesTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtSalesTax.Location = new System.Drawing.Point(900, 323);
+			this.txtSalesTax.Location = new System.Drawing.Point(900, 341);
 			this.txtSalesTax.Name = "txtSalesTax";
 			this.txtSalesTax.Size = new System.Drawing.Size(98, 26);
 			this.txtSalesTax.TabIndex = 3;
@@ -763,7 +763,7 @@
 			// txtSalesTaxRate
 			// 
 			this.txtSalesTaxRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtSalesTaxRate.Location = new System.Drawing.Point(823, 323);
+			this.txtSalesTaxRate.Location = new System.Drawing.Point(823, 341);
 			this.txtSalesTaxRate.Name = "txtSalesTaxRate";
 			this.txtSalesTaxRate.Size = new System.Drawing.Size(48, 26);
 			this.txtSalesTaxRate.TabIndex = 2;
@@ -774,7 +774,7 @@
 			// 
 			this.label22.AutoSize = true;
 			this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label22.Location = new System.Drawing.Point(768, 358);
+			this.label22.Location = new System.Drawing.Point(768, 376);
 			this.label22.Name = "label22";
 			this.label22.Size = new System.Drawing.Size(49, 20);
 			this.label22.TabIndex = 12;
@@ -783,7 +783,7 @@
 			// txtTotal
 			// 
 			this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTotal.Location = new System.Drawing.Point(823, 355);
+			this.txtTotal.Location = new System.Drawing.Point(823, 373);
 			this.txtTotal.Name = "txtTotal";
 			this.txtTotal.Size = new System.Drawing.Size(175, 26);
 			this.txtTotal.TabIndex = 4;
@@ -793,7 +793,7 @@
 			// 
 			this.label23.AutoSize = true;
 			this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label23.Location = new System.Drawing.Point(875, 326);
+			this.label23.Location = new System.Drawing.Point(875, 344);
 			this.label23.Name = "label23";
 			this.label23.Size = new System.Drawing.Size(24, 20);
 			this.label23.TabIndex = 13;
@@ -804,6 +804,7 @@
 			this.billGroupBox.Controls.Add(this.label26);
 			this.billGroupBox.Controls.Add(this.txtBalance);
 			this.billGroupBox.Controls.Add(this.label25);
+			this.billGroupBox.Controls.Add(this.groupBox2);
 			this.billGroupBox.Controls.Add(this.txtRefund);
 			this.billGroupBox.Controls.Add(this.btnGoDown);
 			this.billGroupBox.Controls.Add(this.btnGoUp);
@@ -824,7 +825,7 @@
 			this.billGroupBox.Controls.Add(this.txtSalesTax);
 			this.billGroupBox.Location = new System.Drawing.Point(12, 378);
 			this.billGroupBox.Name = "billGroupBox";
-			this.billGroupBox.Size = new System.Drawing.Size(1004, 452);
+			this.billGroupBox.Size = new System.Drawing.Size(1004, 470);
 			this.billGroupBox.TabIndex = 2;
 			this.billGroupBox.TabStop = false;
 			// 
@@ -832,7 +833,7 @@
 			// 
 			this.label26.AutoSize = true;
 			this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label26.Location = new System.Drawing.Point(743, 422);
+			this.label26.Location = new System.Drawing.Point(743, 440);
 			this.label26.Name = "label26";
 			this.label26.Size = new System.Drawing.Size(74, 20);
 			this.label26.TabIndex = 22;
@@ -841,7 +842,7 @@
 			// txtBalance
 			// 
 			this.txtBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtBalance.Location = new System.Drawing.Point(823, 419);
+			this.txtBalance.Location = new System.Drawing.Point(823, 437);
 			this.txtBalance.Name = "txtBalance";
 			this.txtBalance.Size = new System.Drawing.Size(175, 26);
 			this.txtBalance.TabIndex = 21;
@@ -851,7 +852,7 @@
 			// 
 			this.label25.AutoSize = true;
 			this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label25.Location = new System.Drawing.Point(749, 390);
+			this.label25.Location = new System.Drawing.Point(749, 408);
 			this.label25.Name = "label25";
 			this.label25.Size = new System.Drawing.Size(68, 20);
 			this.label25.TabIndex = 20;
@@ -860,7 +861,7 @@
 			// txtRefund
 			// 
 			this.txtRefund.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtRefund.Location = new System.Drawing.Point(823, 387);
+			this.txtRefund.Location = new System.Drawing.Point(823, 405);
 			this.txtRefund.Name = "txtRefund";
 			this.txtRefund.Size = new System.Drawing.Size(175, 26);
 			this.txtRefund.TabIndex = 19;
@@ -922,18 +923,17 @@
 			this.txtNote.Location = new System.Drawing.Point(10, 285);
 			this.txtNote.Multiline = true;
 			this.txtNote.Name = "txtNote";
-			this.txtNote.Size = new System.Drawing.Size(661, 96);
+			this.txtNote.Size = new System.Drawing.Size(661, 106);
 			this.txtNote.TabIndex = 14;
 			// 
 			// BillScreen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1028, 932);
+			this.ClientSize = new System.Drawing.Size(1028, 862);
 			this.Controls.Add(this.billGroupBox);
 			this.Controls.Add(this.detailGroupBox);
 			this.Controls.Add(this.panel1);
-			this.Controls.Add(this.groupBox2);
 			this.Location = new System.Drawing.Point(0, -50);
 			this.Name = "BillScreen";
 			this.Text = "Bill Screen";
