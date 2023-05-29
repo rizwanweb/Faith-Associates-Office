@@ -31,8 +31,8 @@ AS
 			  ,[Clients].[ContactPerson]
 			  ,[Clients].[Address]
 			  ,[Clients].Phone
-			  ,Clients.Fax
-			  ,Clients.StandAddress
+			  --,[Clients].Fax
+			  --,[Clients].StandAddress
 
 			  ,[Items].[ItemName]
 			  ,[Items].[HSCode]

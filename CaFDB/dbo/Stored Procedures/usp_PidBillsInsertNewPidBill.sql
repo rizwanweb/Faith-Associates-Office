@@ -5,10 +5,9 @@
 	,@BillNo int
 	,@BillDate date
 	,@PidID int
+	,@SubTotal int
+	,@ServiceCharges int
 	,@Total int
-	,@Refund int
-	,@Balance int
-	,@Note nvarchar(MAX)
 )
 AS
 	BEGIN
@@ -16,19 +15,18 @@ AS
 				   ([BillNo]
 				   ,[BillDate]
 				   ,[PidID]
-				   ,[Total]
-				   ,[Refund]
-				   ,[Balance]
-				   ,[Note])
+				   ,[SubTotal]
+				   ,[ServiceCharges]
+				   ,[Total])
 			 VALUES
 				   (
 				   @BillNo
 				   ,@BillDate
 				   ,@PidID
+				   ,@SubTotal
+				   ,@ServiceCharges
+
 				   ,@Total
-				   ,@Refund
-				   ,@Balance
-				   ,@Note
 				   )
 	END
 

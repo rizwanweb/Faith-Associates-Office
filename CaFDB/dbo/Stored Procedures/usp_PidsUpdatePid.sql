@@ -44,7 +44,12 @@
 		,@RDType    nvarchar(5)
 		,@RDRate    decimal(18,2)
         ,@TotalDuty    int
-        
+        ,@DeliveryCharges    int
+        ,@Wharfage    int
+        ,@ContainerDeposit    int
+        ,@LoloCharges    int
+        ,@PSQCA1    int
+        ,@PSQCA2    int
         ,@Terminal    int
         ,@ShippingLine    int
         ,@Lolo    int
@@ -52,7 +57,7 @@
 		,@GDDate	date
 		,@Cash	nvarchar(100)
 		,@CashDate	date
-        
+        ,@Rent  Int
 )
 AS
 
@@ -99,11 +104,16 @@ UPDATE [dbo].[Pids]
       ,[RDType] = @RDType
       ,[RDRate] = @RDRate
       ,[TotalDuty] = @TotalDuty
-
+      ,[DeliveryCharges] = @DeliveryCharges
+      ,[Wharfage] = @Wharfage
+      ,[ContainerDeposit] = @ContainerDeposit
+      ,[LoloCharges] = @LoloCharges
+      ,[PSQCA1] = @PSQCA1
+      ,[PSQCA2] = @PSQCA2
       ,[Terminal] = @Terminal
       ,[ShippingLine] = @ShippingLine
       ,[Lolo] = @Lolo
-
+	  ,[Rent] = @Rent
 	  ,[GD] = @GD
 	  ,[GDDate] = @GDDate
 	  ,[Cash] = @Cash

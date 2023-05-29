@@ -17,7 +17,7 @@ SELECT  TransactionDate=NULL
 FROM AccountLedger
 WHERE TransactionDate < @StartDate AND ClientID = @ClientID
 UNION ALL
-SELECT  Convert(datetime, TransactionDate, 103)
+SELECT  Format(TransactionDate, 'dd-MM-yyyy') as TransactionDate
 	   ,Particular
 	   ,ClientID
 	   ,Debit
@@ -29,4 +29,4 @@ SELECT  Convert(datetime, TransactionDate, 103)
 FROM AccountLedger
 WHERE TransactionDate BETWEEN @StartDate AND @EndDate 
 AND ClientID=@ClientID
-ORDER BY TransactionDate ASC
+ORDER BY TransactionDate

@@ -5,10 +5,9 @@
 AS
 SELECT
        [BillDate]
+      ,[SubTotal]
+      ,[ServiceCharges]
       ,[Total]
-	  ,[Refund]
-	  ,[Balance]
-	  ,[Note]
   FROM [dbo].[PidBills]
   WHERE BillID = @BillID
 

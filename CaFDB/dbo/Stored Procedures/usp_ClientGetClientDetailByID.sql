@@ -16,10 +16,6 @@ AS
 			  ,[Address]
 			  ,[City]
 			  ,[ClientType]
-			  ,[StandAddress]
-			  ,[Fax]
-			  ,[CNIC]
-			  ,[Designation]
 			  ,c.CityName
 		  FROM [dbo].[Clients]
 		  INNER JOIN Cities c on City = c.CityID
