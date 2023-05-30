@@ -16,6 +16,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_059B02271AF24AA2940DD8FE0ADC84BB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_14DD02066CBE4CE88CD03BAE09F2473C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -217,6 +223,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_059B02271AF24AA2940DD8FE0ADC84BB"
+            {
+            "SourcePath" = "8:C:\\Users\\SHAH\\Downloads\\img.ico"
+            "TargetName" = "8:img.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_7551C1B6AD0F4045A23F4DD5AFF713E7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_14DD02066CBE4CE88CD03BAE09F2473C"
             {
             "SourcePath" = "8:..\\Faith Associates\\Reports\\Jobs\\NewPIDCalculationSheetReport.rpt"
@@ -634,15 +660,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Faith Associates"
-        "ProductCode" = "8:{2AD34345-F4DE-441E-B522-9A5A9A385F8E}"
-        "PackageCode" = "8:{2E9B10CF-2397-43EC-A09D-67B6099B43EB}"
+        "ProductCode" = "8:{17F27C34-66D3-420E-949D-C114185BFCC2}"
+        "PackageCode" = "8:{21B7651D-D888-4D23-9CD5-A764F267C42D}"
         "UpgradeCode" = "8:{839B511F-571C-4AE4-8C66-56C3B0508634}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.2.2"
+        "ProductVersion" = "8:1.2.3"
         "Manufacturer" = "8:Rizwan Razzak"
         "ARPHELPTELEPHONE" = "8:0335-2055505"
         "ARPHELPLINK" = "8:"

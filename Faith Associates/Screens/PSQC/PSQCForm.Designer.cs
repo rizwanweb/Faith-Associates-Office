@@ -67,6 +67,22 @@
             this.btnSearchJob = new System.Windows.Forms.Button();
             this.txtJob = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.dtQCC = new System.Windows.Forms.DateTimePicker();
+            this.txtQCCBank = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtQCCAmount = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtQCC = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.dtSDC = new System.Windows.Forms.DateTimePicker();
+            this.txtSDCBank = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtSDCAmount = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtSDC = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.dtInvoice = new System.Windows.Forms.DateTimePicker();
             this.txtInvoice = new System.Windows.Forms.TextBox();
@@ -82,11 +98,11 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnPringCertificate = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAuthLetter = new System.Windows.Forms.Button();
+            this.btnConsignee = new System.Windows.Forms.Button();
+            this.btnUndertaking = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -463,6 +479,22 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label26);
+            this.groupBox2.Controls.Add(this.dtQCC);
+            this.groupBox2.Controls.Add(this.txtQCCBank);
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Controls.Add(this.txtQCCAmount);
+            this.groupBox2.Controls.Add(this.label28);
+            this.groupBox2.Controls.Add(this.txtQCC);
+            this.groupBox2.Controls.Add(this.label29);
+            this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Controls.Add(this.dtSDC);
+            this.groupBox2.Controls.Add(this.txtSDCBank);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.txtSDCAmount);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.txtSDC);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.dtInvoice);
             this.groupBox2.Controls.Add(this.txtInvoice);
@@ -475,9 +507,147 @@
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Location = new System.Drawing.Point(12, 386);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(809, 92);
+            this.groupBox2.Size = new System.Drawing.Size(809, 223);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(655, 153);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(46, 21);
+            this.label26.TabIndex = 57;
+            this.label26.Text = "Date";
+            // 
+            // dtQCC
+            // 
+            this.dtQCC.CustomFormat = "dd-MMM-yyyy";
+            this.dtQCC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtQCC.Location = new System.Drawing.Point(657, 175);
+            this.dtQCC.Name = "dtQCC";
+            this.dtQCC.Size = new System.Drawing.Size(146, 26);
+            this.dtQCC.TabIndex = 56;
+            // 
+            // txtQCCBank
+            // 
+            this.txtQCCBank.Enabled = false;
+            this.txtQCCBank.Location = new System.Drawing.Point(444, 175);
+            this.txtQCCBank.Name = "txtQCCBank";
+            this.txtQCCBank.Size = new System.Drawing.Size(207, 26);
+            this.txtQCCBank.TabIndex = 55;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(444, 151);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(46, 21);
+            this.label27.TabIndex = 54;
+            this.label27.Text = "Bank";
+            // 
+            // txtQCCAmount
+            // 
+            this.txtQCCAmount.Enabled = false;
+            this.txtQCCAmount.Location = new System.Drawing.Point(248, 175);
+            this.txtQCCAmount.Name = "txtQCCAmount";
+            this.txtQCCAmount.Size = new System.Drawing.Size(190, 26);
+            this.txtQCCAmount.TabIndex = 53;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(251, 151);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(64, 21);
+            this.label28.TabIndex = 52;
+            this.label28.Text = "Amount";
+            // 
+            // txtQCC
+            // 
+            this.txtQCC.Enabled = false;
+            this.txtQCC.Location = new System.Drawing.Point(6, 175);
+            this.txtQCC.Name = "txtQCC";
+            this.txtQCC.Size = new System.Drawing.Size(236, 26);
+            this.txtQCC.TabIndex = 51;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(6, 151);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(136, 21);
+            this.label29.TabIndex = 50;
+            this.label29.Text = "QCC Payorder #";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(655, 90);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(46, 21);
+            this.label25.TabIndex = 49;
+            this.label25.Text = "Date";
+            // 
+            // dtSDC
+            // 
+            this.dtSDC.CustomFormat = "dd-MMM-yyyy";
+            this.dtSDC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtSDC.Location = new System.Drawing.Point(657, 112);
+            this.dtSDC.Name = "dtSDC";
+            this.dtSDC.Size = new System.Drawing.Size(146, 26);
+            this.dtSDC.TabIndex = 48;
+            // 
+            // txtSDCBank
+            // 
+            this.txtSDCBank.Enabled = false;
+            this.txtSDCBank.Location = new System.Drawing.Point(444, 112);
+            this.txtSDCBank.Name = "txtSDCBank";
+            this.txtSDCBank.Size = new System.Drawing.Size(207, 26);
+            this.txtSDCBank.TabIndex = 47;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(444, 88);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(46, 21);
+            this.label24.TabIndex = 46;
+            this.label24.Text = "Bank";
+            // 
+            // txtSDCAmount
+            // 
+            this.txtSDCAmount.Enabled = false;
+            this.txtSDCAmount.Location = new System.Drawing.Point(248, 112);
+            this.txtSDCAmount.Name = "txtSDCAmount";
+            this.txtSDCAmount.Size = new System.Drawing.Size(190, 26);
+            this.txtSDCAmount.TabIndex = 45;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(251, 88);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(64, 21);
+            this.label23.TabIndex = 44;
+            this.label23.Text = "Amount";
+            // 
+            // txtSDC
+            // 
+            this.txtSDC.Enabled = false;
+            this.txtSDC.Location = new System.Drawing.Point(6, 112);
+            this.txtSDC.Name = "txtSDC";
+            this.txtSDC.Size = new System.Drawing.Size(236, 26);
+            this.txtSDC.TabIndex = 43;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 21);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "SDC Payorder #";
             // 
             // label22
             // 
@@ -569,7 +739,7 @@
             this.groupBox3.Controls.Add(this.btnDelete);
             this.groupBox3.Controls.Add(this.btnAdd);
             this.groupBox3.Controls.Add(this.btnSave);
-            this.groupBox3.Location = new System.Drawing.Point(610, 484);
+            this.groupBox3.Location = new System.Drawing.Point(610, 615);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(211, 87);
             this.groupBox3.TabIndex = 4;
@@ -613,59 +783,60 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnPringCertificate
             // 
-            this.button7.Location = new System.Drawing.Point(6, 17);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(130, 64);
-            this.button7.TabIndex = 38;
-            this.button7.Text = "Print Certificate";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnPringCertificate.Location = new System.Drawing.Point(6, 17);
+            this.btnPringCertificate.Name = "btnPringCertificate";
+            this.btnPringCertificate.Size = new System.Drawing.Size(130, 64);
+            this.btnPringCertificate.TabIndex = 38;
+            this.btnPringCertificate.Text = "Print Certificate";
+            this.btnPringCertificate.UseVisualStyleBackColor = true;
+            this.btnPringCertificate.Click += new System.EventHandler(this.btnPringCertificate_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.button7);
-            this.groupBox4.Location = new System.Drawing.Point(12, 484);
+            this.groupBox4.Controls.Add(this.btnAuthLetter);
+            this.groupBox4.Controls.Add(this.btnConsignee);
+            this.groupBox4.Controls.Add(this.btnUndertaking);
+            this.groupBox4.Controls.Add(this.btnPringCertificate);
+            this.groupBox4.Location = new System.Drawing.Point(12, 615);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(592, 87);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             // 
-            // button3
+            // btnAuthLetter
             // 
-            this.button3.Location = new System.Drawing.Point(444, 17);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 64);
-            this.button3.TabIndex = 41;
-            this.button3.Text = "Print Auth-Letter";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAuthLetter.Location = new System.Drawing.Point(444, 17);
+            this.btnAuthLetter.Name = "btnAuthLetter";
+            this.btnAuthLetter.Size = new System.Drawing.Size(130, 64);
+            this.btnAuthLetter.TabIndex = 41;
+            this.btnAuthLetter.Text = "Print Auth-Letter";
+            this.btnAuthLetter.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnConsignee
             // 
-            this.button2.Location = new System.Drawing.Point(298, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 64);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Print Consignee";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnConsignee.Location = new System.Drawing.Point(298, 17);
+            this.btnConsignee.Name = "btnConsignee";
+            this.btnConsignee.Size = new System.Drawing.Size(130, 64);
+            this.btnConsignee.TabIndex = 40;
+            this.btnConsignee.Text = "Print Consignee";
+            this.btnConsignee.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnUndertaking
             // 
-            this.button1.Location = new System.Drawing.Point(152, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 64);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Print Undertaking";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUndertaking.Location = new System.Drawing.Point(152, 17);
+            this.btnUndertaking.Name = "btnUndertaking";
+            this.btnUndertaking.Size = new System.Drawing.Size(130, 64);
+            this.btnUndertaking.TabIndex = 39;
+            this.btnUndertaking.Text = "Print Undertaking";
+            this.btnUndertaking.UseVisualStyleBackColor = true;
             // 
             // PSQCForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 588);
+            this.ClientSize = new System.Drawing.Size(832, 750);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -736,15 +907,31 @@
         private System.Windows.Forms.ComboBox cmbAuthPerson;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnPringCertificate;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnEditClient;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAuthLetter;
+        private System.Windows.Forms.Button btnConsignee;
+        private System.Windows.Forms.Button btnUndertaking;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.DateTimePicker dtSDC;
+        private System.Windows.Forms.TextBox txtSDCBank;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txtSDCAmount;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox txtSDC;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.DateTimePicker dtQCC;
+        private System.Windows.Forms.TextBox txtQCCBank;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txtQCCAmount;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox txtQCC;
+        private System.Windows.Forms.Label label29;
     }
 }

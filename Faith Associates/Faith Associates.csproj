@@ -56,7 +56,7 @@
     <StartupObject>Faith_Associates.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>FaithIcon.ico</ApplicationIcon>
+    <ApplicationIcon>img.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>92A57EF7E6B762F352E3F2331F74BA88D199A87E</ManifestCertificateThumbprint>
@@ -70,11 +70,12 @@
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
-  </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -259,6 +260,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ConsigneeInformation.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PSQCA\PSQCView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PSQCA\PSQCView.Designer.cs">
+      <DependentUpon>PSQCView.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\PSQCA\Undertaking.cs">
       <AutoGen>True</AutoGen>
@@ -665,7 +672,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FaithIcon.ico" />
     <None Include="Resources\Login-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
@@ -695,6 +701,8 @@
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="img.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

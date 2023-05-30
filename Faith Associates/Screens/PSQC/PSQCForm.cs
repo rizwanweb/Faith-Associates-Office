@@ -114,5 +114,10 @@ namespace Faith_Associates.Screens.PSQC
             RSMessageBox.ShowSuccessMessage(this.isJob.ToString());
             RSMessageBox.ShowSuccessMessage(this.isPID.ToString());
         }
+
+        private void btnPringCertificate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
