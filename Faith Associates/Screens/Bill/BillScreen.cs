@@ -413,8 +413,8 @@ namespace Faith_Associates.Screens.Bill
             b.SalesTaxRate = Convert.ToDouble(txtSalesTaxRate.Text);
             b.SalesTax = Convert.ToInt32(txtSalesTax.Text);
             b.Total = Convert.ToInt32(txtTotal.Text);
-            b.Refund = txtRefund.Text == string.Empty ? 0 : Convert.ToInt32(txtRefund.Text);
-            b.Balance = txtBalance.Text == string.Empty ? 0 : Convert.ToInt32(txtBalance.Text);
+           
+        
 
 			b.Note = txtNote.Text.ToUpper();
             return b;
@@ -623,10 +623,6 @@ namespace Faith_Associates.Screens.Bill
                     txtSalesTaxRate.Text = row["SalesTaxRate"].ToString();
                     txtSalesTax.Text = row["SalesTax"].ToString();
                     txtTotal.Text = row["Total"].ToString();
-                    if (Convert.ToInt32(row["Refund"]) == 0) txtRefund.Text = string.Empty;
-                    else txtRefund.Text = row["Refund"].ToString();
-					if (Convert.ToInt32(row["Balance"]) == 0) txtBalance.Text = string.Empty;
-					else txtBalance.Text = row["Balance"].ToString();
 					txtNote.Text = row["Note"].ToString();
                 }
             }
@@ -831,21 +827,6 @@ namespace Faith_Associates.Screens.Bill
                 CalculateBillAmount();
             }
         }
-
-		private void txtRefund_TextChanged(object sender, EventArgs e)
-		{
-            if (txtRefund.Text == string.Empty)
-            {
-                txtBalance.Text = string.Empty;
-            }
-            else
-            {
-				int refund = Convert.ToInt32(txtRefund.Text);
-				int total = Convert.ToInt32(txtTotal.Text);
-				int balance =  total - refund;
-				txtBalance.Text = balance.ToString();
-			}
-		}
 
 	}
 }

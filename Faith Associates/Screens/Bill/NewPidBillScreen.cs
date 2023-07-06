@@ -378,8 +378,6 @@ namespace Faith_Associates.Screens.Bill
             b.BillDate = Convert.ToDateTime(dtBill.Value);
             b.PidID = this.PidID;
             b.Total = Convert.ToInt32(txtTotal.Text);
-            b.Refund = txtRefund.Text == string.Empty ? 0 : Convert.ToInt32(txtRefund.Text);
-            b.Balance = txtBalance.Text == string.Empty ? 0 : Convert.ToInt32(txtBalance.Text);
             b.Note = txtNote.Text.ToUpper();
             return b;
         }

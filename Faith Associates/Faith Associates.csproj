@@ -704,6 +704,13 @@
   <ItemGroup>
     <Content Include="faithIcon.ico" />
     <Content Include="img.ico" />
+    <None Include="Resources\Coronavirus Logo.png" />
+    <None Include="Resources\document %281%29.png" />
+    <None Include="Resources\container %281%29.png" />
+    <None Include="Resources\box %281%29.png" />
+    <None Include="Resources\human-capital %281%29.png" />
+    <None Include="Resources\port %281%29.png" />
+    <None Include="Resources\Untitled.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

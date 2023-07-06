@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -156,7 +157,7 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Cascadia Code", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
@@ -203,17 +204,17 @@
             this.groupBox1.Controls.Add(this.btnJobSearch);
             this.groupBox1.Controls.Add(this.txtJobNo);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 71);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(692, 506);
+            this.groupBox1.Size = new System.Drawing.Size(692, 477);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // btnAddItem
             // 
             this.btnAddItem.Image = ((System.Drawing.Image)(resources.GetObject("btnAddItem.Image")));
-            this.btnAddItem.Location = new System.Drawing.Point(308, 277);
+            this.btnAddItem.Location = new System.Drawing.Point(308, 263);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(44, 29);
             this.btnAddItem.TabIndex = 56;
@@ -223,25 +224,25 @@
             // 
             // txtVessel
             // 
-            this.txtVessel.Location = new System.Drawing.Point(507, 460);
+            this.txtVessel.Location = new System.Drawing.Point(507, 435);
             this.txtVessel.Name = "txtVessel";
-            this.txtVessel.Size = new System.Drawing.Size(179, 30);
+            this.txtVessel.Size = new System.Drawing.Size(179, 29);
             this.txtVessel.TabIndex = 17;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(502, 434);
+            this.label16.Location = new System.Drawing.Point(503, 411);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(78, 25);
+            this.label16.Size = new System.Drawing.Size(55, 21);
             this.label16.TabIndex = 33;
             this.label16.Text = "Vessel";
             // 
             // txtIndex
             // 
-            this.txtIndex.Location = new System.Drawing.Point(358, 460);
+            this.txtIndex.Location = new System.Drawing.Point(358, 435);
             this.txtIndex.Name = "txtIndex";
-            this.txtIndex.Size = new System.Drawing.Size(143, 30);
+            this.txtIndex.Size = new System.Drawing.Size(143, 29);
             this.txtIndex.TabIndex = 16;
             this.txtIndex.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtIndex.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIndex_KeyPress);
@@ -249,17 +250,17 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(357, 433);
+            this.label15.Location = new System.Drawing.Point(358, 410);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 25);
+            this.label15.Size = new System.Drawing.Size(50, 21);
             this.label15.TabIndex = 31;
             this.label15.Text = "Index";
             // 
             // txtSize
             // 
-            this.txtSize.Location = new System.Drawing.Point(211, 338);
+            this.txtSize.Location = new System.Drawing.Point(210, 318);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(141, 30);
+            this.txtSize.Size = new System.Drawing.Size(141, 29);
             this.txtSize.TabIndex = 8;
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
@@ -267,17 +268,17 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(206, 309);
+            this.label14.Location = new System.Drawing.Point(207, 293);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 25);
+            this.label14.Size = new System.Drawing.Size(39, 21);
             this.label14.TabIndex = 29;
             this.label14.Text = "Size";
             // 
             // txtContainer
             // 
-            this.txtContainer.Location = new System.Drawing.Point(12, 338);
+            this.txtContainer.Location = new System.Drawing.Point(11, 318);
             this.txtContainer.Name = "txtContainer";
-            this.txtContainer.Size = new System.Drawing.Size(193, 30);
+            this.txtContainer.Size = new System.Drawing.Size(193, 29);
             this.txtContainer.TabIndex = 7;
             this.txtContainer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtContainer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContainer_KeyPress);
@@ -285,25 +286,25 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(11, 309);
+            this.label13.Location = new System.Drawing.Point(8, 293);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 25);
+            this.label13.Size = new System.Drawing.Size(89, 21);
             this.label13.TabIndex = 27;
             this.label13.Text = "Containers";
             // 
             // txtPackages
             // 
-            this.txtPackages.Location = new System.Drawing.Point(358, 338);
+            this.txtPackages.Location = new System.Drawing.Point(357, 318);
             this.txtPackages.Name = "txtPackages";
-            this.txtPackages.Size = new System.Drawing.Size(328, 30);
+            this.txtPackages.Size = new System.Drawing.Size(328, 29);
             this.txtPackages.TabIndex = 9;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(353, 310);
+            this.label12.Location = new System.Drawing.Point(354, 294);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(100, 25);
+            this.label12.Size = new System.Drawing.Size(76, 21);
             this.label12.TabIndex = 25;
             this.label12.Text = "Packages";
             // 
@@ -311,16 +312,16 @@
             // 
             this.dtIGM.CustomFormat = "dd MMM yyyy";
             this.dtIGM.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtIGM.Location = new System.Drawing.Point(211, 460);
+            this.dtIGM.Location = new System.Drawing.Point(211, 435);
             this.dtIGM.Name = "dtIGM";
-            this.dtIGM.Size = new System.Drawing.Size(141, 30);
+            this.dtIGM.Size = new System.Drawing.Size(141, 29);
             this.dtIGM.TabIndex = 15;
             // 
             // txtIGM
             // 
-            this.txtIGM.Location = new System.Drawing.Point(11, 460);
+            this.txtIGM.Location = new System.Drawing.Point(11, 435);
             this.txtIGM.Name = "txtIGM";
-            this.txtIGM.Size = new System.Drawing.Size(194, 30);
+            this.txtIGM.Size = new System.Drawing.Size(194, 29);
             this.txtIGM.TabIndex = 14;
             this.txtIGM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtIGM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIGM_KeyPress);
@@ -328,9 +329,9 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(11, 432);
+            this.label11.Location = new System.Drawing.Point(12, 409);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(122, 25);
+            this.label11.Size = new System.Drawing.Size(104, 21);
             this.label11.TabIndex = 22;
             this.label11.Text = "IGM Number";
             // 
@@ -338,24 +339,24 @@
             // 
             this.dtBL.CustomFormat = "dd MMM yyyy";
             this.dtBL.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtBL.Location = new System.Drawing.Point(543, 401);
+            this.dtBL.Location = new System.Drawing.Point(507, 379);
             this.dtBL.Name = "dtBL";
-            this.dtBL.Size = new System.Drawing.Size(143, 30);
+            this.dtBL.Size = new System.Drawing.Size(178, 29);
             this.dtBL.TabIndex = 13;
             // 
             // txtBL
             // 
-            this.txtBL.Location = new System.Drawing.Point(358, 401);
+            this.txtBL.Location = new System.Drawing.Point(357, 377);
             this.txtBL.Name = "txtBL";
-            this.txtBL.Size = new System.Drawing.Size(179, 30);
+            this.txtBL.Size = new System.Drawing.Size(144, 29);
             this.txtBL.TabIndex = 12;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(353, 371);
+            this.label10.Location = new System.Drawing.Point(354, 355);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 25);
+            this.label10.Size = new System.Drawing.Size(92, 21);
             this.label10.TabIndex = 19;
             this.label10.Text = "BL Number";
             // 
@@ -363,31 +364,31 @@
             // 
             this.dtLC.CustomFormat = "dd MMM yyyy";
             this.dtLC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtLC.Location = new System.Drawing.Point(211, 399);
+            this.dtLC.Location = new System.Drawing.Point(210, 377);
             this.dtLC.Name = "dtLC";
-            this.dtLC.Size = new System.Drawing.Size(141, 30);
+            this.dtLC.Size = new System.Drawing.Size(141, 29);
             this.dtLC.TabIndex = 11;
             // 
             // txtLC
             // 
-            this.txtLC.Location = new System.Drawing.Point(12, 399);
+            this.txtLC.Location = new System.Drawing.Point(11, 377);
             this.txtLC.Name = "txtLC";
-            this.txtLC.Size = new System.Drawing.Size(193, 30);
+            this.txtLC.Size = new System.Drawing.Size(193, 29);
             this.txtLC.TabIndex = 10;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(11, 371);
+            this.label9.Location = new System.Drawing.Point(12, 355);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(111, 25);
+            this.label9.Size = new System.Drawing.Size(92, 21);
             this.label9.TabIndex = 16;
             this.label9.Text = "LC Number";
             // 
             // btnAddClient
             // 
             this.btnAddClient.Image = ((System.Drawing.Image)(resources.GetObject("btnAddClient.Image")));
-            this.btnAddClient.Location = new System.Drawing.Point(414, 112);
+            this.btnAddClient.Location = new System.Drawing.Point(414, 107);
             this.btnAddClient.Name = "btnAddClient";
             this.btnAddClient.Size = new System.Drawing.Size(44, 31);
             this.btnAddClient.TabIndex = 15;
@@ -398,25 +399,25 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(353, 248);
+            this.label8.Location = new System.Drawing.Point(357, 238);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(177, 25);
+            this.label8.Size = new System.Drawing.Size(118, 21);
             this.label8.TabIndex = 14;
             this.label8.Text = "Additional Info";
             // 
             // txtItemDetail
             // 
-            this.txtItemDetail.Location = new System.Drawing.Point(358, 276);
+            this.txtItemDetail.Location = new System.Drawing.Point(358, 262);
             this.txtItemDetail.Name = "txtItemDetail";
-            this.txtItemDetail.Size = new System.Drawing.Size(328, 30);
+            this.txtItemDetail.Size = new System.Drawing.Size(328, 29);
             this.txtItemDetail.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 249);
+            this.label7.Location = new System.Drawing.Point(11, 239);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(188, 25);
+            this.label7.Size = new System.Drawing.Size(131, 21);
             this.label7.TabIndex = 12;
             this.label7.Text = "Item Description";
             // 
@@ -424,7 +425,7 @@
             // 
             this.cmbItem.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbItem.FormattingEnabled = true;
-            this.cmbItem.Location = new System.Drawing.Point(12, 277);
+            this.cmbItem.Location = new System.Drawing.Point(12, 263);
             this.cmbItem.Name = "cmbItem";
             this.cmbItem.Size = new System.Drawing.Size(290, 29);
             this.cmbItem.TabIndex = 5;
@@ -433,16 +434,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 145);
+            this.label6.Location = new System.Drawing.Point(11, 139);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 25);
+            this.label6.Size = new System.Drawing.Size(70, 21);
             this.label6.TabIndex = 10;
             this.label6.Text = "Address";
             // 
             // txtAddress
             // 
             this.txtAddress.Enabled = false;
-            this.txtAddress.Location = new System.Drawing.Point(12, 173);
+            this.txtAddress.Location = new System.Drawing.Point(11, 163);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(674, 73);
@@ -451,17 +452,17 @@
             // txtContactPerson
             // 
             this.txtContactPerson.Enabled = false;
-            this.txtContactPerson.Location = new System.Drawing.Point(464, 113);
+            this.txtContactPerson.Location = new System.Drawing.Point(464, 107);
             this.txtContactPerson.Name = "txtContactPerson";
-            this.txtContactPerson.Size = new System.Drawing.Size(222, 30);
+            this.txtContactPerson.Size = new System.Drawing.Size(222, 29);
             this.txtContactPerson.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(459, 84);
+            this.label5.Location = new System.Drawing.Point(460, 83);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 25);
+            this.label5.Size = new System.Drawing.Size(121, 21);
             this.label5.TabIndex = 7;
             this.label5.Text = "Contact Person";
             // 
@@ -469,7 +470,7 @@
             // 
             this.cmbClient.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbClient.FormattingEnabled = true;
-            this.cmbClient.Location = new System.Drawing.Point(12, 113);
+            this.cmbClient.Location = new System.Drawing.Point(11, 107);
             this.cmbClient.Name = "cmbClient";
             this.cmbClient.Size = new System.Drawing.Size(399, 29);
             this.cmbClient.TabIndex = 2;
@@ -478,9 +479,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 84);
+            this.label4.Location = new System.Drawing.Point(8, 83);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 25);
+            this.label4.Size = new System.Drawing.Size(100, 21);
             this.label4.TabIndex = 5;
             this.label4.Text = "Client Name";
             // 
@@ -490,7 +491,7 @@
             this.dtJob.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtJob.Location = new System.Drawing.Point(200, 51);
             this.dtJob.Name = "dtJob";
-            this.dtJob.Size = new System.Drawing.Size(211, 30);
+            this.dtJob.Size = new System.Drawing.Size(211, 29);
             this.dtJob.TabIndex = 1;
             // 
             // label3
@@ -498,7 +499,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(195, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 25);
+            this.label3.Size = new System.Drawing.Size(75, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "Job Date";
             // 
@@ -517,7 +518,7 @@
             // 
             this.txtJobNo.Location = new System.Drawing.Point(11, 51);
             this.txtJobNo.Name = "txtJobNo";
-            this.txtJobNo.Size = new System.Drawing.Size(133, 30);
+            this.txtJobNo.Size = new System.Drawing.Size(133, 29);
             this.txtJobNo.TabIndex = 0;
             this.txtJobNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtJobNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtJobNo_KeyPress);
@@ -527,25 +528,25 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(7, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 25);
+            this.label2.Size = new System.Drawing.Size(101, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Job Number";
             // 
             // txtLandingCharges
             // 
             this.txtLandingCharges.Enabled = false;
-            this.txtLandingCharges.Location = new System.Drawing.Point(262, 113);
+            this.txtLandingCharges.Location = new System.Drawing.Point(262, 103);
             this.txtLandingCharges.Name = "txtLandingCharges";
-            this.txtLandingCharges.Size = new System.Drawing.Size(244, 30);
+            this.txtLandingCharges.Size = new System.Drawing.Size(244, 29);
             this.txtLandingCharges.TabIndex = 3;
             this.txtLandingCharges.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(257, 87);
+            this.label20.Location = new System.Drawing.Point(261, 79);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(177, 25);
+            this.label20.Size = new System.Drawing.Size(132, 21);
             this.label20.TabIndex = 41;
             this.label20.Text = "Landing Charges";
             // 
@@ -591,18 +592,18 @@
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.txtQuantity);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(710, 71);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(512, 506);
+            this.groupBox2.Size = new System.Drawing.Size(512, 477);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
             // txtRDRate
             // 
-            this.txtRDRate.Location = new System.Drawing.Point(262, 398);
+            this.txtRDRate.Location = new System.Drawing.Point(262, 387);
             this.txtRDRate.Name = "txtRDRate";
-            this.txtRDRate.Size = new System.Drawing.Size(96, 30);
+            this.txtRDRate.Size = new System.Drawing.Size(96, 29);
             this.txtRDRate.TabIndex = 73;
             this.txtRDRate.TabStop = false;
             this.txtRDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -610,9 +611,9 @@
             // 
             // txtCessRate
             // 
-            this.txtCessRate.Location = new System.Drawing.Point(262, 362);
+            this.txtCessRate.Location = new System.Drawing.Point(262, 351);
             this.txtCessRate.Name = "txtCessRate";
-            this.txtCessRate.Size = new System.Drawing.Size(96, 30);
+            this.txtCessRate.Size = new System.Drawing.Size(96, 29);
             this.txtCessRate.TabIndex = 72;
             this.txtCessRate.TabStop = false;
             this.txtCessRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -621,9 +622,9 @@
             // 
             // txtITRate
             // 
-            this.txtITRate.Location = new System.Drawing.Point(262, 326);
+            this.txtITRate.Location = new System.Drawing.Point(262, 315);
             this.txtITRate.Name = "txtITRate";
-            this.txtITRate.Size = new System.Drawing.Size(96, 30);
+            this.txtITRate.Size = new System.Drawing.Size(96, 29);
             this.txtITRate.TabIndex = 71;
             this.txtITRate.TabStop = false;
             this.txtITRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -632,9 +633,9 @@
             // 
             // txtSTRate
             // 
-            this.txtSTRate.Location = new System.Drawing.Point(262, 290);
+            this.txtSTRate.Location = new System.Drawing.Point(262, 279);
             this.txtSTRate.Name = "txtSTRate";
-            this.txtSTRate.Size = new System.Drawing.Size(96, 30);
+            this.txtSTRate.Size = new System.Drawing.Size(96, 29);
             this.txtSTRate.TabIndex = 70;
             this.txtSTRate.TabStop = false;
             this.txtSTRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -643,9 +644,9 @@
             // 
             // txtACDRate
             // 
-            this.txtACDRate.Location = new System.Drawing.Point(262, 254);
+            this.txtACDRate.Location = new System.Drawing.Point(262, 243);
             this.txtACDRate.Name = "txtACDRate";
-            this.txtACDRate.Size = new System.Drawing.Size(96, 30);
+            this.txtACDRate.Size = new System.Drawing.Size(96, 29);
             this.txtACDRate.TabIndex = 69;
             this.txtACDRate.TabStop = false;
             this.txtACDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -653,9 +654,9 @@
             // 
             // txtCDRate
             // 
-            this.txtCDRate.Location = new System.Drawing.Point(262, 218);
+            this.txtCDRate.Location = new System.Drawing.Point(262, 207);
             this.txtCDRate.Name = "txtCDRate";
-            this.txtCDRate.Size = new System.Drawing.Size(96, 30);
+            this.txtCDRate.Size = new System.Drawing.Size(96, 29);
             this.txtCDRate.TabIndex = 68;
             this.txtCDRate.TabStop = false;
             this.txtCDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -665,221 +666,222 @@
             // 
             this.txtTotal.BackColor = System.Drawing.Color.DarkSlateGray;
             this.txtTotal.Enabled = false;
-            this.txtTotal.Font = new System.Drawing.Font("Cascadia Code", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal.ForeColor = System.Drawing.Color.Gold;
-            this.txtTotal.Location = new System.Drawing.Point(364, 455);
+            this.txtTotal.Location = new System.Drawing.Point(364, 432);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(142, 35);
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(142, 39);
             this.txtTotal.TabIndex = 19;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Cascadia Code", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(6, 458);
+            this.label30.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(4, 435);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(84, 32);
+            this.label30.Size = new System.Drawing.Size(66, 32);
             this.label30.TabIndex = 67;
             this.label30.Text = "Total";
             // 
             // txtRD
             // 
-            this.txtRD.Location = new System.Drawing.Point(364, 398);
+            this.txtRD.Location = new System.Drawing.Point(364, 387);
             this.txtRD.Name = "txtRD";
-            this.txtRD.Size = new System.Drawing.Size(142, 30);
+            this.txtRD.Size = new System.Drawing.Size(142, 29);
             this.txtRD.TabIndex = 18;
             this.txtRD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtRDType
             // 
             this.txtRDType.Enabled = false;
-            this.txtRDType.Location = new System.Drawing.Point(217, 398);
+            this.txtRDType.Location = new System.Drawing.Point(217, 387);
             this.txtRDType.Name = "txtRDType";
-            this.txtRDType.Size = new System.Drawing.Size(39, 30);
+            this.txtRDType.Size = new System.Drawing.Size(39, 29);
             this.txtRDType.TabIndex = 17;
             this.txtRDType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(6, 401);
+            this.label29.Location = new System.Drawing.Point(6, 390);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(34, 25);
+            this.label29.Size = new System.Drawing.Size(31, 21);
             this.label29.TabIndex = 64;
             this.label29.Text = "RD";
             // 
             // txtCess
             // 
-            this.txtCess.Location = new System.Drawing.Point(364, 362);
+            this.txtCess.Location = new System.Drawing.Point(364, 351);
             this.txtCess.Name = "txtCess";
-            this.txtCess.Size = new System.Drawing.Size(142, 30);
+            this.txtCess.Size = new System.Drawing.Size(142, 29);
             this.txtCess.TabIndex = 16;
             this.txtCess.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtCessType
             // 
             this.txtCessType.Enabled = false;
-            this.txtCessType.Location = new System.Drawing.Point(217, 362);
+            this.txtCessType.Location = new System.Drawing.Point(217, 351);
             this.txtCessType.Name = "txtCessType";
-            this.txtCessType.Size = new System.Drawing.Size(39, 30);
+            this.txtCessType.Size = new System.Drawing.Size(39, 29);
             this.txtCessType.TabIndex = 15;
             this.txtCessType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 365);
+            this.label28.Location = new System.Drawing.Point(6, 354);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(56, 25);
+            this.label28.Size = new System.Drawing.Size(47, 21);
             this.label28.TabIndex = 61;
             this.label28.Text = "CESS";
             // 
             // txtIT
             // 
-            this.txtIT.Location = new System.Drawing.Point(364, 326);
+            this.txtIT.Location = new System.Drawing.Point(364, 315);
             this.txtIT.Name = "txtIT";
-            this.txtIT.Size = new System.Drawing.Size(142, 30);
+            this.txtIT.Size = new System.Drawing.Size(142, 29);
             this.txtIT.TabIndex = 14;
             this.txtIT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtITType
             // 
             this.txtITType.Enabled = false;
-            this.txtITType.Location = new System.Drawing.Point(217, 326);
+            this.txtITType.Location = new System.Drawing.Point(217, 315);
             this.txtITType.Name = "txtITType";
-            this.txtITType.Size = new System.Drawing.Size(39, 30);
+            this.txtITType.Size = new System.Drawing.Size(39, 29);
             this.txtITType.TabIndex = 13;
             this.txtITType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 329);
+            this.label27.Location = new System.Drawing.Point(6, 318);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(122, 25);
+            this.label27.Size = new System.Drawing.Size(91, 21);
             this.label27.TabIndex = 58;
             this.label27.Text = "Income Tax";
             // 
             // txtST
             // 
-            this.txtST.Location = new System.Drawing.Point(364, 290);
+            this.txtST.Location = new System.Drawing.Point(364, 279);
             this.txtST.Name = "txtST";
-            this.txtST.Size = new System.Drawing.Size(142, 30);
+            this.txtST.Size = new System.Drawing.Size(142, 29);
             this.txtST.TabIndex = 12;
             this.txtST.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtSTType
             // 
             this.txtSTType.Enabled = false;
-            this.txtSTType.Location = new System.Drawing.Point(217, 290);
+            this.txtSTType.Location = new System.Drawing.Point(217, 279);
             this.txtSTType.Name = "txtSTType";
-            this.txtSTType.Size = new System.Drawing.Size(39, 30);
+            this.txtSTType.Size = new System.Drawing.Size(39, 29);
             this.txtSTType.TabIndex = 11;
             this.txtSTType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 293);
+            this.label26.Location = new System.Drawing.Point(6, 282);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(111, 25);
+            this.label26.Size = new System.Drawing.Size(74, 21);
             this.label26.TabIndex = 55;
             this.label26.Text = "Sales Tax";
             // 
             // txtACD
             // 
-            this.txtACD.Location = new System.Drawing.Point(364, 254);
+            this.txtACD.Location = new System.Drawing.Point(364, 243);
             this.txtACD.Name = "txtACD";
-            this.txtACD.Size = new System.Drawing.Size(142, 30);
+            this.txtACD.Size = new System.Drawing.Size(142, 29);
             this.txtACD.TabIndex = 10;
             this.txtACD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtACDType
             // 
             this.txtACDType.Enabled = false;
-            this.txtACDType.Location = new System.Drawing.Point(217, 254);
+            this.txtACDType.Location = new System.Drawing.Point(217, 243);
             this.txtACDType.Name = "txtACDType";
-            this.txtACDType.Size = new System.Drawing.Size(39, 30);
+            this.txtACDType.Size = new System.Drawing.Size(39, 29);
             this.txtACDType.TabIndex = 9;
             this.txtACDType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(6, 257);
+            this.label25.Location = new System.Drawing.Point(6, 246);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(177, 25);
+            this.label25.Size = new System.Drawing.Size(141, 21);
             this.label25.TabIndex = 52;
             this.label25.Text = "Add Custom Duty";
             // 
             // txtCD
             // 
-            this.txtCD.Location = new System.Drawing.Point(364, 218);
+            this.txtCD.Location = new System.Drawing.Point(364, 207);
             this.txtCD.Name = "txtCD";
-            this.txtCD.Size = new System.Drawing.Size(142, 30);
+            this.txtCD.Size = new System.Drawing.Size(142, 29);
             this.txtCD.TabIndex = 8;
             this.txtCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtCDType
             // 
             this.txtCDType.Enabled = false;
-            this.txtCDType.Location = new System.Drawing.Point(217, 218);
+            this.txtCDType.Location = new System.Drawing.Point(217, 207);
             this.txtCDType.Name = "txtCDType";
-            this.txtCDType.Size = new System.Drawing.Size(39, 30);
+            this.txtCDType.Size = new System.Drawing.Size(39, 29);
             this.txtCDType.TabIndex = 7;
             this.txtCDType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 221);
+            this.label24.Location = new System.Drawing.Point(6, 210);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(133, 25);
+            this.label24.Size = new System.Drawing.Size(106, 21);
             this.label24.TabIndex = 49;
             this.label24.Text = "Custom Duty";
             // 
             // txtImportPKR
             // 
             this.txtImportPKR.Enabled = false;
-            this.txtImportPKR.Location = new System.Drawing.Point(262, 173);
+            this.txtImportPKR.Location = new System.Drawing.Point(262, 159);
             this.txtImportPKR.Name = "txtImportPKR";
-            this.txtImportPKR.Size = new System.Drawing.Size(244, 30);
+            this.txtImportPKR.Size = new System.Drawing.Size(244, 29);
             this.txtImportPKR.TabIndex = 6;
             this.txtImportPKR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(257, 145);
+            this.label23.Location = new System.Drawing.Point(261, 135);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(188, 25);
+            this.label23.Size = new System.Drawing.Size(136, 21);
             this.label23.TabIndex = 47;
             this.label23.Text = "Import Value PKR";
             // 
             // txtValuePKR
             // 
             this.txtValuePKR.Enabled = false;
-            this.txtValuePKR.Location = new System.Drawing.Point(6, 173);
+            this.txtValuePKR.Location = new System.Drawing.Point(6, 159);
             this.txtValuePKR.Name = "txtValuePKR";
-            this.txtValuePKR.Size = new System.Drawing.Size(250, 30);
+            this.txtValuePKR.Size = new System.Drawing.Size(250, 29);
             this.txtValuePKR.TabIndex = 5;
             this.txtValuePKR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 145);
+            this.label22.Location = new System.Drawing.Point(6, 135);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(144, 25);
+            this.label22.Size = new System.Drawing.Size(102, 21);
             this.label22.TabIndex = 45;
             this.label22.Text = "Value IN PKR";
             // 
             // txtInsurance
             // 
-            this.txtInsurance.Location = new System.Drawing.Point(6, 113);
+            this.txtInsurance.Location = new System.Drawing.Point(6, 103);
             this.txtInsurance.Name = "txtInsurance";
-            this.txtInsurance.Size = new System.Drawing.Size(250, 30);
+            this.txtInsurance.Size = new System.Drawing.Size(250, 29);
             this.txtInsurance.TabIndex = 4;
             this.txtInsurance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtInsurance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInsurance_KeyPress);
@@ -888,17 +890,17 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 85);
+            this.label21.Location = new System.Drawing.Point(5, 79);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(111, 25);
+            this.label21.Size = new System.Drawing.Size(79, 21);
             this.label21.TabIndex = 43;
             this.label21.Text = "Insurance";
             // 
             // txtInvoiceUSD
             // 
-            this.txtInvoiceUSD.Location = new System.Drawing.Point(262, 54);
+            this.txtInvoiceUSD.Location = new System.Drawing.Point(262, 47);
             this.txtInvoiceUSD.Name = "txtInvoiceUSD";
-            this.txtInvoiceUSD.Size = new System.Drawing.Size(244, 30);
+            this.txtInvoiceUSD.Size = new System.Drawing.Size(244, 29);
             this.txtInvoiceUSD.TabIndex = 2;
             this.txtInvoiceUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtInvoiceUSD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInvoiceUSD_KeyPress);
@@ -906,17 +908,17 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(257, 26);
+            this.label19.Location = new System.Drawing.Point(261, 23);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(133, 25);
+            this.label19.Size = new System.Drawing.Size(97, 21);
             this.label19.TabIndex = 39;
             this.label19.Text = "Invoice USD";
             // 
             // txtEXRate
             // 
-            this.txtEXRate.Location = new System.Drawing.Point(155, 54);
+            this.txtEXRate.Location = new System.Drawing.Point(155, 47);
             this.txtEXRate.Name = "txtEXRate";
-            this.txtEXRate.Size = new System.Drawing.Size(101, 30);
+            this.txtEXRate.Size = new System.Drawing.Size(101, 29);
             this.txtEXRate.TabIndex = 1;
             this.txtEXRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtEXRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEXRate_KeyPress);
@@ -924,17 +926,17 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(150, 26);
+            this.label18.Location = new System.Drawing.Point(151, 23);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(89, 25);
+            this.label18.Size = new System.Drawing.Size(65, 21);
             this.label18.TabIndex = 37;
             this.label18.Text = "Ex-Rate";
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(6, 54);
+            this.txtQuantity.Location = new System.Drawing.Point(6, 47);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(143, 30);
+            this.txtQuantity.Size = new System.Drawing.Size(143, 29);
             this.txtQuantity.TabIndex = 0;
             this.txtQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
@@ -942,9 +944,9 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 26);
+            this.label17.Location = new System.Drawing.Point(7, 23);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(133, 25);
+            this.label17.Size = new System.Drawing.Size(88, 21);
             this.label17.TabIndex = 35;
             this.label17.Text = "Qty (In KG)";
             // 
@@ -959,17 +961,17 @@
             this.groupBox3.Controls.Add(this.label32);
             this.groupBox3.Controls.Add(this.cmbTerminal);
             this.groupBox3.Controls.Add(this.label31);
-            this.groupBox3.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(12, 583);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(12, 554);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(333, 269);
+            this.groupBox3.Size = new System.Drawing.Size(280, 197);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             // 
             // btnAddLolo
             // 
             this.btnAddLolo.Image = ((System.Drawing.Image)(resources.GetObject("btnAddLolo.Image")));
-            this.btnAddLolo.Location = new System.Drawing.Point(273, 218);
+            this.btnAddLolo.Location = new System.Drawing.Point(230, 159);
             this.btnAddLolo.Name = "btnAddLolo";
             this.btnAddLolo.Size = new System.Drawing.Size(44, 29);
             this.btnAddLolo.TabIndex = 55;
@@ -980,7 +982,7 @@
             // btnAddShippingLine
             // 
             this.btnAddShippingLine.Image = ((System.Drawing.Image)(resources.GetObject("btnAddShippingLine.Image")));
-            this.btnAddShippingLine.Location = new System.Drawing.Point(273, 132);
+            this.btnAddShippingLine.Location = new System.Drawing.Point(230, 103);
             this.btnAddShippingLine.Name = "btnAddShippingLine";
             this.btnAddShippingLine.Size = new System.Drawing.Size(44, 29);
             this.btnAddShippingLine.TabIndex = 54;
@@ -991,7 +993,7 @@
             // btnAddTerminal
             // 
             this.btnAddTerminal.Image = ((System.Drawing.Image)(resources.GetObject("btnAddTerminal.Image")));
-            this.btnAddTerminal.Location = new System.Drawing.Point(273, 45);
+            this.btnAddTerminal.Location = new System.Drawing.Point(230, 45);
             this.btnAddTerminal.Name = "btnAddTerminal";
             this.btnAddTerminal.Size = new System.Drawing.Size(44, 29);
             this.btnAddTerminal.TabIndex = 53;
@@ -1003,18 +1005,18 @@
             // 
             this.cmbLolo.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLolo.FormattingEnabled = true;
-            this.cmbLolo.Location = new System.Drawing.Point(18, 218);
+            this.cmbLolo.Location = new System.Drawing.Point(11, 159);
             this.cmbLolo.Name = "cmbLolo";
-            this.cmbLolo.Size = new System.Drawing.Size(252, 29);
+            this.cmbLolo.Size = new System.Drawing.Size(213, 29);
             this.cmbLolo.TabIndex = 2;
             this.cmbLolo.SelectionChangeCommitted += new System.EventHandler(this.cmbLolo_SelectionChangeCommitted);
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(116, 190);
+            this.label33.Location = new System.Drawing.Point(7, 135);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(56, 25);
+            this.label33.Size = new System.Drawing.Size(48, 21);
             this.label33.TabIndex = 39;
             this.label33.Text = "LOLO";
             // 
@@ -1022,18 +1024,18 @@
             // 
             this.cmbShippingLine.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbShippingLine.FormattingEnabled = true;
-            this.cmbShippingLine.Location = new System.Drawing.Point(18, 132);
+            this.cmbShippingLine.Location = new System.Drawing.Point(11, 103);
             this.cmbShippingLine.Name = "cmbShippingLine";
-            this.cmbShippingLine.Size = new System.Drawing.Size(252, 29);
+            this.cmbShippingLine.Size = new System.Drawing.Size(213, 29);
             this.cmbShippingLine.TabIndex = 1;
             this.cmbShippingLine.SelectionChangeCommitted += new System.EventHandler(this.cmbShippingLine_SelectionChangeCommitted);
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(67, 100);
+            this.label32.Location = new System.Drawing.Point(7, 79);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(155, 25);
+            this.label32.Size = new System.Drawing.Size(109, 21);
             this.label32.TabIndex = 37;
             this.label32.Text = "Shipping Line";
             // 
@@ -1041,18 +1043,18 @@
             // 
             this.cmbTerminal.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTerminal.FormattingEnabled = true;
-            this.cmbTerminal.Location = new System.Drawing.Point(18, 45);
+            this.cmbTerminal.Location = new System.Drawing.Point(11, 45);
             this.cmbTerminal.Name = "cmbTerminal";
-            this.cmbTerminal.Size = new System.Drawing.Size(252, 29);
+            this.cmbTerminal.Size = new System.Drawing.Size(213, 29);
             this.cmbTerminal.TabIndex = 0;
             this.cmbTerminal.SelectionChangeCommitted += new System.EventHandler(this.cmbTerminal_SelectionChangeCommitted);
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(94, 17);
+            this.label31.Location = new System.Drawing.Point(7, 17);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(100, 25);
+            this.label31.Size = new System.Drawing.Size(71, 21);
             this.label31.TabIndex = 35;
             this.label31.Text = "Terminal";
             // 
@@ -1065,7 +1067,7 @@
             this.dgvPayorders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1077,14 +1079,22 @@
             this.Particulars,
             this.Amount,
             this.Payorder});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPayorders.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPayorders.Location = new System.Drawing.Point(6, 17);
             this.dgvPayorders.MultiSelect = false;
             this.dgvPayorders.Name = "dgvPayorders";
             this.dgvPayorders.RowHeadersVisible = false;
             this.dgvPayorders.RowHeadersWidth = 40;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPayorders.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvPayorders.Size = new System.Drawing.Size(728, 242);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPayorders.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvPayorders.Size = new System.Drawing.Size(739, 171);
             this.dgvPayorders.TabIndex = 56;
             // 
             // ID
@@ -1116,11 +1126,11 @@
             // 
             // btnSave
             // 
-            this.btnSave.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(9, 16);
+            this.btnSave.Location = new System.Drawing.Point(9, 17);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(105, 56);
+            this.btnSave.Size = new System.Drawing.Size(72, 50);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -1129,11 +1139,11 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(9, 139);
+            this.btnDelete.Location = new System.Drawing.Point(6, 135);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(105, 56);
+            this.btnDelete.Size = new System.Drawing.Size(72, 50);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.TabStop = false;
             this.btnDelete.Text = "Delete";
@@ -1143,11 +1153,11 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(9, 77);
+            this.btnPrint.Location = new System.Drawing.Point(87, 17);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(105, 56);
+            this.btnPrint.Size = new System.Drawing.Size(72, 50);
             this.btnPrint.TabIndex = 1;
             this.btnPrint.Text = "Print";
             this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -1156,11 +1166,11 @@
             // 
             // btnExit
             // 
-            this.btnExit.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(9, 201);
+            this.btnExit.Location = new System.Drawing.Point(87, 135);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(105, 56);
+            this.btnExit.Size = new System.Drawing.Size(72, 50);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -1171,9 +1181,9 @@
             // 
             this.groupBox4.Controls.Add(this.dgvPayorders);
             this.groupBox4.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(351, 583);
+            this.groupBox4.Location = new System.Drawing.Point(298, 554);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(740, 269);
+            this.groupBox4.Size = new System.Drawing.Size(751, 197);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             // 
@@ -1183,9 +1193,9 @@
             this.groupBox5.Controls.Add(this.btnSave);
             this.groupBox5.Controls.Add(this.btnDelete);
             this.groupBox5.Controls.Add(this.btnPrint);
-            this.groupBox5.Location = new System.Drawing.Point(1097, 585);
+            this.groupBox5.Location = new System.Drawing.Point(1055, 554);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(125, 267);
+            this.groupBox5.Size = new System.Drawing.Size(167, 197);
             this.groupBox5.TabIndex = 58;
             this.groupBox5.TabStop = false;
             // 
@@ -1193,7 +1203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1234, 868);
+            this.ClientSize = new System.Drawing.Size(1234, 767);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
