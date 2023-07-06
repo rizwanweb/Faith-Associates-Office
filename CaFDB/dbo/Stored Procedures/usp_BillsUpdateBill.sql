@@ -9,6 +9,7 @@
 	,@SalesTaxRate decimal(18,2)
 	,@SalesTax int
 	,@Total int
+	,@Note nvarchar(MAX)
 	,@Refund	int
 	,@Balance	int
 )
@@ -22,6 +23,7 @@ UPDATE [dbo].[Bills]
       ,[SalesTaxRate] = @SalesTaxRate
       ,[SalesTax] = @SalesTax
       ,[Total] = @Total
+	  ,[Note] = @Note
 	  ,[Refund] = @Refund
 	  ,[Balance] = @Balance
  WHERE BillID = @BillID

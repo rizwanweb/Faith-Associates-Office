@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_ShippingLinesDeleteShippingLine
+﻿CREATE PROCEDURE [dbo].[usp_ShippingLinesDeleteShippingLine]
 (
 	@ShippingLineID	INT
 )

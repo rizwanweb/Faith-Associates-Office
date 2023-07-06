@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_HeadersUpdateByID
+﻿CREATE PROCEDURE [dbo].[usp_HeadersUpdateByID]
 (
 	@HeadID	INT
 	,@BillHead	nvarchar(250)

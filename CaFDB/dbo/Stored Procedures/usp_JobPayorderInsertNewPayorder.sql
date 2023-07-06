@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_JobPayorderInsertNewPayorder
+﻿CREATE PROCEDURE [dbo].[usp_JobPayorderInsertNewPayorder]
 (
 			@PayorderID INT
 		   ,@JobID int

@@ -28,33 +28,43 @@ AS
 			  ,[Insurance]
 			  ,[LandingCharges]
 			  ,[ImportValuePKR]
-			  ,[CustomDuty]
-			  ,[CustomDutyType]
-			  ,[CustomDutyRate]
-			  ,[AddCustomDuty]
-			  ,[AddCustomDutyType]
+			  ,Jobs.[CustomDuty]
+			  ,Jobs.[CustomDutyType]
+			  ,Jobs.[CustomDutyRate]
+			  ,Jobs.[AddCustomDuty]
+			  ,Jobs.[AddCustomDutyType]
 			  ,[AddCustomDutyRate]
-			  ,[SalesTax]
+			  ,Jobs.[SalesTax]
 			  ,[SalesTaxType]
 			  ,[SalesTaxRate]
-			  ,[IncomeTax]
+			  ,Jobs.[IncomeTax]
 			  ,[IncomeTaxType]
 			  ,[IncomeTaxRate]
-			  ,[Cess]
-			  ,[CessType]
+			  ,Jobs.[Cess]
+			  ,Jobs.[CessType]
 			  ,[CessRate]
-			  ,[RD]
-			  ,[RDType]
+			  ,Jobs.[RD]
+			  ,Jobs.[RDType]
 			  ,[RDRate]
 			  ,[TotalDuty]
 
 			  ,[Terminal]
 			  ,[ShippingLine]
 			  ,[Lolo]
+
+			  ,[Clients].[ClientName]
 			  ,[Clients].[ContactPerson]
 			  ,[Clients].[Address]
+			  ,[Clients].Phone
+			  ,[Clients].Mobile
+			  ,[Clients].Email
+			  ,[Clients].NTN
+
+			  ,[Items].[ItemName]
+			  ,[Items].HSCode
 		  FROM [dbo].[Jobs]
 		  INNER JOIN Clients ON Clients.ClientID = Jobs.Client
+		  INNER JOIN Items ON Items.ItemID = Jobs.Item
 		  WHERE JobID = @JobID
 	END
 

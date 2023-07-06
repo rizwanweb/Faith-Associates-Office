@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_SalesTaxInvoiceUpdateSTInvoice
+﻿CREATE PROCEDURE [dbo].[usp_SalesTaxInvoiceUpdateSTInvoice]
 (
 	 @STID	int
     ,@SalesTaxNo int

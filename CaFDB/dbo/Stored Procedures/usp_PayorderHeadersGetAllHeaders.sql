@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_PayorderHeadersGetAllHeaders
+﻿CREATE PROCEDURE [dbo].[usp_PayorderHeadersGetAllHeaders]
 AS
 SELECT [HeaderID]
       ,[Description]

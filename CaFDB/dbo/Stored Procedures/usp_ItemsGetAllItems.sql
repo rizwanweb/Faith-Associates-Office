@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_ItemsGetAllItems
+﻿CREATE PROCEDURE [dbo].[usp_ItemsGetAllItems]
 
 AS
 SELECT [ItemID]

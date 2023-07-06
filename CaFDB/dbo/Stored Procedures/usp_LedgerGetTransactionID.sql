@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_LedgerGetTransactionID
+﻿CREATE PROCEDURE [dbo].[usp_LedgerGetTransactionID]
 @Reff	int
 AS
 SELECT [TransactionID]

@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_STInvoiceGetSTInvoiceByBillID
+﻿CREATE PROCEDURE [dbo].[usp_STInvoiceGetSTInvoiceByBillID]
 (
 	@BillID	INT
 )

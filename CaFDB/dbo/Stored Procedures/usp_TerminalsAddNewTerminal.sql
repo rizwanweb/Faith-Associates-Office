@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_TerminalsAddNewTerminal
+﻿CREATE PROCEDURE [dbo].[usp_TerminalsAddNewTerminal]
 (
 	 @TerminalID INT
 	,@TerminalName nvarchar(100)

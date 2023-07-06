@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_LOLOsAddNewLolo
+﻿CREATE PROCEDURE [dbo].[usp_LOLOsAddNewLolo]
 (
 	 @LoloID INT
 	,@LoloName nvarchar(100)

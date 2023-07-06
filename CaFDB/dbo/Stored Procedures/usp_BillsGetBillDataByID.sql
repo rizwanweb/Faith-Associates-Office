@@ -10,6 +10,7 @@ SELECT
       ,[SalesTaxRate]
       ,Bills.[SalesTax]
       ,[Total]
+	  ,[Note]
 	  ,[Refund]
 	  ,[Balance]
 	  ,SalesTaxInvoice.SalesTaxNo

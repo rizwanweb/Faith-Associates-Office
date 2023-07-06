@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_PayorderHeaderGetHeaderByJobID
+﻿CREATE PROCEDURE [dbo].[usp_PayorderHeaderGetHeaderByJobID]
 (
 	@JobID	INT
 )

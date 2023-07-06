@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_LedgerDeleteEntry
+﻿CREATE PROCEDURE [dbo].[usp_LedgerDeleteEntry]
 (
 	@REFF	INT
 )

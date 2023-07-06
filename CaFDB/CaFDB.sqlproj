@@ -132,7 +132,6 @@
     <Build Include="dbo\Stored Procedures\usp_PidsGetPidsByPidNo.sql" />
     <Build Include="dbo\Stored Procedures\usp_HeadersDeleteByID.sql" />
     <Build Include="dbo\Stored Procedures\usp_PidsGetPidsByLC.sql" />
-    <Build Include="dbo\Stored Procedures\usp_ReportsGetPIDDataByID.sql" />
     <Build Include="dbo\Stored Procedures\usp_PidsInsertNewPid.sql" />
     <Build Include="dbo\Stored Procedures\usp_PidsUpdatePid.sql" />
     <Build Include="dbo\Stored Procedures\usp_TerminalsGetAllTerminals.sql" />

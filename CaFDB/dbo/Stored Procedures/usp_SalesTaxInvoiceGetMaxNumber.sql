@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_SalesTaxInvoiceGetMaxNumber
+﻿CREATE PROCEDURE [dbo].[usp_SalesTaxInvoiceGetMaxNumber]
 AS
 SELECT MAX([SalesTaxNo])
 

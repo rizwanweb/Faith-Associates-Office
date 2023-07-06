@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_SalesTaxInvoiceDeleteByBillID
+﻿CREATE PROCEDURE [dbo].[usp_SalesTaxInvoiceDeleteByBillID]
 (
 	@BillID	INT
 )

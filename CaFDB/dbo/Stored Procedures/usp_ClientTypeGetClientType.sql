@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_ClientTypeGetClientType
+﻿CREATE PROCEDURE [dbo].[usp_ClientTypeGetClientType]
 AS
 	BEGIN
 		SELECT [TypeID]

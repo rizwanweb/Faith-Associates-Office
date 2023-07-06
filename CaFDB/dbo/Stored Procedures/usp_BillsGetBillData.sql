@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_BillsGetBillData
+﻿CREATE PROCEDURE [dbo].[usp_BillsGetBillData]
 (
 	@BillID	int
 )

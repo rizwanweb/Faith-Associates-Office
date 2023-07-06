@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_LOLODeletelolo
+﻿CREATE PROCEDURE [dbo].[usp_LOLODeletelolo]
 (
 	@LoloID	INT
 )

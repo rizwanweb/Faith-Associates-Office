@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_ShippingLinesUpdateShippingLine
+﻿CREATE PROCEDURE [dbo].[usp_ShippingLinesUpdateShippingLine]
 (
 	 @ShippingLineID INT
 	,@ShippingLineName nvarchar(100)

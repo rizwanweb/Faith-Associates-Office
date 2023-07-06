@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_LOLOsGetAllLolos
+﻿CREATE PROCEDURE [dbo].[usp_LOLOsGetAllLolos]
 AS
 	BEGIN
 		SELECT [LoloID]

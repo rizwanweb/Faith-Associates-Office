@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_JobPayordersDeleteByJobID
+﻿CREATE PROCEDURE [dbo].[usp_JobPayordersDeleteByJobID]
 (
 	@JobID	int
 )

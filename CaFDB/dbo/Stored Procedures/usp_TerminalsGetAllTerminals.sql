@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_TerminalsGetAllTerminals
+﻿CREATE PROCEDURE [dbo].[usp_TerminalsGetAllTerminals]
 AS
 	BEGIN
 		SELECT [TerminalID]

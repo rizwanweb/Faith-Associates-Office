@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_HeadsGetAllHeads
+﻿CREATE PROCEDURE [dbo].[usp_HeadsGetAllHeads]
 AS
 SELECT [HeadID]
       ,[BillHead]

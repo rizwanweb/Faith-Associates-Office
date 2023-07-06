@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_PSQCAuthPersonGetAllAuthPersons
+﻿CREATE PROCEDURE [dbo].[usp_PSQCAuthPersonGetAllAuthPersons]
 
 AS
 SELECT [PersonID]

@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_ClientsAddNewClient
+﻿CREATE PROCEDURE [dbo].[usp_ClientsAddNewClient]
 (
 	 @ClientID	int
 	,@ClientName nvarchar(250)
@@ -11,6 +11,11 @@
 	,@Address text
 	,@City int
 	,@ClientType nvarchar(50)
+	,@StandAddress nvarchar(500)
+	,@Fax	nvarchar(50)
+	,@CNIC	nvarchar(50)
+	,@Designation	nvarchar(50)
+	,@AuthorizedPerson	nvarchar(150)
 )
 
 AS
@@ -27,7 +32,14 @@ AS
 				   ,[GST]
 				   ,[Address]
 				   ,[City]
-				   ,[ClientType])
+				   ,[ClientType]
+				   ,[StandAddress]
+				   ,[Fax]
+				   ,[CNIC]
+				   ,[Designation]
+				   ,[AuthorizedPerson]
+				   
+				   )
 			 VALUES
 				   (
 				    @ClientName 
@@ -40,6 +52,11 @@ AS
 				   ,@Address
 				   ,@City
 				   ,@ClientType
+				   ,@StandAddress
+				   ,@Fax
+				   ,@CNIC
+				   ,@Designation
+				   ,@AuthorizedPerson
 				   )
 	END
 

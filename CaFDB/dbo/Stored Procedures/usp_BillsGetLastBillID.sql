@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_BillsGetLastBillID
+﻿CREATE PROCEDURE [dbo].[usp_BillsGetLastBillID]
 
 AS
 BEGIN

@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_TerminalsDeleteTerminal
+﻿CREATE PROCEDURE [dbo].[usp_TerminalsDeleteTerminal]
 (
 	@TerminalID	INT
 )

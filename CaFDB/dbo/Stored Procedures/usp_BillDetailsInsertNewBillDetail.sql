@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_BillDetailsInsertNewBillDetail
+﻿CREATE PROCEDURE [dbo].[usp_BillDetailsInsertNewBillDetail]
 
 (
 	 @BillDetailsID	int

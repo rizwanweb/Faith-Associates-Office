@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_ItemsDeleteItem
+﻿CREATE PROCEDURE [dbo].[usp_ItemsDeleteItem]
 (
 	@ItemID	INT
 )

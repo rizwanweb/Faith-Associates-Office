@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_PSQCInsertNewCertificate
+﻿CREATE PROCEDURE [dbo].[usp_PSQCInsertNewCertificate]
 (
 		 @PSQCID int
 		,@JobID int

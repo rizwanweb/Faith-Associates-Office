@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_BillsGetBillByBillNo
+﻿CREATE PROCEDURE [dbo].[usp_BillsGetBillByBillNo]
 (
 	@BillNo	int
 )

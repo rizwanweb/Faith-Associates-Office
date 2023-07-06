@@ -42,12 +42,6 @@
     [RDType]            NVARCHAR (5)    NULL,
     [RDRate]            DECIMAL (18, 2) NULL,
     [TotalDuty]         INT             NULL,
-    [DeliveryCharges]   INT             NULL,
-    [Wharfage]          INT             NULL,
-    [ContainerDeposit]  INT             NULL,
-    [LoloCharges]       INT             NULL,
-    [PSQCA1]            INT             NULL,
-    [PSQCA2]            INT             NULL,
     [Terminal]          INT             NULL,
     [ShippingLine]      INT             NULL,
     [Lolo]              INT             NULL,
@@ -55,7 +49,6 @@
     [GDDate]            DATE            NULL,
     [Cash]              NVARCHAR (100)  NULL,
     [CashDate]          DATE            NULL,
-    [Rent]              INT             NULL,
     CONSTRAINT [PK_Pids] PRIMARY KEY CLUSTERED ([PidID] ASC),
     CONSTRAINT [FK_Pids_Clients] FOREIGN KEY ([Client]) REFERENCES [dbo].[Clients] ([ClientID]),
     CONSTRAINT [FK_Pids_Item] FOREIGN KEY ([Item]) REFERENCES [dbo].[Items] ([ItemID]),
@@ -63,6 +56,20 @@
     CONSTRAINT [FK_Pids_ShippingLine] FOREIGN KEY ([ShippingLine]) REFERENCES [dbo].[ShippingLines] ([ShippingLineID]),
     CONSTRAINT [FK_Pids_Terminal] FOREIGN KEY ([Terminal]) REFERENCES [dbo].[Terminals] ([TerminalID])
 );
+
+
+GO
+ALTER TABLE [dbo].[Pids] NOCHECK CONSTRAINT [FK_Pids_Lolo];
+
+
+GO
+ALTER TABLE [dbo].[Pids] NOCHECK CONSTRAINT [FK_Pids_ShippingLine];
+
+
+GO
+ALTER TABLE [dbo].[Pids] NOCHECK CONSTRAINT [FK_Pids_Terminal];
+
+
 
 
 

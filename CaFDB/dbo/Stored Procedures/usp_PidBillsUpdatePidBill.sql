@@ -1,40 +1,24 @@
 ﻿CREATE PROCEDURE [dbo].[usp_PidBillsUpdatePidBill]
-
 (
-	 @BillDetailsID	int
-	,@BillID int
-	,@Particulars nvarchar(250)
-	,@ReceiptNo nvarchar(250)
-	,@ByYou int
-	,@ByUs int
+	 @BillID	int
+	,@BillNo int
+	,@BillDate date
+	,@PidID int
+	,@Total int
+	,@Refund int
+	,@Balance int
+	,@Note nvarchar(MAX)
 )
 AS
-IF EXISTS (SELECT * FROM BillDetails WHERE BillDetailsID = @BillDetailsID)
-BEGIN
-   UPDATE [dbo].[BillDetails]
-   SET [Particulars] = @Particulars
-      ,[ReceiptNo] = @ReceiptNo
-      ,[ByYou] = @ByYou
-      ,[ByUs] = @ByUs
-   WHERE BillDetailsID = @BillDetailsID
-END
-ELSE
-BEGIN
-   INSERT INTO [dbo].[BillDetails]
-           ([BillID]
-           ,[Particulars]
-           ,[ReceiptNo]
-           ,[ByYou]
-           ,[ByUs])
-     VALUES
-           (
-		   @BillID
-           ,@Particulars
-           ,@ReceiptNo
-           ,@ByYou
-           ,@ByUs
-			)
-END
+UPDATE [dbo].[PidBills]
+   SET [BillNo] = @BillNo
+      ,[BillDate] = @BillDate
+      ,[PidID] = @PidID
+      ,[Total] = @Total
+	  ,[Refund] = @Refund
+	  ,[Balance] = @Balance
+	  ,[Note] = @Note
+ WHERE BillID = @BillID
 
 
 

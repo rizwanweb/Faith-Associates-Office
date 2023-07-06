@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_ItemsUpdateItem
+﻿CREATE PROCEDURE [dbo].[usp_ItemsUpdateItem]
 (
 	 @ItemID INT
 	,@ItemName nvarchar(150)

@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_ShippingLinesGetAllShippingLines
+﻿CREATE PROCEDURE [dbo].[usp_ShippingLinesGetAllShippingLines]
 AS
 	BEGIN
 		SELECT [ShippingLineID]

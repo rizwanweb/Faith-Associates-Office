@@ -42,12 +42,6 @@
     [RDType]            NVARCHAR (5)    NULL,
     [RDRate]            DECIMAL (18, 2) NULL,
     [TotalDuty]         INT             NULL,
-    [DeliveryCharges]   INT             NULL,
-    [Wharfage]          INT             NULL,
-    [ContainerDeposit]  INT             NULL,
-    [LoloCharges]       INT             NULL,
-    [PSQCA1]            INT             NULL,
-    [PSQCA2]            INT             NULL,
     [Terminal]          INT             NULL,
     [ShippingLine]      INT             NULL,
     [Lolo]              INT             NULL,
@@ -62,6 +56,20 @@
     CONSTRAINT [FK_Jobs_ShippingLines] FOREIGN KEY ([ShippingLine]) REFERENCES [dbo].[ShippingLines] ([ShippingLineID]),
     CONSTRAINT [FK_Jobs_Terminal] FOREIGN KEY ([Terminal]) REFERENCES [dbo].[Terminals] ([TerminalID])
 );
+
+
+GO
+ALTER TABLE [dbo].[Jobs] NOCHECK CONSTRAINT [FK_Jobs_LOLOs];
+
+
+GO
+ALTER TABLE [dbo].[Jobs] NOCHECK CONSTRAINT [FK_Jobs_ShippingLines];
+
+
+GO
+ALTER TABLE [dbo].[Jobs] NOCHECK CONSTRAINT [FK_Jobs_Terminal];
+
+
 
 
 GO

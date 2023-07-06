@@ -16,12 +16,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_059B02271AF24AA2940DD8FE0ADC84BB"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_14DD02066CBE4CE88CD03BAE09F2473C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -84,6 +78,12 @@
         {
         "MsmKey" = "8:_9E8C7812BD6C654B0189F6D890F46DC6"
         "OwnerKey" = "8:_4B5F0E4516CB43C88DDF5448D4308469"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D774331778EF4B528F06435EC54E7C90"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -223,26 +223,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_059B02271AF24AA2940DD8FE0ADC84BB"
-            {
-            "SourcePath" = "8:C:\\Users\\SHAH\\Downloads\\img.ico"
-            "TargetName" = "8:img.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_7551C1B6AD0F4045A23F4DD5AFF713E7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_14DD02066CBE4CE88CD03BAE09F2473C"
             {
             "SourcePath" = "8:..\\Faith Associates\\Reports\\Jobs\\NewPIDCalculationSheetReport.rpt"
@@ -474,6 +454,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D774331778EF4B528F06435EC54E7C90"
+            {
+            "SourcePath" = "8:C:\\Users\\SHAH\\Downloads\\faithIcon.ico"
+            "TargetName" = "8:faithIcon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_7551C1B6AD0F4045A23F4DD5AFF713E7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DAFC14543D11576C0E01089BD5591468"
@@ -781,7 +781,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4FE30D8957F44C619EBF7C543053A789"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_07EB9A4A5C6E48A28C53FF9528F868CE"
             {
             "Name" = "8:Faith Associates"
             "Arguments" = "8:"
@@ -792,7 +792,7 @@
             "Target" = "8:_4B5F0E4516CB43C88DDF5448D4308469"
             "Folder" = "8:_A635FDB3228947509F93D4E8C3E53CEA"
             "WorkingFolder" = "8:_7551C1B6AD0F4045A23F4DD5AFF713E7"
-            "Icon" = "8:"
+            "Icon" = "8:_D774331778EF4B528F06435EC54E7C90"
             "Feature" = "8:"
             }
         }

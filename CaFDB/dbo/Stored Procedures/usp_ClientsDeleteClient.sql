@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE usp_ClientsDeleteClient
+﻿CREATE PROCEDURE [dbo].[usp_ClientsDeleteClient]
 (
 	@ClientID INT
 )

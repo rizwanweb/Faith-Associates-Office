@@ -32,11 +32,10 @@ BEGIN
 
 		   ,b.BillNo
 		   ,CONVERT(varchar, b.BillDate, 103) AS 'BillDate'
-		   ,b.SubTotal
-		   ,b.ServiceCharges
 		   ,b.Total
-		   ,(b.ServiceCharges + b.SubTotal) AS 'Total' 
-		   		   
+		   ,b.Refund
+		   ,b.Balance
+		   ,b.Note		   
 		   ,c.ClientName
 		   ,Concat(c.Address, ',',  Cities.CityName) AS 'Address'
 		   ,c.[Address]
@@ -45,6 +44,7 @@ BEGIN
 		   ,i.ItemName
 
 		   ,Cities.CityName
+		   ,Terminals.ShortName
 
 		   ,CONCAT(d.[Particulars], ' ', d.[ReceiptNo]) AS 'Particulars'
 		   ,d.ByYou
@@ -57,7 +57,9 @@ BEGIN
 	INNER JOIN Clients c ON c.ClientID = j.Client
 	INNER JOIN Items i ON i.ItemID = j.Item
 	INNER JOIN Cities ON Cities.CityID = c.City
-	RIGHT JOIN PidBillDetails d ON b.BillID = d.BillID 
+	INNER JOIN Terminals ON Terminals.TerminalID = j.Terminal
+	RIGHT JOIN PidBillDetails d ON b.BillID = d.BillID
+	
 	WHERE b.BillID = @BillID
 	AND (d.ByYou > 0 OR d.ByUs > 0)
 END

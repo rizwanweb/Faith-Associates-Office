@@ -44,12 +44,8 @@
 		,@RDType    nvarchar(5)
 		,@RDRate    decimal(18,2)
         ,@TotalDuty    int
-        ,@DeliveryCharges    int
-        ,@Wharfage    int
-        ,@ContainerDeposit    int
-        ,@LoloCharges    int
-        ,@PSQCA1    int
-        ,@PSQCA2    int
+
+
         ,@Terminal    int
         ,@ShippingLine    int
         ,@Lolo    int
@@ -58,7 +54,6 @@
 		,@GDDate	date
 		,@Cash	nvarchar(100)
 		,@CashDate	date
-		,@Rent	Int
 )
 AS
 
@@ -105,12 +100,7 @@ AS
 			   ,[RDType]
 			   ,[RDRate]
 			   ,[TotalDuty]
-			   ,[DeliveryCharges]
-			   ,[Wharfage]
-			   ,[ContainerDeposit]
-			   ,[LoloCharges]
-			   ,[PSQCA1]
-			   ,[PSQCA2]
+
 			   ,[Terminal]
 			   ,[ShippingLine]
 			   ,[Lolo]
@@ -119,7 +109,7 @@ AS
 			   ,[GDDate]
 			   ,[Cash]
 			   ,[CashDate]
-			   ,[Rent]
+
 			   )
 		 VALUES
 			   (
@@ -166,12 +156,7 @@ AS
 			   ,@RDType
 			   ,@RDRate
 			   ,@TotalDuty
-			   ,@DeliveryCharges
-			   ,@Wharfage
-			   ,@ContainerDeposit
-			   ,@LoloCharges
-			   ,@PSQCA1
-			   ,@PSQCA2
+
 			   ,@Terminal
 			   ,@ShippingLine
 			   ,@Lolo
@@ -179,5 +164,5 @@ AS
 			   ,@GDDate
 			   ,@Cash
 			   ,@CashDate
-			   ,@Rent
+
 			   )
