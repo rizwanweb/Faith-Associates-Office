@@ -33,8 +33,6 @@ BEGIN
 		   ,b.BillNo
 		   ,CONVERT(varchar, b.BillDate, 103) AS 'BillDate'
 		   ,b.Total
-		   ,b.Refund
-		   ,b.Balance
 		   ,b.Note		   
 		   ,c.ClientName
 		   ,Concat(c.Address, ',',  Cities.CityName) AS 'Address'

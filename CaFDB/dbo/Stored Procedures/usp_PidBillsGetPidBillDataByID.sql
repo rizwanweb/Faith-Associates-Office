@@ -6,8 +6,6 @@ AS
 SELECT
        [BillDate]
       ,[Total]
-	  ,[Refund]
-	  ,[Balance]
 	  ,[Note]
   FROM [dbo].[PidBills]
   WHERE BillID = @BillID

@@ -5,8 +5,6 @@
 	,@BillDate date
 	,@PidID int
 	,@Total int
-	,@Refund int
-	,@Balance int
 	,@Note nvarchar(MAX)
 )
 AS
@@ -15,8 +13,6 @@ UPDATE [dbo].[PidBills]
       ,[BillDate] = @BillDate
       ,[PidID] = @PidID
       ,[Total] = @Total
-	  ,[Refund] = @Refund
-	  ,[Balance] = @Balance
 	  ,[Note] = @Note
  WHERE BillID = @BillID
 

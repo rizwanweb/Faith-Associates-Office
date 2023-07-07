@@ -11,8 +11,6 @@
 	,@SalesTax int
 	,@Total int
 	,@Note nvarchar(MAX)
-	,@Refund	int
-	,@Balance	int
 )
 AS
 	BEGIN
@@ -26,8 +24,7 @@ AS
 				   ,[SalesTax]
 				   ,[Total]
 				   ,[Note]
-				   ,[Refund]
-				   ,[Balance])
+					)
 			 VALUES
 				   (
 				   @BillNo
@@ -39,8 +36,6 @@ AS
 				   ,@SalesTax
 				   ,@Total
 				   ,@Note
-				   ,@Refund
-				   ,@Balance
 				   )
 	END
 

@@ -22,19 +22,25 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_197EA536534485ECA6D566EE77E273A2"
+        "OwnerKey" = "8:_4B5F0E4516CB43C88DDF5448D4308469"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2A4A75FF3D5F4DA79227B03ED09573F5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3B015BF170994468992DAF5631288EB6"
+        "MsmKey" = "8:_39132D5C69A548BAB6B0E9B9C6A172F2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3E1B052CECE94AA294207240158A4F8F"
+        "MsmKey" = "8:_3B015BF170994468992DAF5631288EB6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -58,26 +64,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4F03347A63DD49008E0E25B01BA46BAC"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_639B956F9BCF0EFD7DA53092F15FFA56"
         "OwnerKey" = "8:_4B5F0E4516CB43C88DDF5448D4308469"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8FCECB42C8C740E1892F243153C7C096"
+        "MsmKey" = "8:_825B97CF620042CF92D7FD1276DE37BB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_9E8C7812BD6C654B0189F6D890F46DC6"
-        "OwnerKey" = "8:_4B5F0E4516CB43C88DDF5448D4308469"
+        "MsmKey" = "8:_8FCECB42C8C740E1892F243153C7C096"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -119,7 +119,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9E8C7812BD6C654B0189F6D890F46DC6"
+        "OwnerKey" = "8:_197EA536534485ECA6D566EE77E273A2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -243,6 +243,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_197EA536534485ECA6D566EE77E273A2"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:RSDBFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_197EA536534485ECA6D566EE77E273A2"
+                    {
+                    "Name" = "8:RSDBFramework.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:RSDBFramework.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_7551C1B6AD0F4045A23F4DD5AFF713E7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2A4A75FF3D5F4DA79227B03ED09573F5"
             {
             "SourcePath" = "8:..\\Faith Associates\\bin\\Debug\\Reports\\Bills\\SalesTaxReport.rpt"
@@ -263,17 +294,17 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3B015BF170994468992DAF5631288EB6"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_39132D5C69A548BAB6B0E9B9C6A172F2"
             {
-            "SourcePath" = "8:..\\Faith Associates\\bin\\Debug\\Reports\\Lists\\JobRegister.rpt"
-            "TargetName" = "8:JobRegister.rpt"
+            "SourcePath" = "8:..\\Faith Associates\\Reports\\PidBills\\PidBillReport1.rpt"
+            "TargetName" = "8:PidBillReport1.rpt"
             "Tag" = "8:"
-            "Folder" = "8:_9493984F092E45D3ABCD62D6B25F2E4D"
+            "Folder" = "8:_D4CB46DBD16B433B81748DBF2F93BB1B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:TRUE"
+            "Hidden" = "11:FALSE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
@@ -283,12 +314,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3E1B052CECE94AA294207240158A4F8F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3B015BF170994468992DAF5631288EB6"
             {
-            "SourcePath" = "8:..\\Faith Associates\\bin\\Debug\\Reports\\Bills\\JobBillReport.rpt"
-            "TargetName" = "8:JobBillReport.rpt"
+            "SourcePath" = "8:..\\Faith Associates\\bin\\Debug\\Reports\\Lists\\JobRegister.rpt"
+            "TargetName" = "8:JobRegister.rpt"
             "Tag" = "8:"
-            "Folder" = "8:_5DD152B0CC294E7C841C608470BAF5E5"
+            "Folder" = "8:_9493984F092E45D3ABCD62D6B25F2E4D"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -354,26 +385,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4F03347A63DD49008E0E25B01BA46BAC"
-            {
-            "SourcePath" = "8:..\\Faith Associates\\Reports\\PidBills\\PidBillReport1.rpt"
-            "TargetName" = "8:PidBillReport1.rpt"
-            "Tag" = "8:"
-            "Folder" = "8:_D4CB46DBD16B433B81748DBF2F93BB1B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_639B956F9BCF0EFD7DA53092F15FFA56"
             {
             "AssemblyRegister" = "3:1"
@@ -405,6 +416,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_825B97CF620042CF92D7FD1276DE37BB"
+            {
+            "SourcePath" = "8:..\\Faith Associates\\Reports\\Bills\\JobBillReport.rpt"
+            "TargetName" = "8:JobBillReport.rpt"
+            "Tag" = "8:"
+            "Folder" = "8:_5DD152B0CC294E7C841C608470BAF5E5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8FCECB42C8C740E1892F243153C7C096"
             {
             "SourcePath" = "8:..\\Faith Associates\\bin\\Debug\\Reports\\Clients\\BalanceSheet.rpt"
@@ -423,37 +454,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9E8C7812BD6C654B0189F6D890F46DC6"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:RSDBFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_9E8C7812BD6C654B0189F6D890F46DC6"
-                    {
-                    "Name" = "8:RSDBFramework.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:RSDBFramework.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_7551C1B6AD0F4045A23F4DD5AFF713E7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D774331778EF4B528F06435EC54E7C90"
@@ -660,15 +660,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Faith Associates"
-        "ProductCode" = "8:{17F27C34-66D3-420E-949D-C114185BFCC2}"
-        "PackageCode" = "8:{21B7651D-D888-4D23-9CD5-A764F267C42D}"
+        "ProductCode" = "8:{A285B82F-2FD3-469A-8467-3E88E472265B}"
+        "PackageCode" = "8:{05A7D634-E0EC-4264-80D1-96E951079394}"
         "UpgradeCode" = "8:{839B511F-571C-4AE4-8C66-56C3B0508634}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.2.3"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:Rizwan Razzak"
         "ARPHELPTELEPHONE" = "8:0335-2055505"
         "ARPHELPLINK" = "8:"
@@ -1196,7 +1196,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4B5F0E4516CB43C88DDF5448D4308469"
             {
-            "SourcePath" = "8:..\\Faith Associates\\obj\\Debug\\Faith Associates.exe"
+            "SourcePath" = "8:..\\Faith Associates\\obj\\Release\\Faith Associates.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_7551C1B6AD0F4045A23F4DD5AFF713E7"

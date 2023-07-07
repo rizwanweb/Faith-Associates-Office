@@ -10,8 +10,6 @@
 	,@SalesTax int
 	,@Total int
 	,@Note nvarchar(MAX)
-	,@Refund	int
-	,@Balance	int
 )
 AS
 UPDATE [dbo].[Bills]
@@ -24,8 +22,6 @@ UPDATE [dbo].[Bills]
       ,[SalesTax] = @SalesTax
       ,[Total] = @Total
 	  ,[Note] = @Note
-	  ,[Refund] = @Refund
-	  ,[Balance] = @Balance
  WHERE BillID = @BillID
 
 

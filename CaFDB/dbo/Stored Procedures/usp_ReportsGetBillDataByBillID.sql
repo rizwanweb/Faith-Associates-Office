@@ -38,8 +38,6 @@ BEGIN
 		   ,b.ServiceCharges
 		   ,b.Total
 		   ,b.Note
-		   ,b.Refund
-		   ,b.Balance
 		   ,(b.ServiceCharges + b.SalesTax) AS 'ST Total' 
 		   		   
 		   ,c.ClientName

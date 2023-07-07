@@ -512,8 +512,6 @@ namespace Faith_Associates.Screens.Bill
                     dtBill.Value = Convert.ToDateTime(row["BillDate"]);
                     txtSubTotal.Text = row["Total"].ToString();
                     txtTotal.Text = row["Total"].ToString();
-                    txtRefund.Text = row["Refund"].ToString();
-                    txtBalance.Text = row["Balance"].ToString();
                     txtNote.Text = row["Note"].ToString();
                 }
 
@@ -705,19 +703,5 @@ namespace Faith_Associates.Screens.Bill
             }
         }
 
-        private void txtRefund_Validated(object sender, EventArgs e)
-        {
-            if (Convert.ToInt32(txtRefund.Text) == 0)
-            {
-                txtBalance.Text = "0";
-            }
-            else
-            {
-                int total = Convert.ToInt32(txtTotal.Text);
-                int balance = total - Convert.ToInt32(txtRefund.Text);
-                txtBalance.Text = balance.ToString();
-            }
-
-        }
     }
 }
