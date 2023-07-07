@@ -58,7 +58,7 @@
             this.groupBox1.Controls.Add(this.txtSearchBox);
             this.groupBox1.Location = new System.Drawing.Point(13, 91);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(396, 71);
+            this.groupBox1.Size = new System.Drawing.Size(645, 71);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 

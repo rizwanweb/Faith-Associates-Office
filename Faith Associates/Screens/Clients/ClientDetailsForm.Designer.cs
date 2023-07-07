@@ -89,136 +89,136 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 21);
+            this.label1.Size = new System.Drawing.Size(132, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Company Name:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(472, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 21);
+            this.label2.Size = new System.Drawing.Size(125, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "Contact Person:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(15, 83);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 21);
+            this.label3.Size = new System.Drawing.Size(60, 21);
             this.label3.TabIndex = 4;
             this.label3.Text = "Phone:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(144, 87);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 21);
+            this.label4.Size = new System.Drawing.Size(66, 21);
             this.label4.TabIndex = 5;
             this.label4.Text = "Mobile:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(472, 83);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 21);
+            this.label5.Size = new System.Drawing.Size(52, 21);
             this.label5.TabIndex = 6;
             this.label5.Text = "Email:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(15, 144);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 21);
+            this.label6.Size = new System.Drawing.Size(74, 21);
             this.label6.TabIndex = 7;
             this.label6.Text = "Address:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(15, 229);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 21);
+            this.label7.Size = new System.Drawing.Size(44, 21);
             this.label7.TabIndex = 8;
             this.label7.Text = "City:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(473, 225);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 21);
+            this.label8.Size = new System.Drawing.Size(56, 21);
             this.label8.TabIndex = 9;
             this.label8.Text = "NTN #";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(640, 228);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 21);
+            this.label9.Size = new System.Drawing.Size(52, 21);
             this.label9.TabIndex = 10;
             this.label9.Text = "GST #";
             // 
             // txtClientName
             // 
-            this.txtClientName.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClientName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientName.Location = new System.Drawing.Point(15, 50);
             this.txtClientName.Name = "txtClientName";
-            this.txtClientName.Size = new System.Drawing.Size(434, 26);
+            this.txtClientName.Size = new System.Drawing.Size(434, 29);
             this.txtClientName.TabIndex = 0;
             // 
             // txtContactPerson
             // 
-            this.txtContactPerson.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactPerson.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContactPerson.Location = new System.Drawing.Point(477, 50);
             this.txtContactPerson.Name = "txtContactPerson";
-            this.txtContactPerson.Size = new System.Drawing.Size(321, 26);
+            this.txtContactPerson.Size = new System.Drawing.Size(321, 29);
             this.txtContactPerson.TabIndex = 1;
             // 
             // txtPhone
             // 
-            this.txtPhone.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(15, 111);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(137, 26);
+            this.txtPhone.Size = new System.Drawing.Size(137, 29);
             this.txtPhone.TabIndex = 2;
             // 
             // txtMobile
             // 
-            this.txtMobile.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMobile.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMobile.Location = new System.Drawing.Point(158, 111);
             this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(141, 26);
+            this.txtMobile.Size = new System.Drawing.Size(141, 29);
             this.txtMobile.TabIndex = 3;
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(477, 111);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(321, 26);
+            this.txtEmail.Size = new System.Drawing.Size(321, 29);
             this.txtEmail.TabIndex = 5;
             // 
             // txtAddress
             // 
-            this.txtAddress.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(15, 172);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
@@ -227,23 +227,23 @@
             // 
             // txtNTN
             // 
-            this.txtNTN.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNTN.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNTN.Location = new System.Drawing.Point(477, 253);
             this.txtNTN.Name = "txtNTN";
-            this.txtNTN.Size = new System.Drawing.Size(161, 26);
+            this.txtNTN.Size = new System.Drawing.Size(161, 29);
             this.txtNTN.TabIndex = 10;
             // 
             // txtGST
             // 
-            this.txtGST.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGST.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGST.Location = new System.Drawing.Point(643, 253);
             this.txtGST.Name = "txtGST";
-            this.txtGST.Size = new System.Drawing.Size(154, 26);
+            this.txtGST.Size = new System.Drawing.Size(154, 29);
             this.txtGST.TabIndex = 11;
             // 
             // cmbCity
             // 
-            this.cmbCity.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCity.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCity.FormattingEnabled = true;
             this.cmbCity.Location = new System.Drawing.Point(15, 250);
             this.cmbCity.Name = "cmbCity";
@@ -252,36 +252,36 @@
             // 
             // txtOpeningBalance
             // 
-            this.txtOpeningBalance.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOpeningBalance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOpeningBalance.Location = new System.Drawing.Point(15, 366);
             this.txtOpeningBalance.Name = "txtOpeningBalance";
-            this.txtOpeningBalance.Size = new System.Drawing.Size(212, 26);
+            this.txtOpeningBalance.Size = new System.Drawing.Size(212, 29);
             this.txtOpeningBalance.TabIndex = 15;
             this.txtOpeningBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(12, 340);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(145, 21);
+            this.label10.Size = new System.Drawing.Size(133, 21);
             this.label10.TabIndex = 22;
             this.label10.Text = "Opening Balance";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(238, 225);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 21);
+            this.label11.Size = new System.Drawing.Size(93, 21);
             this.label11.TabIndex = 21;
             this.label11.Text = "Client Type";
             // 
             // cmbClientType
             // 
-            this.cmbClientType.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbClientType.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbClientType.FormattingEnabled = true;
             this.cmbClientType.Location = new System.Drawing.Point(237, 249);
             this.cmbClientType.Name = "cmbClientType";
@@ -290,6 +290,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.Location = new System.Drawing.Point(200, 20);
             this.btnSave.Name = "btnSave";
@@ -302,6 +303,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Location = new System.Drawing.Point(460, 19);
             this.btnExit.Name = "btnExit";
@@ -326,6 +328,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.Location = new System.Drawing.Point(331, 20);
             this.btnDelete.Name = "btnDelete";
@@ -372,7 +375,7 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 71);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(819, 407);
@@ -382,60 +385,60 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(15, 282);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(217, 21);
+            this.label16.Size = new System.Drawing.Size(195, 21);
             this.label16.TabIndex = 35;
             this.label16.Text = "Authorized Person Name:";
             // 
             // txtAuthorizdPerson
             // 
-            this.txtAuthorizdPerson.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAuthorizdPerson.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAuthorizdPerson.Location = new System.Drawing.Point(16, 306);
             this.txtAuthorizdPerson.Name = "txtAuthorizdPerson";
-            this.txtAuthorizdPerson.Size = new System.Drawing.Size(434, 26);
+            this.txtAuthorizdPerson.Size = new System.Drawing.Size(434, 29);
             this.txtAuthorizdPerson.TabIndex = 12;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(640, 282);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(109, 21);
+            this.label15.Size = new System.Drawing.Size(97, 21);
             this.label15.TabIndex = 33;
             this.label15.Text = "Designation";
             // 
             // txtDesignation
             // 
-            this.txtDesignation.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDesignation.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesignation.Location = new System.Drawing.Point(643, 306);
             this.txtDesignation.Name = "txtDesignation";
-            this.txtDesignation.Size = new System.Drawing.Size(154, 26);
+            this.txtDesignation.Size = new System.Drawing.Size(154, 29);
             this.txtDesignation.TabIndex = 14;
             // 
             // txtAuthorizedPerson
             // 
             this.txtAuthorizedPerson.AutoSize = true;
-            this.txtAuthorizedPerson.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAuthorizedPerson.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAuthorizedPerson.Location = new System.Drawing.Point(473, 282);
             this.txtAuthorizedPerson.Name = "txtAuthorizedPerson";
-            this.txtAuthorizedPerson.Size = new System.Drawing.Size(64, 21);
+            this.txtAuthorizedPerson.Size = new System.Drawing.Size(61, 21);
             this.txtAuthorizedPerson.TabIndex = 31;
             this.txtAuthorizedPerson.Text = "CNIC #";
             // 
             // txtCNIC
             // 
-            this.txtCNIC.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCNIC.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCNIC.Location = new System.Drawing.Point(476, 306);
             this.txtCNIC.Name = "txtCNIC";
-            this.txtCNIC.Size = new System.Drawing.Size(162, 26);
+            this.txtCNIC.Size = new System.Drawing.Size(162, 29);
             this.txtCNIC.TabIndex = 13;
             // 
             // txtStandAddress
             // 
-            this.txtStandAddress.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStandAddress.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStandAddress.Location = new System.Drawing.Point(476, 172);
             this.txtStandAddress.Multiline = true;
             this.txtStandAddress.Name = "txtStandAddress";
@@ -445,47 +448,48 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(473, 144);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(136, 21);
+            this.label14.Size = new System.Drawing.Size(119, 21);
             this.label14.TabIndex = 29;
             this.label14.Text = "Stand Address:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(301, 87);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 21);
+            this.label13.Size = new System.Drawing.Size(37, 21);
             this.label13.TabIndex = 27;
             this.label13.Text = "Fax:";
             // 
             // txtFax
             // 
-            this.txtFax.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFax.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFax.Location = new System.Drawing.Point(305, 111);
             this.txtFax.Name = "txtFax";
-            this.txtFax.Size = new System.Drawing.Size(144, 26);
+            this.txtFax.Size = new System.Drawing.Size(144, 29);
             this.txtFax.TabIndex = 4;
             // 
             // dtOpeningBalance
             // 
             this.dtOpeningBalance.CustomFormat = "dd-MM-yyyy";
+            this.dtOpeningBalance.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtOpeningBalance.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtOpeningBalance.Location = new System.Drawing.Point(237, 366);
             this.dtOpeningBalance.Name = "dtOpeningBalance";
-            this.dtOpeningBalance.Size = new System.Drawing.Size(212, 26);
+            this.dtOpeningBalance.Size = new System.Drawing.Size(212, 29);
             this.dtOpeningBalance.TabIndex = 16;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(238, 340);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 21);
+            this.label12.Size = new System.Drawing.Size(49, 21);
             this.label12.TabIndex = 24;
             this.label12.Text = "As Of";
             // 

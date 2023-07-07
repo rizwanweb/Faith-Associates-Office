@@ -9,11 +9,11 @@
     [SalesTax]       INT             NULL,
     [Total]          INT             NULL,
     [Note]           NVARCHAR (MAX)  NULL,
-    [Refund]         INT             NULL,
-    [Balance]        INT             NULL,
     CONSTRAINT [PK_Bills] PRIMARY KEY CLUSTERED ([BillID] ASC),
     CONSTRAINT [FK_Bills_Jobs] FOREIGN KEY ([JobID]) REFERENCES [dbo].[Jobs] ([JobID])
 );
+
+
 
 
 

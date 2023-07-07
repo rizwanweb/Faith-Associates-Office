@@ -375,12 +375,6 @@
     <Compile Include="Screens\Jobs\NewPidEntryForm.Designer.cs">
       <DependentUpon>NewPidEntryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Jobs\PidEntryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Jobs\PidEntryForm.Designer.cs">
-      <DependentUpon>PidEntryForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Screens\Jobs\JobEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -608,9 +602,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Jobs\NewPidEntryForm.resx">
       <DependentUpon>NewPidEntryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Jobs\PidEntryForm.resx">
-      <DependentUpon>PidEntryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Jobs\JobEntryForm.resx">
       <DependentUpon>JobEntryForm.cs</DependentUpon>

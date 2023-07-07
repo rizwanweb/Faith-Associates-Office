@@ -93,10 +93,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.billGroupBox = new System.Windows.Forms.GroupBox();
-            this.txtRefund = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtBalance = new System.Windows.Forms.TextBox();
             this.btnGoDown = new System.Windows.Forms.Button();
             this.btnGoUp = new System.Windows.Forms.Button();
             this.btnDeleteRow = new System.Windows.Forms.Button();
@@ -552,7 +548,7 @@
             this.groupBox2.Controls.Add(this.btnPrint);
             this.groupBox2.Controls.Add(this.btnSave);
             this.groupBox2.Controls.Add(this.btnAdd);
-            this.groupBox2.Location = new System.Drawing.Point(12, 779);
+            this.groupBox2.Location = new System.Drawing.Point(12, 721);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1004, 84);
             this.groupBox2.TabIndex = 2;
@@ -560,7 +556,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Location = new System.Drawing.Point(680, 21);
             this.btnExit.Name = "btnExit";
@@ -575,7 +571,7 @@
             // btnDelete
             // 
             this.btnDelete.Enabled = false;
-            this.btnDelete.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.Location = new System.Drawing.Point(559, 21);
             this.btnDelete.Name = "btnDelete";
@@ -590,7 +586,7 @@
             // btnPrint
             // 
             this.btnPrint.Enabled = false;
-            this.btnPrint.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
             this.btnPrint.Location = new System.Drawing.Point(434, 21);
             this.btnPrint.Name = "btnPrint";
@@ -605,7 +601,7 @@
             // btnSave
             // 
             this.btnSave.Enabled = false;
-            this.btnSave.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.Location = new System.Drawing.Point(309, 21);
             this.btnSave.Name = "btnSave";
@@ -619,7 +615,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.Location = new System.Drawing.Point(184, 21);
             this.btnAdd.Name = "btnAdd";
@@ -637,7 +633,7 @@
             this.dgvBill.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -697,10 +693,10 @@
             // 
             // txtSubTotal
             // 
-            this.txtSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubTotal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubTotal.Location = new System.Drawing.Point(823, 262);
             this.txtSubTotal.Name = "txtSubTotal";
-            this.txtSubTotal.Size = new System.Drawing.Size(175, 26);
+            this.txtSubTotal.Size = new System.Drawing.Size(175, 29);
             this.txtSubTotal.TabIndex = 0;
             this.txtSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSubTotal.TextChanged += new System.EventHandler(this.txtSubTotal_TextChanged);
@@ -708,39 +704,35 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(731, 262);
+            this.label19.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(740, 265);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(86, 20);
+            this.label19.Size = new System.Drawing.Size(77, 21);
             this.label19.TabIndex = 5;
             this.label19.Text = "Sub Total";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(768, 297);
+            this.label22.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(772, 297);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(49, 20);
+            this.label22.Size = new System.Drawing.Size(45, 21);
             this.label22.TabIndex = 12;
             this.label22.Text = "Total";
             // 
             // txtTotal
             // 
-            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal.Location = new System.Drawing.Point(823, 294);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(175, 26);
+            this.txtTotal.Size = new System.Drawing.Size(175, 29);
             this.txtTotal.TabIndex = 4;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // billGroupBox
             // 
-            this.billGroupBox.Controls.Add(this.txtRefund);
-            this.billGroupBox.Controls.Add(this.label20);
-            this.billGroupBox.Controls.Add(this.label21);
-            this.billGroupBox.Controls.Add(this.txtBalance);
             this.billGroupBox.Controls.Add(this.btnGoDown);
             this.billGroupBox.Controls.Add(this.btnGoUp);
             this.billGroupBox.Controls.Add(this.btnDeleteRow);
@@ -754,50 +746,9 @@
             this.billGroupBox.Controls.Add(this.txtTotal);
             this.billGroupBox.Location = new System.Drawing.Point(12, 378);
             this.billGroupBox.Name = "billGroupBox";
-            this.billGroupBox.Size = new System.Drawing.Size(1004, 395);
+            this.billGroupBox.Size = new System.Drawing.Size(1004, 337);
             this.billGroupBox.TabIndex = 2;
             this.billGroupBox.TabStop = false;
-            // 
-            // txtRefund
-            // 
-            this.txtRefund.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRefund.Location = new System.Drawing.Point(823, 326);
-            this.txtRefund.Name = "txtRefund";
-            this.txtRefund.Size = new System.Drawing.Size(175, 26);
-            this.txtRefund.TabIndex = 19;
-            this.txtRefund.Text = "0";
-            this.txtRefund.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtRefund.Validated += new System.EventHandler(this.txtRefund_Validated);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(753, 361);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(64, 20);
-            this.label20.TabIndex = 22;
-            this.label20.Text = "Balace";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(749, 329);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(68, 20);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "Refund";
-            // 
-            // txtBalance
-            // 
-            this.txtBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBalance.Location = new System.Drawing.Point(823, 358);
-            this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(175, 26);
-            this.txtBalance.TabIndex = 20;
-            this.txtBalance.Text = "0";
-            this.txtBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnGoDown
             // 
@@ -842,26 +793,27 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(9, 262);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(52, 20);
+            this.label24.Size = new System.Drawing.Size(51, 21);
             this.label24.TabIndex = 13;
             this.label24.Text = "Note:";
             // 
             // txtNote
             // 
+            this.txtNote.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNote.Location = new System.Drawing.Point(61, 262);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(661, 119);
+            this.txtNote.Size = new System.Drawing.Size(661, 58);
             this.txtNote.TabIndex = 14;
             // 
             // NewPidBillScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 875);
+            this.ClientSize = new System.Drawing.Size(1028, 815);
             this.Controls.Add(this.billGroupBox);
             this.Controls.Add(this.detailGroupBox);
             this.Controls.Add(this.panel1);
@@ -950,9 +902,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Receipt;
         private System.Windows.Forms.DataGridViewTextBoxColumn ByYou;
         private System.Windows.Forms.DataGridViewTextBoxColumn ByUs;
-        private System.Windows.Forms.TextBox txtRefund;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox txtBalance;
     }
 }
