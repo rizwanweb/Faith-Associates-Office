@@ -48,7 +48,7 @@
             this.dgvJobList.Location = new System.Drawing.Point(13, 169);
             this.dgvJobList.Name = "dgvJobList";
             this.dgvJobList.ReadOnly = true;
-            this.dgvJobList.Size = new System.Drawing.Size(645, 374);
+            this.dgvJobList.Size = new System.Drawing.Size(864, 374);
             this.dgvJobList.TabIndex = 2;
             this.dgvJobList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvJobList_MouseDoubleClick);
             // 
@@ -58,7 +58,7 @@
             this.groupBox1.Controls.Add(this.txtSearchBox);
             this.groupBox1.Location = new System.Drawing.Point(13, 91);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(645, 71);
+            this.groupBox1.Size = new System.Drawing.Size(864, 71);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -87,7 +87,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(670, 84);
+            this.panel1.Size = new System.Drawing.Size(889, 84);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -97,7 +97,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(670, 84);
+            this.label1.Size = new System.Drawing.Size(889, 84);
             this.label1.TabIndex = 0;
             this.label1.Text = "BILL SEARCH";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,7 +107,7 @@
             this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 555);
+            this.ClientSize = new System.Drawing.Size(889, 555);
             this.Controls.Add(this.dgvJobList);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);

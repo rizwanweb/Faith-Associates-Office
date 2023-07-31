@@ -1,5 +1,6 @@
 ﻿using Faith_Associates.Models.Users;
 using Faith_Associates.Reports.Bills;
+using Faith_Associates.Reports.Refund;
 using Faith_Associates.Screens.Bill;
 using Faith_Associates.Screens.Clients;
 using Faith_Associates.Screens.Items;
@@ -168,6 +169,12 @@ namespace Faith_Associates.Screens
         {
             PSQCForm psqc = new PSQCForm();
             psqc.ShowDialog();
+        }
+
+        private void refundReporToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DepositRefund dr = new DepositRefund();
+            dr.ShowDialog();
         }
     }
 }

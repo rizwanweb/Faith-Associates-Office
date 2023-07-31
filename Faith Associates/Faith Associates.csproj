@@ -273,6 +273,25 @@
       <DependentUpon>Undertaking.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\Refund\DepositRefund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Refund\DepositRefund.Designer.cs">
+      <DependentUpon>DepositRefund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Refund\DepositRefundReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DepositRefundReport.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Refund\RefundReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Refund\RefundReportViewer.Designer.cs">
+      <DependentUpon>RefundReportViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\BillHeadersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -551,6 +570,17 @@
     <EmbeddedResource Include="Reports\PSQCA\Undertaking.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Undertaking.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Refund\DepositRefund.resx">
+      <DependentUpon>DepositRefund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Refund\DepositRefundReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DepositRefundReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Refund\RefundReportViewer.resx">
+      <DependentUpon>RefundReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\BillHeadersForm.resx">
       <DependentUpon>BillHeadersForm.cs</DependentUpon>

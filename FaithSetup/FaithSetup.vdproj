@@ -22,12 +22,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_197EA536534485ECA6D566EE77E273A2"
-        "OwnerKey" = "8:_4B5F0E4516CB43C88DDF5448D4308469"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_2A4A75FF3D5F4DA79227B03ED09573F5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -70,6 +64,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6FB39DE85D8D4E2F974F1B972FA34B3B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_825B97CF620042CF92D7FD1276DE37BB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -78,6 +78,12 @@
         {
         "MsmKey" = "8:_8FCECB42C8C740E1892F243153C7C096"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9E8C7812BD6C654B0189F6D890F46DC6"
+        "OwnerKey" = "8:_4B5F0E4516CB43C88DDF5448D4308469"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -119,7 +125,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_197EA536534485ECA6D566EE77E273A2"
+        "OwnerKey" = "8:_9E8C7812BD6C654B0189F6D890F46DC6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -241,37 +247,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_197EA536534485ECA6D566EE77E273A2"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:RSDBFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_197EA536534485ECA6D566EE77E273A2"
-                    {
-                    "Name" = "8:RSDBFramework.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:RSDBFramework.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_7551C1B6AD0F4045A23F4DD5AFF713E7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2A4A75FF3D5F4DA79227B03ED09573F5"
@@ -416,6 +391,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6FB39DE85D8D4E2F974F1B972FA34B3B"
+            {
+            "SourcePath" = "8:..\\Faith Associates\\Reports\\Refund\\DepositRefundReport.rpt"
+            "TargetName" = "8:DepositRefundReport.rpt"
+            "Tag" = "8:"
+            "Folder" = "8:_3C165169EB47454C8F8DB1AAB9FDC6BC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_825B97CF620042CF92D7FD1276DE37BB"
             {
             "SourcePath" = "8:..\\Faith Associates\\Reports\\Bills\\JobBillReport.rpt"
@@ -454,6 +449,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9E8C7812BD6C654B0189F6D890F46DC6"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:RSDBFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_9E8C7812BD6C654B0189F6D890F46DC6"
+                    {
+                    "Name" = "8:RSDBFramework.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:RSDBFramework.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_7551C1B6AD0F4045A23F4DD5AFF713E7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D774331778EF4B528F06435EC54E7C90"
@@ -563,6 +589,17 @@
                                 {
                                 }
                             }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_3C165169EB47454C8F8DB1AAB9FDC6BC"
+                            {
+                            "Name" = "8:Refund"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_697096E03F8A470EA90820906BDA9934"
+                                "Folders"
+                                {
+                                }
+                            }
                             "{9EF0B969-E518-4E46-987F-47570745A589}:_4B5B0B33539746B6A825DBAD8E78AC17"
                             {
                             "Name" = "8:Clients"
@@ -660,15 +697,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Faith Associates"
-        "ProductCode" = "8:{A285B82F-2FD3-469A-8467-3E88E472265B}"
-        "PackageCode" = "8:{05A7D634-E0EC-4264-80D1-96E951079394}"
+        "ProductCode" = "8:{04285C85-2030-4AD6-90A4-11AD427EB128}"
+        "PackageCode" = "8:{93552EF4-C94E-4CAC-A0C3-52E9B914430D}"
         "UpgradeCode" = "8:{839B511F-571C-4AE4-8C66-56C3B0508634}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.1"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:Rizwan Razzak"
         "ARPHELPTELEPHONE" = "8:0335-2055505"
         "ARPHELPLINK" = "8:"
@@ -1196,7 +1233,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4B5F0E4516CB43C88DDF5448D4308469"
             {
-            "SourcePath" = "8:..\\Faith Associates\\obj\\Release\\Faith Associates.exe"
+            "SourcePath" = "8:..\\Faith Associates\\obj\\Debug\\Faith Associates.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_7551C1B6AD0F4045A23F4DD5AFF713E7"

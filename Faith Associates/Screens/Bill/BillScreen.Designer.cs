@@ -30,9 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillScreen));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.detailGroupBox = new System.Windows.Forms.GroupBox();
@@ -84,11 +86,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvBill = new System.Windows.Forms.DataGridView();
-            this.bdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Particulars = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Receipt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ByYou = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ByUs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSubTotal = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -106,6 +103,11 @@
             this.btnAddRow = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.TextBox();
+            this.bdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Particulars = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Receipt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ByYou = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ByUs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.detailGroupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -641,7 +643,7 @@
             this.dgvBill.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -654,14 +656,14 @@
             this.Receipt,
             this.ByYou,
             this.ByUs});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBill.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBill.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvBill.Location = new System.Drawing.Point(61, 17);
             this.dgvBill.MultiSelect = false;
             this.dgvBill.Name = "dgvBill";
@@ -671,41 +673,6 @@
             this.dgvBill.TabIndex = 0;
             this.dgvBill.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBill_CellClick);
             this.dgvBill.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBill_RowValidated);
-            // 
-            // bdi
-            // 
-            this.bdi.HeaderText = "ID Column";
-            this.bdi.Name = "bdi";
-            this.bdi.Visible = false;
-            // 
-            // Particulars
-            // 
-            this.Particulars.HeaderText = "Particulars";
-            this.Particulars.Name = "Particulars";
-            this.Particulars.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Particulars.Width = 375;
-            // 
-            // Receipt
-            // 
-            this.Receipt.HeaderText = "Receipt No";
-            this.Receipt.Name = "Receipt";
-            this.Receipt.Width = 250;
-            // 
-            // ByYou
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ByYou.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ByYou.HeaderText = "Amount Paid By You";
-            this.ByYou.Name = "ByYou";
-            this.ByYou.Width = 150;
-            // 
-            // ByUs
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ByUs.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ByUs.HeaderText = "Amount Paid By Us";
-            this.ByUs.Name = "ByUs";
-            this.ByUs.Width = 150;
             // 
             // txtSubTotal
             // 
@@ -891,6 +858,48 @@
             this.txtNote.Size = new System.Drawing.Size(610, 123);
             this.txtNote.TabIndex = 14;
             // 
+            // bdi
+            // 
+            this.bdi.HeaderText = "ID Column";
+            this.bdi.Name = "bdi";
+            this.bdi.Visible = false;
+            // 
+            // Particulars
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Particulars.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Particulars.FillWeight = 360F;
+            this.Particulars.HeaderText = "Particulars";
+            this.Particulars.Name = "Particulars";
+            this.Particulars.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Particulars.Width = 360;
+            // 
+            // Receipt
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold);
+            this.Receipt.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Receipt.HeaderText = "Receipt No";
+            this.Receipt.Name = "Receipt";
+            this.Receipt.Width = 250;
+            // 
+            // ByYou
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold);
+            this.ByYou.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ByYou.HeaderText = "Amount Paid By You";
+            this.ByYou.Name = "ByYou";
+            this.ByYou.Width = 150;
+            // 
+            // ByUs
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold);
+            this.ByUs.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ByUs.HeaderText = "Amount Paid By Us";
+            this.ByUs.Name = "ByUs";
+            this.ByUs.Width = 150;
+            // 
             // BillScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -989,5 +998,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Receipt;
         private System.Windows.Forms.DataGridViewTextBoxColumn ByYou;
         private System.Windows.Forms.DataGridViewTextBoxColumn ByUs;
-	}
+    }
 }

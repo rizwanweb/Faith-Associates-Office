@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RSDBFramework.Windows;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
@@ -59,18 +60,27 @@ namespace RSDBFramework
         public object GetScalarValue(string storedProcedure, DBParameter[] parameters)
         {
             object value = null;
-            using (SqlConnection conn = new SqlConnection(_connstring))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand(storedProcedure, conn))
+                
+                using (SqlConnection conn = new SqlConnection(_connstring))
                 {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    conn.Open();
-                    foreach (var parameter in parameters)
+                    using (SqlCommand cmd = new SqlCommand(storedProcedure, conn))
                     {
-                        cmd.Parameters.AddWithValue(parameter.Parameter, parameter.Value);
-                    }                    
-                    value = cmd.ExecuteScalar();
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        conn.Open();
+                        foreach (var parameter in parameters)
+                        {
+                            cmd.Parameters.AddWithValue(parameter.Parameter, parameter.Value);
+                        }
+                        value = cmd.ExecuteScalar();
+                    }
                 }
+                
+            }
+            catch (Exception ex)
+            {
+                RSMessageBox.ShowErrorMessage(ex.Message);
             }
             return value;
         }
